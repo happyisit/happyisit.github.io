@@ -1,479 +1,850 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Developer Philosophy & Crafts | Apps Beyond Code</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Developer HappyisIT | Apps Beyond Code</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        pastel: {
-                            pink: '#FFD6E0',
-                            peach: '#FFEFD5',
-                            yellow: '#FFF3B0',
-                            mint: '#D8F3DC',
-                            blue: '#D0F4DE',
-                            sky: '#E0F4FF',
-                            purple: '#E8DFF5',
-                            coral: '#FFB5A7',
-                            lavender: '#F3E8FF'
-                        },
-                        vivid: {
-                            pink: '#FF5964',
-                            purple: '#8B5CF6',
-                            yellow: '#FFB703',
-                            blue: '#3A86EF',
-                            green: '#10B981',
-                            coral: '#FF6B6B'
-                        }
-                    },
-                    fontFamily: {
-                        fredoka: ['Fredoka', 'Noto Sans KR', 'sans-serif'],
-                    },
-                    animation: {
-                        'float': 'float 5s ease-in-out infinite',
-                        'float-delayed': 'float 5s ease-in-out 2.5s infinite',
-                        'bounce-soft': 'bounceSoft 2s ease-in-out infinite',
-                        'spin-slow': 'spin 15s linear infinite',
-                        'wiggle': 'wiggle 1s ease-in-out infinite'
-                    },
-                    keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
-                            '50%': { transform: 'translateY(-12px) rotate(2deg)' },
-                        },
-                        bounceSoft: {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-6px)' }
-                        },
-                        wiggle: {
-                            '0%, 100%': { transform: 'rotate(-3deg)' },
-                            '50%': { transform: 'rotate(3deg)' }
-                        }
-                    }
-                }
-            }
-        }
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: "#f0f6ff",
+                100: "#e0edff",
+                500: "#3b82f6",
+                600: "#2563eb",
+                900: "#0f172a",
+                950: "#030712",
+              },
+              accent: {
+                cyan: "#06b6d4",
+                purple: "#a855f7",
+                emerald: "#10b981",
+                amber: "#f59e0b",
+              },
+            },
+            animation: {
+              float: "float 6s ease-in-out infinite",
+              "float-delayed": "float 6s ease-in-out 3s infinite",
+              "pulse-slow": "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+              "spin-slow": "spin 12s linear infinite",
+            },
+            keyframes: {
+              float: {
+                "0%, 100%": { transform: "translateY(0px) rotate(0deg)" },
+                "50%": { transform: "translateY(-15px) rotate(3deg)" },
+              },
+            },
+          },
+        },
+      };
     </script>
-    <!-- Google Fonts: Fredoka & Noto Sans KR -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Google Fonts: Noto Sans KR & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        body {
-            font-family: 'Fredoka', 'Noto Sans KR', sans-serif;
-            background-color: #FFFFFF;
-            color: #2D3748;
-            overflow-x: hidden;
-        }
-        /* Custom Cute Card styling with subtle colorful border & soft shadow */
-        .cute-card {
-            background: #FFFFFF;
-            border: 2px solid #F1F5F9;
-            box-shadow: 0 10px 25px -5px rgba(255, 182, 193, 0.25), 0 8px 10px -6px rgba(186, 230, 253, 0.2);
-            border-radius: 1.75rem;
-            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-        }
-        .cute-card:hover {
-            transform: translateY(-6px) scale(1.01);
-            box-shadow: 0 20px 35px -10px rgba(255, 182, 193, 0.4), 0 12px 15px -8px rgba(167, 139, 250, 0.3);
-            border-color: #FFD6E0;
-        }
-        .text-gradient-rainbow {
-            background: linear-gradient(135deg, #FF5964 0%, #FFB703 35%, #10B981 70%, #3A86EF 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .text-gradient-warm {
-            background: linear-gradient(135deg, #FF6B6B 0%, #FFA07A 50%, #FFB703 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        /* Soft Polka Dot pattern overlay */
-        .bg-dots-pattern {
-            background-image: radial-gradient(#FFB5A7 1.5px, transparent 1.5px), radial-gradient(#A7F3D0 1.5px, #FFFFFF 1.5px);
-            background-size: 40px 40px;
-            background-position: 0 0, 20px 20px;
-            background-opacity: 0.3;
-        }
+      body {
+        font-family: "Inter", "Noto Sans KR", sans-serif;
+        background-color: #030712;
+        color: #f3f4f6;
+        overflow-x: hidden;
+      }
+      /* Custom Glassmorphism styling */
+      .glass-card {
+        background: rgba(17, 24, 39, 0.6);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .glass-card:hover {
+        border-color: rgba(59, 130, 246, 0.4);
+        box-shadow: 0 0 25px rgba(59, 130, 246, 0.15);
+      }
+      .text-gradient {
+        background: linear-gradient(
+          135deg,
+          #60a5fa 0%,
+          #c084fc 50%,
+          #f472b6 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .text-gradient-cyan {
+        background: linear-gradient(135deg, #22d3ee 0%, #818cf8 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .bg-grid-pattern {
+        background-image: radial-gradient(
+          rgba(255, 255, 255, 0.07) 1px,
+          transparent 1px
+        );
+        background-size: 32px 32px;
+      }
     </style>
-</head>
-<body class="relative min-h-screen bg-dots-pattern antialiased selection:bg-pastel-pink selection:text-vivid-pink">
+  </head>
+  <body
+    class="relative min-h-screen bg-grid-pattern antialiased selection:bg-brand-500 selection:text-white"
+  >
+    <!-- Ambient Glowing Background Elements -->
+    <div
+      class="fixed top-0 left-1/4 -translate-x-1/2 w-[500px] h-[500px] bg-brand-600/20 rounded-full blur-[140px] pointer-events-none -z-10"
+    ></div>
+    <div
+      class="fixed top-1/3 right-10 w-[400px] h-[400px] bg-accent-purple/15 rounded-full blur-[120px] pointer-events-none -z-10"
+    ></div>
+    <div
+      class="fixed bottom-10 left-1/3 w-[600px] h-[600px] bg-accent-cyan/10 rounded-full blur-[160px] pointer-events-none -z-10"
+    ></div>
 
-    <!-- Bright & Colorful Blob Decorative Background Lights -->
-    <div class="fixed top-[-100px] left-1/4 -translate-x-1/2 w-[550px] h-[550px] bg-pastel-pink/60 rounded-full blur-[100px] pointer-events-none -z-10"></div>
-    <div class="fixed top-1/3 right-[-100px] w-[500px] h-[500px] bg-pastel-sky/70 rounded-full blur-[110px] pointer-events-none -z-10"></div>
-    <div class="fixed bottom-10 left-10 w-[600px] h-[600px] bg-pastel-yellow/60 rounded-full blur-[120px] pointer-events-none -z-10"></div>
-    <div class="fixed bottom-1/4 right-1/3 w-[450px] h-[450px] bg-pastel-lavender/60 rounded-full blur-[110px] pointer-events-none -z-10"></div>
+    <!-- Navigation Bar Header -->
+    <header
+      class="sticky top-0 z-50 backdrop-blur-md bg-brand-950/70 border-b border-white/10 transition-all duration-300"
+    >
+      <div
+        class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between"
+      >
+        <!-- Brand Logo / App Icon Concept SVG -->
+        <a href="#" class="flex items-center gap-3 group">
+          <div
+            class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-accent-purple p-0.5 shadow-lg shadow-brand-500/20 group-hover:scale-105 transition-transform duration-300"
+          >
+            <div
+              class="w-full h-full bg-brand-950 rounded-[10px] flex items-center justify-center"
+            >
+              <svg
+                class="w-5 h-5 text-brand-500 group-hover:text-cyan-400 transition-colors"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+                />
+              </svg>
+            </div>
+          </div>
+          <span
+            class="font-bold text-lg tracking-tight text-white group-hover:text-brand-500 transition-colors"
+            >Happy is IT</span
+          >
+        </a>
 
-    <!-- Cute Floating Sparkles in Background -->
-    <div class="fixed top-20 right-1/4 animate-float opacity-70 pointer-events-none hidden sm:block">
-        <svg class="w-8 h-8 text-vivid-yellow" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z" />
-        </svg>
-    </div>
-    <div class="fixed bottom-32 left-12 animate-float-delayed opacity-70 pointer-events-none hidden sm:block">
-        <svg class="w-10 h-10 text-vivid-pink" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z" />
-        </svg>
-    </div>
+        <!-- Navigation Links -->
+        <nav
+          class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-300"
+        >
+          <a href="#philosophy" class="hover:text-white transition-colors"
+            >철학 & 비전</a
+          >
+          <a href="#reflections" class="hover:text-white transition-colors"
+            >여정의 고언</a
+          >
+          <a href="#showcase" class="hover:text-white transition-colors"
+            >앱 디자인 & 시각</a
+          >
+        </nav>
 
-    <!-- Bright Navigation Bar Header -->
-    <header class="sticky top-0 z-50 backdrop-blur-md bg-white/80 border-b border-pastel-pink/40 transition-all duration-300">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <!-- Brand Logo / Cute App Icon -->
-            <a href="#" class="flex items-center gap-3 group">
-                <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-vivid-pink via-vivid-purple to-vivid-yellow p-1 shadow-md group-hover:scale-105 group-hover:rotate-3 transition-all duration-300">
-                    <div class="w-full h-full bg-white rounded-[12px] flex items-center justify-center">
-                        <svg class="w-6 h-6 text-vivid-pink group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 100-18 9 9 0 000 18z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3" />
-                        </svg>
-                    </div>
-                </div>
-                <div>
-                    <span class="font-extrabold text-xl tracking-tight text-gray-800 group-hover:text-vivid-pink transition-colors">Lab & Craft ✨</span>
-                    <span class="block text-[11px] font-medium text-gray-400 -mt-1">Joyful Code Studio</span>
-                </div>
-            </a>
-
-            <!-- Navigation Links -->
-            <nav class="hidden md:flex items-center space-x-2 text-sm font-semibold text-gray-600">
-                <a href="#philosophy" class="px-4 py-2 rounded-full hover:bg-pastel-pink/50 hover:text-vivid-pink transition-all">신념과 가치</a>
-                <a href="#reflections" class="px-4 py-2 rounded-full hover:bg-pastel-yellow/60 hover:text-vivid-yellow transition-all">삶의 에세이</a>
-                <a href="#showcase" class="px-4 py-2 rounded-full hover:bg-pastel-sky/60 hover:text-vivid-blue transition-all">앱 아틀리에</a>
-            </nav>
-
-            <!-- Store Badge Mock Link -->
-            <a href="#showcase" class="inline-flex items-center gap-2 px-5 py-2.5 text-xs sm:text-sm font-bold rounded-full bg-vivid-pink hover:bg-pink-600 text-white shadow-lg shadow-vivid-pink/30 hover:shadow-vivid-pink/50 hover:scale-105 transition-all">
-                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.85c.67-.82 1.13-1.96.99-3.1-.98.04-2.18.66-2.88 1.48-.63.73-1.18 1.9-1.03 3.03 1.1.09 2.25-.59 2.92-1.41z"/>
-                </svg>
-                <span>App Store Profile</span>
-            </a>
-        </div>
+        <!-- Store Badge Mock Link -->
+        <!--<a
+          href="#showcase"
+          class="inline-flex items-center gap-2 px-4 py-2 text-xs sm:text-sm font-semibold rounded-full bg-white/10 hover:bg-white/20 text-white border border-white/15 transition-all hover:scale-105"
+        >
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <path
+              d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.85c.67-.82 1.13-1.96.99-3.1-.98.04-2.18.66-2.88 1.48-.63.73-1.18 1.9-1.03 3.03 1.1.09 2.25-.59 2.92-1.41z"
+            />
+          </svg>
+          <span>Store Profile</span>
+        </a>-->
+      </div>
     </header>
 
     <main>
-        <!-- Cute Vibrant Hero Section -->
-        <section class="relative pt-16 pb-20 md:pt-28 md:pb-32 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto text-center overflow-hidden">
+      <!-- Hero Section -->
+      <section
+        class="relative pt-20 pb-24 md:pt-32 md:pb-36 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto text-center overflow-hidden"
+      >
+        <!-- Decorative Animated Floating SVGs -->
+        <div
+          class="absolute -top-10 left-10 md:left-20 animate-float opacity-30 pointer-events-none hidden sm:block"
+        >
+          <svg
+            class="w-20 h-20 text-accent-cyan"
+            viewBox="0 0 100 100"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <polygon points="50,5 90,25 90,75 50,95 10,75 10,25" />
+            <line x1="50" y1="5" x2="50" y2="95" />
+            <line x1="90" y1="25" x2="10" y2="75" />
+            <line x1="10" y1="25" x2="90" y2="75" />
+          </svg>
+        </div>
+        <div
+          class="absolute bottom-10 right-10 md:right-20 animate-float-delayed opacity-30 pointer-events-none hidden sm:block"
+        >
+          <svg
+            class="w-24 h-24 text-accent-purple"
+            viewBox="0 0 100 100"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <circle cx="50" cy="50" r="40" stroke-dasharray="6,6" />
+            <circle cx="50" cy="50" r="25" />
+            <circle cx="50" cy="50" r="8" fill="currentColor" />
+          </svg>
+        </div>
 
-            <!-- Floating Decorative Cute SVGs -->
-            <div class="absolute top-12 left-6 md:left-16 animate-float opacity-90 pointer-events-none hidden sm:block">
-                <div class="p-3 bg-pastel-pink/60 rounded-2xl border border-pink-200 shadow-sm rotate-[-10deg]">
-                    <svg class="w-10 h-10 text-vivid-pink" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.684a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-                    </svg>
-                </div>
+        <div
+          class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-400 text-xs sm:text-sm font-medium mb-8 backdrop-blur-md"
+        >
+          <span
+            class="w-2 h-2 rounded-full bg-accent-emerald animate-ping"
+          ></span>
+          <span>Crafting Digital Experiences with Purpose & Passion</span>
+        </div>
+
+        <h1
+          class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white max-w-4xl mx-auto leading-tight sm:leading-none mb-6"
+        >
+          단순함을 통해 <br class="hidden sm:block" />
+          <span class="text-gradient">인생과 가치</span>를 코드에 담다
+        </h1>
+
+        <p
+          class="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed font-light"
+        >
+          우리는 단순히 앱을 만드는 것이 아닌, 삶의 복잡함을 덜어내고 일상의
+          궤적에 작고 깊은 울림을 주는 디지털 도구를 깎아 만듭니다.
+        </p>
+
+        <!-- Interactive Aesthetic SVG Canvas Illustration (Hero graphic) -->
+        <div
+          class="relative max-w-3xl mx-auto mt-12 rounded-2xl glass-card p-6 md:p-10 shadow-2xl overflow-hidden group"
+        >
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-brand-600/10 via-accent-purple/10 to-accent-cyan/10 opacity-50 group-hover:opacity-100 transition-opacity duration-700"
+          ></div>
+
+          <svg
+            class="w-full h-auto max-h-[280px] mx-auto text-gray-300"
+            viewBox="0 0 800 320"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <!-- Background Grid inside graphic -->
+            <path
+              d="M0 40H800 M0 120H800 M0 200H800 M0 280H800"
+              stroke="white"
+              stroke-opacity="0.05"
+              stroke-width="1"
+            />
+            <path
+              d="M100 0V320 M300 0V320 M500 0V320 M700 0V320"
+              stroke="white"
+              stroke-opacity="0.05"
+              stroke-width="1"
+            />
+
+            <!-- Curved Smooth Wave representing growth & journey -->
+            <path
+              d="M50 250 C 200 280, 250 100, 400 160 C 550 220, 600 60, 750 100"
+              stroke="url(#hero-grad)"
+              stroke-width="4"
+              stroke-linecap="round"
+            />
+
+            <!-- Nodes along the curve with glow -->
+            <g class="animate-pulse">
+              <circle cx="210" cy="205" r="7" fill="#3b82f6" />
+              <circle
+                cx="210"
+                cy="205"
+                r="14"
+                stroke="#3b82f6"
+                stroke-opacity="0.4"
+                stroke-width="2"
+              />
+            </g>
+            <g class="animate-pulse" style="animation-delay: 1s">
+              <circle cx="400" cy="160" r="7" fill="#a855f7" />
+              <circle
+                cx="400"
+                cy="160"
+                r="14"
+                stroke="#a855f7"
+                stroke-opacity="0.4"
+                stroke-width="2"
+              />
+            </g>
+            <g class="animate-pulse" style="animation-delay: 2s">
+              <circle cx="630" cy="95" r="7" fill="#06b6d4" />
+              <circle
+                cx="630"
+                cy="95"
+                r="14"
+                stroke="#06b6d4"
+                stroke-opacity="0.4"
+                stroke-width="2"
+              />
+            </g>
+
+            <!-- Abstract Code & Geometry Elements -->
+            <rect
+              x="50"
+              y="50"
+              width="120"
+              height="70"
+              rx="8"
+              fill="#111827"
+              fill-opacity="0.8"
+              stroke="#374151"
+              stroke-width="1"
+            />
+            <line
+              x1="65"
+              y1="70"
+              x2="130"
+              y2="70"
+              stroke="#60a5fa"
+              stroke-width="3"
+              stroke-linecap="round"
+            />
+            <line
+              x1="65"
+              y1="85"
+              x2="150"
+              y2="85"
+              stroke="#9ca3af"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <line
+              x1="65"
+              y1="100"
+              x2="100"
+              y2="100"
+              stroke="#a855f7"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+
+            <rect
+              x="630"
+              y="180"
+              width="130"
+              height="80"
+              rx="8"
+              fill="#111827"
+              fill-opacity="0.8"
+              stroke="#374151"
+              stroke-width="1"
+            />
+            <circle
+              cx="660"
+              cy="210"
+              r="12"
+              fill="#10b981"
+              fill-opacity="0.2"
+              stroke="#10b981"
+              stroke-width="2"
+            />
+            <path
+              d="M685 205 H735 M685 215 H715"
+              stroke="#e5e7eb"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+
+            <!-- Gradients Definition -->
+            <defs>
+              <linearGradient id="hero-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#3b82f6" />
+                <stop offset="50%" stop-color="#a855f7" />
+                <stop offset="100%" stop-color="#06b6d4" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+      </section>
+
+      <!-- Core Philosophy Section -->
+      <section
+        id="philosophy"
+        class="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto"
+      >
+        <div class="text-center mb-16">
+          <h2
+            class="text-xs uppercase tracking-widest text-brand-400 font-semibold mb-2"
+          >
+            Core Philosophy
+          </h2>
+          <p class="text-3xl sm:text-4xl font-bold text-white">
+            개발과 삶을 관통하는 4가지 신념
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Card 1 -->
+          <div
+            class="glass-card p-8 rounded-2xl transition-all duration-300 hover:-translate-y-1 relative overflow-hidden group"
+          >
+            <div
+              class="w-14 h-14 rounded-xl bg-brand-500/10 border border-brand-500/30 flex items-center justify-center text-brand-400 mb-6 group-hover:scale-110 transition-transform"
+            >
+              <!-- SVG Icon: Focus & Precision -->
+              <svg
+                class="w-7 h-7"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <circle cx="12" cy="12" r="9" stroke-width="1.5" />
+                <circle cx="12" cy="12" r="5" stroke-width="1.5" />
+                <circle cx="12" cy="12" r="1" fill="currentColor" />
+              </svg>
             </div>
-            <div class="absolute bottom-16 right-6 md:right-16 animate-float-delayed opacity-90 pointer-events-none hidden sm:block">
-                <div class="p-3 bg-pastel-yellow/80 rounded-2xl border border-yellow-200 shadow-sm rotate-[12deg]">
-                    <svg class="w-12 h-12 text-vivid-yellow" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 01-2 2h-0a2 2 0 01-2-2v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                    </svg>
-                </div>
-            </div>
-
-            <!-- Welcome Pill Badge -->
-            <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-pastel-pink/70 border border-pink-300 text-vivid-pink text-xs sm:text-sm font-bold mb-8 shadow-sm backdrop-blur-md animate-bounce-soft">
-                <span class="w-2.5 h-2.5 rounded-full bg-vivid-pink animate-ping"></span>
-                <span>✨ 화사함과 따뜻함을 담아 만드는 소프트웨어</span>
-            </div>
-
-            <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-gray-800 max-w-4xl mx-auto leading-tight mb-6">
-                복잡한 세상에 <br class="hidden sm:block" />
-                <span class="text-gradient-rainbow">알록달록 다정한 기쁨</span>을 선물합니다
-            </h1>
-
-            <p class="text-base sm:text-xl text-gray-600 max-w-2xl mx-auto mb-10 leading-relaxed font-medium">
-                우리는 차가운 코드 위에 따스한 감성과 아기자기한 상상력을 불어넣어,
-                일상의 작은 순간마다 보석처럼 반짝이는 디지털 경험을 다듬어 만듭니다 🎨
+            <h3 class="text-xl font-bold text-white mb-3">
+              본질에의 집중 (Simplicity)
+            </h3>
+            <p class="text-gray-400 leading-relaxed text-sm sm:text-base">
+              화려한 기능보다 중요한 것은 사용자의 삶에서 진짜 필요한 단 하나의
+              가치입니다. 불필요한 군더더기를 걷어내고 가장 순수한 본질에
+              집중합니다.
             </p>
+          </div>
 
-            <!-- Playful & Cute Interactive Illustration Canvas Card -->
-            <div class="relative max-w-3xl mx-auto mt-8 cute-card p-6 md:p-10 bg-gradient-to-b from-white via-pastel-peach/20 to-pastel-pink/20 overflow-hidden group">
-                <div class="absolute inset-0 bg-gradient-to-r from-pastel-pink/30 via-pastel-purple/30 to-pastel-sky/30 opacity-60 group-hover:opacity-100 transition-opacity duration-500"></div>
-
-                <!-- Playful Cute Vector Graphic -->
-                <svg class="w-full h-auto max-h-[290px] mx-auto relative z-10" viewBox="0 0 800 320" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Soft grid background -->
-                    <path d="M0 40H800 M0 120H800 M0 200H800 M0 280H800" stroke="#FFD6E0" stroke-width="1.5" stroke-dasharray="4 4"/>
-
-                    <!-- Cute bouncy curve -->
-                    <path d="M50 240 C 200 290, 250 90, 400 160 C 550 230, 600 50, 750 90" stroke="url(#cute-grad)" stroke-width="6" stroke-linecap="round"/>
-
-                    <!-- Glowing nodes / colorful stars along curve -->
-                    <g class="animate-bounce-soft">
-                        <circle cx="210" cy="210" r="14" fill="#FF5964" opacity="0.9"/>
-                        <circle cx="210" cy="210" r="22" stroke="#FF5964" stroke-opacity="0.3" stroke-width="3"/>
-                        <path d="M210 203L212 208L217 210L212 212L210 217L208 212L203 210L208 208Z" fill="white"/>
-                    </g>
-                    <g class="animate-bounce-soft" style="animation-delay: 0.6s;">
-                        <circle cx="400" cy="160" r="14" fill="#8B5CF6" opacity="0.9"/>
-                        <circle cx="400" cy="160" r="22" stroke="#8B5CF6" stroke-opacity="0.3" stroke-width="3"/>
-                        <path d="M400 153L402 158L407 160L402 162L400 167L398 162L393 160L398 158Z" fill="white"/>
-                    </g>
-                    <g class="animate-bounce-soft" style="animation-delay: 1.2s;">
-                        <circle cx="630" cy="85" r="14" fill="#3A86EF" opacity="0.9"/>
-                        <circle cx="630" cy="85" r="22" stroke="#3A86EF" stroke-opacity="0.3" stroke-width="3"/>
-                        <path d="M630 78L632 83L637 85L632 87L630 92L628 87L623 85L628 83Z" fill="white"/>
-                    </g>
-
-                    <!-- Cute UI Card Windows -->
-                    <rect x="50" y="45" width="130" height="85" rx="16" fill="#FFFFFF" stroke="#FFB5A7" stroke-width="3"/>
-                    <circle cx="75" cy="65" r="5" fill="#FF5964"/>
-                    <circle cx="90" cy="65" r="5" fill="#FFB703"/>
-                    <circle cx="105" cy="65" r="5" fill="#10B981"/>
-                    <rect x="70" y="82" width="80" height="8" rx="4" fill="#FFD6E0"/>
-                    <rect x="70" y="98" width="50" height="8" rx="4" fill="#E8DFF5"/>
-
-                    <rect x="620" y="170" width="140" height="90" rx="16" fill="#FFFFFF" stroke="#93C5FD" stroke-width="3"/>
-                    <circle cx="655" cy="215" r="16" fill="#D0F4DE"/>
-                    <path d="M650 215L654 219L662 211" stroke="#10B981" stroke-width="3" stroke-linecap="round"/>
-                    <rect x="682" y="200" width="60" height="8" rx="4" fill="#BAE6FD"/>
-                    <rect x="682" y="218" width="40" height="8" rx="4" fill="#E2E8F0"/>
-
-                    <!-- Gradients Definition -->
-                    <defs>
-                        <linearGradient id="cute-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-                            <stop offset="0%" stop-color="#FF5964" />
-                            <stop offset="33%" stop-color="#FFB703" />
-                            <stop offset="66%" stop-color="#8B5CF6" />
-                            <stop offset="100%" stop-color="#3A86EF" />
-                        </linearGradient>
-                    </defs>
-                </svg>
+          <!-- Card 2 -->
+          <div
+            class="glass-card p-8 rounded-2xl transition-all duration-300 hover:-translate-y-1 relative overflow-hidden group"
+          >
+            <div
+              class="w-14 h-14 rounded-xl bg-accent-purple/10 border border-accent-purple/30 flex items-center justify-center text-accent-purple mb-6 group-hover:scale-110 transition-transform"
+            >
+              <!-- SVG Icon: Endurance & Iteration -->
+              <svg
+                class="w-7 h-7"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+                />
+              </svg>
             </div>
-        </section>
+            <h3 class="text-xl font-bold text-white mb-3">
+              지속적인 연마 (Craftsmanship)
+            </h3>
+            <p class="text-gray-400 leading-relaxed text-sm sm:text-base">
+              한 번의 완벽함보다 매일 1%의 개선을 믿습니다. 눈에 보이지 않는
+              내부 코드부터 작은 애니메이션의 디테일까지 장인 정신으로 다듬어
+              나갑니다.
+            </p>
+          </div>
 
-        <!-- Core Philosophy Section with Pastel Cards -->
-        <section id="philosophy" class="py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-            <div class="text-center mb-14">
-                <span class="inline-block px-4 py-1.5 rounded-full bg-pastel-purple/60 text-vivid-purple font-bold text-xs uppercase tracking-wider mb-3">Core Philosophy</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-800">마음을 밝히는 4가지 개발 철학 🎈</h2>
+          <!-- Card 3 -->
+          <div
+            class="glass-card p-8 rounded-2xl transition-all duration-300 hover:-translate-y-1 relative overflow-hidden group"
+          >
+            <div
+              class="w-14 h-14 rounded-xl bg-accent-cyan/10 border border-accent-cyan/30 flex items-center justify-center text-accent-cyan mb-6 group-hover:scale-110 transition-transform"
+            >
+              <!-- SVG Icon: Empathy & Connection -->
+              <svg
+                class="w-7 h-7"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.684a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                />
+              </svg>
             </div>
+            <h3 class="text-xl font-bold text-white mb-3">
+              공감과 따뜻함 (Human Centered)
+            </h3>
+            <p class="text-gray-400 leading-relaxed text-sm sm:text-base">
+              기술은 차갑지만 그것이 전달되는 경험은 따뜻해야 합니다. 화면
+              너머의 사람을 이해하고, 사용 과정에서 편안함과 잔잔한 미소를
+              전합니다.
+            </p>
+          </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-                <!-- Card 1: Simplicity -->
-                <div class="cute-card p-8 bg-gradient-to-br from-white to-pastel-pink/30 relative overflow-hidden group">
-                    <div class="w-16 h-16 rounded-2xl bg-pastel-pink flex items-center justify-center text-vivid-pink mb-6 shadow-sm group-hover:scale-110 group-hover:rotate-6 transition-transform">
-                        <!-- Cute Heart Focus Icon -->
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-extrabold text-gray-800 mb-3 flex items-center gap-2">
-                        <span>단순함의 미학</span>
-                        <span class="text-xs px-2.5 py-0.5 rounded-full bg-pink-100 text-pink-600 font-bold">Simplicity</span>
-                    </h3>
-                    <p class="text-gray-600 leading-relaxed text-sm sm:text-base font-medium">
-                        복잡하고 어지러운 기능보다 중요한 것은 당신의 삶을 편안하게 만들어 줄 한 줄의 명료함입니다. 불필요한 군더더기를 다듬어 가벼운 미소를 남깁니다.
-                    </p>
-                </div>
-
-                <!-- Card 2: Craftsmanship -->
-                <div class="cute-card p-8 bg-gradient-to-br from-white to-pastel-yellow/40 relative overflow-hidden group">
-                    <div class="w-16 h-16 rounded-2xl bg-pastel-yellow flex items-center justify-center text-vivid-yellow mb-6 shadow-sm group-hover:scale-110 group-hover:-rotate-6 transition-transform">
-                        <!-- Cute Sparkle Magic Wand Icon -->
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L5.6 15.12a2 2 0 00-1.111.196l-1.4 1.4a2 2 0 000 2.828l1.4 1.4a2 2 0 002.828 0l1.4-1.4a2 2 0 00.196-1.111l-.477-2.387a6 6 0 01.517-3.86l.158-.318a6 6 0 00.517-3.86l-.477-2.387a2 2 0 00-.547-1.022L12 3l7.428 12.428z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-extrabold text-gray-800 mb-3 flex items-center gap-2">
-                        <span>정성 어린 정제</span>
-                        <span class="text-xs px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-700 font-bold">Craftsmanship</span>
-                    </h3>
-                    <p class="text-gray-600 leading-relaxed text-sm sm:text-base font-medium">
-                        눈에 띄지 않는 디테일 하나, 수많은 테스트 스텝 하나까지 정성을 쏟습니다. 작고 예쁜 조각들이 모여 완성도 높은 따스함을 완성합니다.
-                    </p>
-                </div>
-
-                <!-- Card 3: Human Centered -->
-                <div class="cute-card p-8 bg-gradient-to-br from-white to-pastel-mint/40 relative overflow-hidden group">
-                    <div class="w-16 h-16 rounded-2xl bg-pastel-mint flex items-center justify-center text-vivid-green mb-6 shadow-sm group-hover:scale-110 group-hover:rotate-6 transition-transform">
-                        <!-- Cute Smile / Empathy Icon -->
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
-                            <circle cx="12" cy="12" r="10"/>
-                            <path stroke-linecap="round" d="M8 14s1.5 2 4 2 4-2 4-2"/>
-                            <line x1="9" y1="9" x2="9.01" y2="9" stroke-width="3" stroke-linecap="round"/>
-                            <line x1="15" y1="9" x2="15.01" y2="9" stroke-width="3" stroke-linecap="round"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-extrabold text-gray-800 mb-3 flex items-center gap-2">
-                        <span>따뜻한 공감</span>
-                        <span class="text-xs px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-700 font-bold">Empathy</span>
-                    </h3>
-                    <p class="text-gray-600 leading-relaxed text-sm sm:text-base font-medium">
-                        기술은 차가울 수 있지만, 손끝으로 느끼는 사용 경험은 상냥해야 합니다. 화면 너머 사람의 마음을 상상하며 친근하게 다가갑니다.
-                    </p>
-                </div>
-
-                <!-- Card 4: Joyful Journey -->
-                <div class="cute-card p-8 bg-gradient-to-br from-white to-pastel-sky/40 relative overflow-hidden group">
-                    <div class="w-16 h-16 rounded-2xl bg-pastel-sky flex items-center justify-center text-vivid-blue mb-6 shadow-sm group-hover:scale-110 group-hover:-rotate-6 transition-transform">
-                        <!-- Cute Rocket / Discovery Icon -->
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-extrabold text-gray-800 mb-3 flex items-center gap-2">
-                        <span>탐구의 즐거움</span>
-                        <span class="text-xs px-2.5 py-0.5 rounded-full bg-sky-100 text-sky-700 font-bold">Journey</span>
-                    </h3>
-                    <p class="text-gray-600 leading-relaxed text-sm sm:text-base font-medium">
-                        새로운 도전을 즐기며 호기심 어린 눈으로 배움을 이어갑니다. 문제를 해결해 나가는 수많은 과정 그 자체가 소중한 동력이 됩니다.
-                    </p>
-                </div>
-
+          <!-- Card 4 -->
+          <div
+            class="glass-card p-8 rounded-2xl transition-all duration-300 hover:-translate-y-1 relative overflow-hidden group"
+          >
+            <div
+              class="w-14 h-14 rounded-xl bg-accent-amber/10 border border-accent-amber/30 flex items-center justify-center text-accent-amber mb-6 group-hover:scale-110 transition-transform"
+            >
+              <!-- SVG Icon: Courage & Journey -->
+              <svg
+                class="w-7 h-7"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M13 10V3L4 14h7v7l9-11h-7z"
+                />
+              </svg>
             </div>
-        </section>
+            <h3 class="text-xl font-bold text-white mb-3">
+              여정 그 자체의 즐거움 (Journey)
+            </h3>
+            <p class="text-gray-400 leading-relaxed text-sm sm:text-base">
+              목적지에 도달하는 결과도 중요하지만, 문제를 해결해 나가는 탐구와
+              성장의 과과정 자체를 사랑하고 그 경험을 제품에 녹여냅니다.
+            </p>
+          </div>
+        </div>
+      </section>
 
-        <!-- Quotes & Reflections Section -->
-        <section id="reflections" class="py-16 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
-            <div class="text-center mb-14">
-                <span class="inline-block px-4 py-1.5 rounded-full bg-pastel-pink/60 text-vivid-pink font-bold text-xs uppercase tracking-wider mb-3">Life Reflections</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-800">삶과 창작에 관한 성찰 📖</h2>
+      <!-- Quotes & Life Reflections Section -->
+      <section
+        id="reflections"
+        class="py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto border-t border-white/5"
+      >
+        <div class="text-center mb-16">
+          <h2
+            class="text-xs uppercase tracking-widest text-accent-purple font-semibold mb-2"
+          >
+            Life Reflections
+          </h2>
+          <p class="text-3xl sm:text-4xl font-bold text-white">
+            삶과 창작에 관한 성찰
+          </p>
+        </div>
+
+        <div class="space-y-8">
+          <!-- Quote 1 -->
+          <blockquote class="glass-card p-8 md:p-10 rounded-2xl relative">
+            <svg
+              class="absolute top-6 left-6 w-10 h-10 text-white/5"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"
+              />
+            </svg>
+            <p
+              class="text-lg sm:text-xl text-gray-200 font-light italic leading-relaxed mb-6 relative z-10"
+            >
+              "작은 것에 충실할 때 비로소 위대한 소프트웨어가 태어납니다. 복잡한
+              세상을 단순하게 만드는 도구를 짓는 일은, 나 자신의 마음을 정돈하는
+              여정과 닮아 있습니다."
+            </p>
+            <footer class="flex items-center gap-4">
+              <div class="w-8 h-0.5 bg-brand-500"></div>
+              <span class="text-sm text-gray-400 font-medium"
+                >On Crafting Software</span
+              >
+            </footer>
+          </blockquote>
+
+          <!-- Quote 2 -->
+          <blockquote class="glass-card p-8 md:p-10 rounded-2xl relative">
+            <svg
+              class="absolute top-6 left-6 w-10 h-10 text-white/5"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"
+              />
+            </svg>
+            <p
+              class="text-lg sm:text-xl text-gray-200 font-light italic leading-relaxed mb-6 relative z-10"
+            >
+              "버그를 찾고 바로잡는 과정은 우리 인생의 시행착오와 다르지
+              않습니다. 실패를 마주했을 때 멈추지 않고 원인을 파악하며 한 걸음
+              나아가는 일, 그것이 성장의 본질입니다."
+            </p>
+            <footer class="flex items-center gap-4">
+              <div class="w-8 h-0.5 bg-accent-purple"></div>
+              <span class="text-sm text-gray-400 font-medium"
+                >On Embracing Failure</span
+              >
+            </footer>
+          </blockquote>
+        </div>
+      </section>
+
+      <!-- App Concept & Aesthetics Visual Showcase -->
+      <section
+        id="showcase"
+        class="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto border-t border-white/5"
+      >
+        <div class="text-center mb-16">
+          <h2
+            class="text-xs uppercase tracking-widest text-accent-cyan font-semibold mb-2"
+          >
+            Aesthetic Vision
+          </h2>
+          <p class="text-3xl sm:text-4xl font-bold text-white">
+            디자인과 프레임워크 지향점
+          </p>
+        </div>
+
+        <!-- Abstract App Device Mockups / Vector Graphics Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Mockup 1: Minimal Productivity -->
+          <div
+            class="glass-card rounded-2xl p-6 flex flex-col items-center text-center group hover:border-brand-500/50 transition-all"
+          >
+            <div
+              class="w-full h-48 bg-brand-950/80 rounded-xl mb-6 border border-white/10 flex items-center justify-center p-4 relative overflow-hidden"
+            >
+              <!-- Abstract Mobile Wireframe SVG -->
+              <svg
+                class="w-32 h-full text-brand-500"
+                viewBox="0 0 140 220"
+                fill="none"
+                stroke="currentColor"
+              >
+                <rect
+                  x="10"
+                  y="10"
+                  width="120"
+                  height="200"
+                  rx="20"
+                  stroke-width="3"
+                  stroke="#374151"
+                />
+                <rect
+                  x="25"
+                  y="30"
+                  width="90"
+                  height="12"
+                  rx="4"
+                  fill="#3b82f6"
+                  fill-opacity="0.3"
+                  stroke="none"
+                />
+                <rect
+                  x="25"
+                  y="55"
+                  width="60"
+                  height="8"
+                  rx="3"
+                  fill="#6b7280"
+                  fill-opacity="0.5"
+                  stroke="none"
+                />
+                <circle
+                  cx="40"
+                  cy="95"
+                  r="12"
+                  stroke="#60a5fa"
+                  stroke-width="2"
+                />
+                <line
+                  x1="60"
+                  y1="90"
+                  x2="110"
+                  y2="90"
+                  stroke="#4b5563"
+                  stroke-width="2"
+                />
+                <line
+                  x1="60"
+                  y1="100"
+                  x2="90"
+                  y2="100"
+                  stroke="#4b5563"
+                  stroke-width="2"
+                />
+                <circle
+                  cx="40"
+                  cy="135"
+                  r="12"
+                  stroke="#a855f7"
+                  stroke-width="2"
+                />
+                <line
+                  x1="60"
+                  y1="130"
+                  x2="110"
+                  y2="130"
+                  stroke="#4b5563"
+                  stroke-width="2"
+                />
+                <line
+                  x1="60"
+                  y1="140"
+                  x2="95"
+                  y2="140"
+                  stroke="#4b5563"
+                  stroke-width="2"
+                />
+              </svg>
             </div>
+            <h3 class="text-lg font-semibold text-white mb-2">
+              Minimal Productivity
+            </h3>
+            <p class="text-xs text-gray-400">
+              집중을 방해하지 않는 정갈하고 절제된 인터페이스 레이아웃 탐구
+            </p>
+          </div>
 
-            <div class="space-y-8">
-                <!-- Quote Card 1 -->
-                <blockquote class="cute-card p-8 md:p-10 bg-gradient-to-r from-pastel-pink/20 via-white to-pastel-purple/20 relative">
-                    <div class="flex items-start gap-4">
-                        <span class="text-5xl text-vivid-pink opacity-80 leading-none">“</span>
-                        <div>
-                            <p class="text-lg sm:text-xl text-gray-700 font-semibold leading-relaxed mb-4">
-                                작은 다정함에 충실할 때 비로소 사람의 마음을 두드리는 도구가 만들어집니다. 복잡한 세상을 단순하게 정리하는 일은, 내 마음의 정원을 조용히 가꾸는 여정과 매우 닮아 있습니다.
-                            </p>
-                            <footer class="flex items-center gap-3">
-                                <div class="w-8 h-1 bg-vivid-pink rounded-full"></div>
-                                <span class="text-xs font-bold text-gray-500 uppercase tracking-wide">On Crafting Software & Mind</span>
-                            </footer>
-                        </div>
-                    </div>
-                </blockquote>
-
-                <!-- Quote Card 2 -->
-                <blockquote class="cute-card p-8 md:p-10 bg-gradient-to-r from-pastel-yellow/30 via-white to-pastel-mint/30 relative">
-                    <div class="flex items-start gap-4">
-                        <span class="text-5xl text-vivid-yellow opacity-90 leading-none">“</span>
-                        <div>
-                            <p class="text-lg sm:text-xl text-gray-700 font-semibold leading-relaxed mb-4">
-                                예기치 못한 작은 오류를 만나 고쳐나가는 일은 우리 삶의 성장통과 같습니다. 넘어짐을 두려워하기보다 원인을 조용히 살피고 웃으며 한 걸음 나아갈 때 한층 더 단단해집니다.
-                            </p>
-                            <footer class="flex items-center gap-3">
-                                <div class="w-8 h-1 bg-vivid-yellow rounded-full"></div>
-                                <span class="text-xs font-bold text-gray-500 uppercase tracking-wide">On Embracing Mistakes & Growth</span>
-                            </footer>
-                        </div>
-                    </div>
-                </blockquote>
+          <!-- Mockup 2: Data & Ambient Analytics -->
+          <div
+            class="glass-card rounded-2xl p-6 flex flex-col items-center text-center group hover:border-accent-purple/50 transition-all"
+          >
+            <div
+              class="w-full h-48 bg-brand-950/80 rounded-xl mb-6 border border-white/10 flex items-center justify-center p-4 relative overflow-hidden"
+            >
+              <!-- Abstract Chart SVG -->
+              <svg
+                class="w-full h-full text-accent-purple"
+                viewBox="0 0 200 120"
+                fill="none"
+              >
+                <path
+                  d="M20 100 Q 60 40, 100 70 T 180 20"
+                  stroke="url(#chart-grad)"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  fill="none"
+                />
+                <path
+                  d="M20 100 Q 60 40, 100 70 T 180 20 L 180 110 L 20 110 Z"
+                  fill="url(#chart-fill)"
+                  fill-opacity="0.15"
+                />
+                <circle cx="100" cy="70" r="4" fill="#a855f7" />
+                <circle cx="180" cy="20" r="4" fill="#06b6d4" />
+                <defs>
+                  <linearGradient id="chart-grad" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#a855f7" />
+                    <stop offset="100%" stop-color="#06b6d4" />
+                  </linearGradient>
+                  <linearGradient id="chart-fill" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#a855f7" />
+                    <stop offset="100%" stop-color="transparent" />
+                  </linearGradient>
+                </defs>
+              </svg>
             </div>
-        </section>
+            <h3 class="text-lg font-semibold text-white mb-2">
+              Fluid Data Visuals
+            </h3>
+            <p class="text-xs text-gray-400">
+              데이터가 선율처럼 자연스럽게 읽히는 시각적 스토리텔링
+            </p>
+          </div>
 
-        <!-- App Concept & Aesthetics Visual Showcase Section -->
-        <section id="showcase" class="py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-            <div class="text-center mb-14">
-                <span class="inline-block px-4 py-1.5 rounded-full bg-pastel-mint/80 text-vivid-green font-bold text-xs uppercase tracking-wider mb-3">Aesthetic Vision</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-800">지향하는 앱의 스타일 🌸</h2>
+          <!-- Mockup 3: Micro Interactions -->
+          <div
+            class="glass-card rounded-2xl p-6 flex flex-col items-center text-center group hover:border-accent-cyan/50 transition-all sm:col-span-2 lg:col-span-1"
+          >
+            <div
+              class="w-full h-48 bg-brand-950/80 rounded-xl mb-6 border border-white/10 flex items-center justify-center p-4 relative overflow-hidden"
+            >
+              <!-- Micro interaction SVG -->
+              <svg
+                class="w-24 h-24 text-accent-cyan animate-spin-slow"
+                viewBox="0 0 100 100"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="50" cy="50" r="35" stroke-dasharray="10 15" />
+                <circle
+                  cx="50"
+                  cy="50"
+                  r="20"
+                  stroke="#3b82f6"
+                  stroke-width="1.5"
+                />
+                <polygon points="50,20 55,30 45,30" fill="#06b6d4" />
+                <polygon points="50,80 55,70 45,70" fill="#06b6d4" />
+              </svg>
             </div>
-
-            <!-- Cute App Mockup Grid -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                <!-- Mockup 1: Minimal Productivity -->
-                <div class="cute-card p-6 flex flex-col items-center text-center group">
-                    <div class="w-full h-52 bg-pastel-sky/40 rounded-2xl mb-6 border-2 border-sky-100 flex items-center justify-center p-4 relative overflow-hidden group-hover:bg-pastel-sky/60 transition-colors">
-                        <!-- Phone Wireframe SVG -->
-                        <svg class="w-32 h-full text-vivid-blue" viewBox="0 0 140 220" fill="none">
-                            <rect x="10" y="10" width="120" height="200" rx="22" fill="white" stroke="#93C5FD" stroke-width="4"/>
-                            <rect x="28" y="32" width="84" height="14" rx="7" fill="#E0F4FF"/>
-                            <circle cx="42" cy="72" r="12" fill="#FFD6E0"/>
-                            <rect x="62" y="66" width="48" height="6" rx="3" fill="#CBD5E1"/>
-                            <rect x="62" y="76" width="32" height="6" rx="3" fill="#E2E8F0"/>
-                            <circle cx="42" cy="112" r="12" fill="#FFF3B0"/>
-                            <rect x="62" y="106" width="48" height="6" rx="3" fill="#CBD5E1"/>
-                            <rect x="62" y="116" width="28" height="6" rx="3" fill="#E2E8F0"/>
-                            <circle cx="42" cy="152" r="12" fill="#D8F3DC"/>
-                            <rect x="62" y="146" width="48" height="6" rx="3" fill="#CBD5E1"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-bold text-gray-800 mb-2">Clean & Pastel UI</h3>
-                    <p class="text-xs text-gray-500 font-medium">눈이 편안하고 마음이 차분해지는 부드러운 파스텔 레이아웃 디자인</p>
-                </div>
-
-                <!-- Mockup 2: Playful Charts -->
-                <div class="cute-card p-6 flex flex-col items-center text-center group">
-                    <div class="w-full h-52 bg-pastel-pink/30 rounded-2xl mb-6 border-2 border-pink-100 flex items-center justify-center p-4 relative overflow-hidden group-hover:bg-pastel-pink/50 transition-colors">
-                        <!-- Cute Chart SVG -->
-                        <svg class="w-full h-full text-vivid-pink" viewBox="0 0 200 120" fill="none">
-                            <path d="M20 90 Q 60 30, 100 65 T 180 25" stroke="#FF5964" stroke-width="5" stroke-linecap="round" fill="none"/>
-                            <circle cx="100" cy="65" r="8" fill="#FFB703"/>
-                            <circle cx="180" cy="25" r="8" fill="#3A86EF"/>
-                            <rect x="30" y="98" width="20" height="12" rx="6" fill="#FFD6E0"/>
-                            <rect x="70" y="98" width="20" height="12" rx="6" fill="#FFF3B0"/>
-                            <rect x="110" y="98" width="20" height="12" rx="6" fill="#E8DFF5"/>
-                            <rect x="150" y="98" width="20" height="12" rx="6" fill="#D0F4DE"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-bold text-gray-800 mb-2">Joyful Data Visuals</h3>
-                    <p class="text-xs text-gray-500 font-medium">데이터의 변화가 마치 게임처럼 아기자기하게 느껴지는 경험</p>
-                </div>
-
-                <!-- Mockup 3: Micro Interactions -->
-                <div class="cute-card p-6 flex flex-col items-center text-center group sm:col-span-2 lg:col-span-1">
-                    <div class="w-full h-52 bg-pastel-purple/30 rounded-2xl mb-6 border-2 border-purple-100 flex items-center justify-center p-4 relative overflow-hidden group-hover:bg-pastel-purple/50 transition-colors">
-                        <!-- Micro interaction SVG -->
-                        <svg class="w-24 h-24 text-vivid-purple animate-spin-slow" viewBox="0 0 100 100" fill="none">
-                            <circle cx="50" cy="50" r="38" stroke="#8B5CF6" stroke-width="4" stroke-dasharray="12 12"/>
-                            <circle cx="50" cy="50" r="22" fill="#E8DFF5"/>
-                            <circle cx="50" cy="20" r="8" fill="#FF5964"/>
-                            <circle cx="80" cy="50" r="8" fill="#FFB703"/>
-                            <circle cx="50" cy="80" r="8" fill="#10B981"/>
-                            <circle cx="20" cy="50" r="8" fill="#3A86EF"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-bold text-gray-800 mb-2">Sweet Micro Motions</h3>
-                    <p class="text-xs text-gray-500 font-medium">손가락이 닿을 때마다 반갑게 통통 튀는 아기자기한 애니메이션 반응</p>
-                </div>
-
-            </div>
-        </section>
+            <h3 class="text-lg font-semibold text-white mb-2">
+              Micro Interactions
+            </h3>
+            <p class="text-xs text-gray-400">
+              손끝에 전해지는 작고 세심한 반응과 모션 감성 디자인
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Footer Section -->
-    <footer class="border-t border-pastel-pink/50 bg-white/90 py-12 px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
-            <div>
-                <p class="text-gray-800 font-extrabold text-base flex items-center justify-center md:justify-start gap-1">
-                    <span>App Store Developer Profile</span>
-                    <span>💖</span>
-                </p>
-                <p class="text-xs text-gray-400 font-medium mt-1">© 2026 Joyful Developer Craft. All rights reserved. Made with love & colorful code.</p>
-            </div>
-
-            <!-- Social Links -->
-            <div class="flex items-center space-x-4">
-                <!-- GitHub Icon -->
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="w-11 h-11 rounded-full bg-pastel-pink/40 hover:bg-vivid-pink hover:text-white border border-pink-200 flex items-center justify-center text-vivid-pink transition-all hover:scale-110 shadow-sm" aria-label="GitHub Profile">
-                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
-                    </svg>
-                </a>
-
-                <!-- App Store Link Icon -->
-                <a href="#" class="w-11 h-11 rounded-full bg-pastel-yellow/50 hover:bg-vivid-yellow hover:text-white border border-yellow-200 flex items-center justify-center text-vivid-yellow transition-all hover:scale-110 shadow-sm" aria-label="App Store">
-                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                        <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.85c.67-.82 1.13-1.96.99-3.1-.98.04-2.18.66-2.88 1.48-.63.73-1.18 1.9-1.03 3.03 1.1.09 2.25-.59 2.92-1.41z"/>
-                    </svg>
-                </a>
-            </div>
+    <footer
+      class="border-t border-white/10 bg-brand-950/80 py-12 px-4 sm:px-6 lg:px-8"
+    >
+      <div
+        class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left"
+      >
+        <div>
+          <p class="text-white font-semibold text-base">Developer Profile</p>
+          <p class="text-xs text-gray-500 mt-1">
+            © 2026 Developer HappyisIT. All rights reserved
+          </p>
         </div>
-    </footer>
 
-</body>
+        <!-- Social / Code Link SVGs -->
+        <div class="flex items-center space-x-5">
+          <!-- GitHub SVG Icon -->
+          <!--<a
+            href="https://github.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-10 h-10 rounded-full bg-white/5 hover:bg-white/15 border border-white/10 flex items-center justify-center text-gray-300 hover:text-white transition-all hover:scale-110"
+            aria-label="GitHub Profile"
+          >
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+              />
+            </svg>
+          </a>-->
+
+          <!-- App Store Link Icon -->
+          <!--<a
+            href="#"
+            class="w-10 h-10 rounded-full bg-white/5 hover:bg-white/15 border border-white/10 flex items-center justify-center text-gray-300 hover:text-white transition-all hover:scale-110"
+            aria-label="App Store"
+          >
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+              <path
+                d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.85c.67-.82 1.13-1.96.99-3.1-.98.04-2.18.66-2.88 1.48-.63.73-1.18 1.9-1.03 3.03 1.1.09 2.25-.59 2.92-1.41z"
+              />
+            </svg>
+          </a>-->
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
