@@ -2,94 +2,104 @@
 <html lang="ko"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>개인정보 처리방침 · 마인드가지</title>
-<meta name="description" content="마인드가지 앱의 개인정보 처리방침">
+<meta name="description" content="마인드가지(MindGazi) 앱의 개인정보 처리방침 — 한국어 · 繁體中文 · Русский · English · Español · Português">
 <link rel="canonical" href="https://happyisit.github.io/mindgazi/privacy.html">
 <meta name="color-scheme" content="light dark">
 <style>
-:root{--bg:#f7f5ff;--card:#fff;--text:#242642;--sub:#6b6e8f;--primary:#7c88f0;--band:#ded9fa;--line:#e6e4f5;--warn:#fde8ec}
-@media (prefers-color-scheme:dark){:root{--bg:#15162a;--card:#1f2040;--text:#ecebff;--sub:#a9abcf;--primary:#9aa5ff;--band:#2b2d57;--line:#33356a;--warn:#3a2230}}
-*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR","Noto Sans CJK KR",system-ui,sans-serif;line-height:1.75;font-size:16px;word-break:keep-all;overflow-wrap:anywhere}
-header{background:linear-gradient(135deg,#8b9af7,#707ee8);color:#fff;padding:36px 20px 30px}
+:root{--bg:#f7f5ff;--card:#fff;--text:#242642;--sub:#6b6e8f;--primary:#7c88f0;--band:#ded9fa;--line:#e6e4f5;--warn:#fde8ec;--info:#eef0ff}
+@media (prefers-color-scheme:dark){:root{--bg:#15162a;--card:#1f2040;--text:#ecebff;--sub:#a9abcf;--primary:#9aa5ff;--band:#2b2d57;--line:#33356a;--warn:#3a2230;--info:#262a55}}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR","Noto Sans TC","PingFang TC","Microsoft JhengHei","Segoe UI",Roboto,system-ui,sans-serif;line-height:1.75;font-size:16px;overflow-wrap:anywhere}
+:lang(ko){word-break:keep-all}
+header{background:linear-gradient(135deg,#8b9af7,#707ee8);color:#fff;padding:30px 20px 46px}
 .wrap{max-width:820px;margin:0 auto}
-header .app{font-size:14px;opacity:.9;margin:0 0 6px;font-weight:600}
-header h1{margin:0;font-size:28px;line-height:1.3}
-header .meta{margin:10px 0 0;font-size:14px;opacity:.92}
-nav.tabs{max-width:820px;margin:-18px auto 0;padding:0 20px;display:flex;gap:8px}
+header .app{font-size:14px;opacity:.9;margin:0;font-weight:600}
+nav.langs{max-width:820px;margin:-26px auto 0;padding:0 20px;display:flex;flex-wrap:wrap;gap:6px}
+nav.langs a{flex:1 1 auto;min-width:96px;text-align:center;padding:9px 10px;border-radius:999px;background:var(--card);color:var(--sub);text-decoration:none;font-weight:700;font-size:14px;border:1px solid var(--line)}
+nav.langs a[aria-current="true"]{background:var(--primary);color:#fff;border-color:var(--primary)}
+main{max-width:820px;margin:18px auto 40px;padding:0 20px}
+.dochead{margin:6px 2px 14px}
+.dochead h1{margin:0;font-size:27px;line-height:1.3}
+.dochead .meta{margin:6px 0 0;color:var(--sub);font-size:14px}
+nav.tabs{display:flex;gap:8px;margin:0 0 16px}
 nav.tabs a{flex:1;text-align:center;padding:11px 8px;border-radius:12px;background:var(--card);color:var(--sub);text-decoration:none;font-weight:700;font-size:15px;border:1px solid var(--line)}
 nav.tabs a.on{background:var(--primary);color:#fff;border-color:var(--primary)}
-main{max-width:820px;margin:20px auto 40px;padding:0 20px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 22px 10px;margin-bottom:16px}
+.tr-note{background:var(--info);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin:0 0 16px;font-size:14.5px}
+.tr-note a{font-weight:700}
 .toc{padding:18px 22px}.toc h3{margin:0 0 8px;font-size:15px;color:var(--sub)}
 .toc ol{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:2px 16px}
 @media (max-width:560px){.toc ol{grid-template-columns:1fr}}
 .toc a{color:var(--primary);text-decoration:none;font-size:14px}
-h2{font-size:18px;margin:28px 0 8px;padding-top:6px;border-top:1px solid var(--line)}
-h2:first-child{border-top:0;margin-top:6px}
-p{margin:8px 0}p.clause{padding-left:1.1em;text-indent:-1.1em}p.sub{padding-left:1.4em;color:var(--sub);font-size:15px}
+h2{font-size:18px;margin:28px 0 8px;padding-top:6px;border-top:1px solid var(--line);scroll-margin-top:12px}
+.card>h2:first-child{border-top:0;margin-top:6px}
+p{margin:8px 0}p.clause{padding-left:1.1em;text-indent:-1.1em}
 ul{margin:8px 0 10px;padding-left:1.2em}li{margin:3px 0}
 a{color:var(--primary)}
-.note{background:var(--warn);border-radius:12px;padding:12px 14px;margin:14px 0;font-size:15px}
-table{width:100%;border-collapse:collapse;font-size:14.5px;margin:10px 0 14px}th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}th{background:var(--band);width:34%}
+table{width:100%;border-collapse:collapse;font-size:14.5px;margin:10px 0 14px}th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}th{background:var(--band);width:30%}
 footer{max-width:820px;margin:0 auto 40px;padding:0 20px;color:var(--sub);font-size:14px;text-align:center}
 footer a{color:var(--sub)}
 </style></head><body>
-<header><div class="wrap"><p class="app">마인드가지 · HappyisIT</p><h1>개인정보 처리방침</h1><p class="meta">시행일 2026년 11월 5일</p></div></header>
-<nav class="tabs"><a class="on" href="privacy.html">개인정보 처리방침</a><a class="" href="terms.html">서비스 이용약관</a></nav>
+<header><div class="wrap"><p class="app">마인드가지 · MindGazi · HappyisIT</p></div></header>
+<nav class="langs" aria-label="Language"><a href="#ko" hreflang="ko" lang="ko" aria-current="true">한국어</a><a href="#zh-Hant" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a><a href="#ru" hreflang="ru" lang="ru">Русский</a><a href="#en" hreflang="en" lang="en">English</a><a href="#es" hreflang="es" lang="es">Español</a><a href="#pt" hreflang="pt" lang="pt">Português</a></nav>
 <main>
-<div class="card toc"><h3>목차</h3><ol><li><a href="#s1">1. 한눈에 보기</a></li><li><a href="#s2">2. 앱이 다루는 정보와 저장 위치</a></li><li><a href="#s3">3. 이용 목적</a></li><li><a href="#s4">4. 보유 및 파기</a></li><li><a href="#s5">5. 제3자 제공 및 처리 위탁</a></li><li><a href="#s6">6. 광고 및 광고 SDK (광고가 포함된 버전에 한함)</a></li><li><a href="#s7">7. 기기 권한</a></li><li><a href="#s8">8. 이용자의 권리</a></li><li><a href="#s9">9. 안전성 확보를 위한 조치</a></li><li><a href="#s10">10. 아동의 개인정보</a></li><li><a href="#s11">11. 개인정보 보호책임자 및 문의</a></li><li><a href="#s12">12. 방침의 변경</a></li><li><a href="#s13">13. 지원 OS 안내</a></li><li><a href="#s14">14. 면책 및 이용자의 책임</a></li><li><a href="#addendum">부칙</a></li></ol></div>
-<div class="card"><p class="">HappyisIT(이하 &quot;개발자&quot;)는 앱 &quot;마인드가지&quot;(이하 &quot;앱&quot;)를 제공하면서 이용자의 개인정보를 소중하게 다루며, 「개인정보 보호법」 등 관련 법령을 지키기 위해 노력합니다. 이 방침은 앱이 어떤 정보를 어떻게 다루는지 알려 드립니다.</p>
-<h2 id="s1">1. 한눈에 보기</h2>
+<section id="ko" lang="ko" data-title="개인정보 처리방침 · 마인드가지">
+<div class="dochead"><h1>개인정보 처리방침</h1><p class="meta">마인드가지 · 시행일 2026년 11월 9일</p></div>
+<nav class="tabs"><a class="on" href="privacy.html#ko">개인정보 처리방침</a><a class="" href="terms.html#ko">서비스 이용약관</a></nav>
+
+<div class="card toc"><h3>목차</h3><ol><li><a href="#ko-s1">1. 한눈에 보기</a></li><li><a href="#ko-s2">2. 앱이 다루는 정보와 저장 위치</a></li><li><a href="#ko-s3">3. 이용 목적</a></li><li><a href="#ko-s4">4. 보유 및 파기</a></li><li><a href="#ko-s5">5. 제3자 제공 및 처리 위탁</a></li><li><a href="#ko-s6">6. 광고 및 광고 SDK (광고가 포함된 버전에 한함)</a></li><li><a href="#ko-s7">7. 기기 권한</a></li><li><a href="#ko-s8">8. 이용자의 권리</a></li><li><a href="#ko-s9">9. 안전성 확보를 위한 조치</a></li><li><a href="#ko-s10">10. 아동의 개인정보</a></li><li><a href="#ko-s11">11. 개인정보 보호책임자 및 문의</a></li><li><a href="#ko-s12">12. 방침의 변경</a></li><li><a href="#ko-s13">13. 지원 OS 안내</a></li><li><a href="#ko-s14">14. 면책 및 이용자의 책임</a></li><li><a href="#ko-s15">부칙</a></li></ol></div>
+<div class="card"><p>HappyisIT(이하 &quot;개발자&quot;)는 앱 &quot;마인드가지&quot;(이하 &quot;앱&quot;)를 제공하면서 이용자의 개인정보를 소중하게 다루며, 「개인정보 보호법」 등 관련 법령을 지키기 위해 노력합니다. 이 방침은 앱이 어떤 정보를 어떻게 다루는지 알려 드립니다.</p>
+<h2 id="ko-s1">1. 한눈에 보기</h2>
 <ul>
 <li>앱은 회원가입이 없으며 이름, 연락처, 이메일 등을 요구하지 않습니다.</li>
 <li>이용자가 입력한 마인드맵과 설정은 이용자의 기기 안에만 저장되며, 개발자의 서버로 전송되지 않습니다. (개발자는 서버를 운영하지 않습니다.)</li>
 <li>따라서 개발자는 이용자의 데이터를 열람할 수도, 복구해 드릴 수도 없습니다. (앱의 &quot;백업 파일로 저장&quot; 기능으로 이용자가 직접 만든 백업 파일은 이용자가 선택한 위치에만 저장됩니다.)</li>
 </ul>
-<h2 id="s2">2. 앱이 다루는 정보와 저장 위치</h2>
-<p class="">앱을 사용하면 기기 내부의 앱 전용 저장 공간에 다음 정보가 저장됩니다.</p>
+<h2 id="ko-s2">2. 앱이 다루는 정보와 저장 위치</h2>
+<p>앱을 사용하면 기기 내부의 앱 전용 저장 공간에 다음 정보가 저장됩니다.</p>
 <ul>
 <li>이용자가 직접 입력한 정보: 마인드맵 제목, 가지 글, 메모, 분류명</li>
 <li>이용 정보: 마인드맵의 위치·색상·생성일·수정일, 즐겨찾기·상단 고정 여부, 가지 사이 연결선과 그 이름, 마지막으로 보던 화면 위치·배율, 최근 사용한 색상, 최근 5일간 받은 에너지 기록(받은 시각·양·종류), 마인드맵별 기능 사용 상태(이미 만든 가지 단계, 연결선 사용 여부 등 에너지 차감 기록)</li>
 <li>설정 정보: 테마, 정렬 방식, 키패드 글자 크기, 화면 캡처 차단·기기 잠금 사용 여부, 에너지 보유량, 마지막 방문일, 광고 시청 횟수와 마지막 광고 시청 시각(하루 지급·광고 한도·광고 대기 시간 계산용), 동의한 약관 버전</li>
 </ul>
-<p class="">이 정보는 앱 전용 저장 공간에 앱이 암호화(AES-256-GCM)한 파일로 저장되며, 암호화 키는 이용자가 정한 숫자 6자리 PIN에서 Argon2id 방식으로 만들어지며 기기에 저장되지 않고, 앱을 켤 때 PIN을 입력하면 그때마다 만들어져 앱을 쓰는 동안에만 메모리에 있습니다. PIN을 잊으면 개발자도 데이터를 열어 드릴 수 없습니다. 이는 파일이 다른 앱이나 일반적인 방법으로 바로 읽히지 않도록 하는 기본적인 보호이며, 모든 상황에서 완전한 보안을 보장하지 않습니다. 기기 잠금은 화면 보호를 위한 기능이며, 비밀번호, 주민등록번호, 계좌번호 등 민감한 정보는 앱에 입력하지 않는 것을 권장합니다.</p>
-<p class="">데이터는 하나의 파일이 아니라 헤더, 설정, 마인드맵 파일(마인드맵 하나당 파일 하나)로 나뉘어 저장되며 모두 암호화됩니다. 한 파일이 손상되어도 나머지는 계속 읽을 수 있고, 목록 화면은 한 번에 30개씩만 불러옵니다.</p>
-<p class="">앱은 PIN으로 들어온 날의 첫 실행에 자동백업 한 벌(최근 5건까지만 남김)을 앱 전용 저장 공간에 스스로 만듭니다. 자동백업은 데이터와 같은 방식으로 암호화되어 있어 그 백업을 만든 시점의 PIN이 있어야 열 수 있고, 개발자의 서버나 다른 곳으로 전송되지 않으며, 앱을 삭제하거나 앱 데이터를 지우면 함께 삭제됩니다. 저장 파일이 손상되었거나 저장 공간이 부족할 때만 앱이 이를 알리고, 이용자가 고르면 자동백업으로 복원합니다. 복원하면 PIN도 그 백업 시점의 값으로 돌아가며, 에너지와 광고 횟수는 복원으로 되살아나지 않습니다.</p>
-<p class="">이용자가 &quot;백업 파일로 저장&quot;을 누르면 마인드맵과 분류가 담긴 암호화된 백업 파일(.bak)이 이용자가 고른 위치에 저장됩니다. 에너지, 광고 시청 횟수, 테마, 약관 동의, 기기 잠금, 화면 캡처 차단 설정은 담기지 않습니다. 백업 파일은 백업을 만들 때 이용자가 정한 비밀번호로 암호화되며, 이 비밀번호는 기기나 개발자에게 저장되지 않습니다. 파일과 비밀번호를 알면 다른 기기에서도 복원할 수 있으므로, 타인에게 전달하거나 공유 폴더에 두지 않도록 주의해 주세요.</p>
-<p class="">이용자가 &quot;내보내기&quot;를 선택하면 마인드맵이 이미지(PNG)·PDF·텍스트 파일로 만들어져 이용자가 고른 위치에 저장되거나(개요 복사는 기기의 클립보드에 복사되며), 이 파일에는 마인드맵 제목, 가지 글, 메모 등이 암호화되지 않은 상태로 담깁니다. 이 파일과 복사한 내용은 개발자의 서버나 광고 서비스로 전송되지 않습니다. 클립보드는 다른 앱이 읽을 수 있고 내보낸 파일은 앱 밖에서 누구든 열 수 있으므로, 보관과 공유에 주의해 주세요. 내보낸 파일과 복사한 내용의 관리 책임은 이용자에게 있습니다.</p>
-<h2 id="s3">3. 이용 목적</h2>
-<p class="">저장된 정보는 마인드맵 제공, 목록 정렬·검색, 에너지 지급·차감과 광고 충전 한도·대기 시간 관리, 약관 재동의 확인 목적으로만 앱 안에서 사용됩니다.</p>
-<h2 id="s4">4. 보유 및 파기</h2>
+<p>이 정보는 앱 전용 저장 공간에 앱이 암호화(AES-256-GCM)한 파일로 저장되며, 암호화 키는 이용자가 정한 숫자 6자리 PIN에서 Argon2id 방식으로 만들어지며 기기에 저장되지 않고, 앱을 켤 때 PIN을 입력하면 그때마다 만들어져 앱을 쓰는 동안에만 메모리에 있습니다. PIN을 잊으면 개발자도 데이터를 열어 드릴 수 없습니다. 이는 파일이 다른 앱이나 일반적인 방법으로 바로 읽히지 않도록 하는 기본적인 보호이며, 모든 상황에서 완전한 보안을 보장하지 않습니다. 기기 잠금은 화면 보호를 위한 기능이며, 비밀번호, 주민등록번호, 계좌번호 등 민감한 정보는 앱에 입력하지 않는 것을 권장합니다.</p>
+<p>데이터는 하나의 파일이 아니라 헤더, 설정, 마인드맵 파일(마인드맵 하나당 파일 하나)로 나뉘어 저장되며 모두 암호화됩니다. 한 파일이 손상되어도 나머지는 계속 읽을 수 있고, 목록 화면은 한 번에 30개씩만 불러옵니다.</p>
+<p>앱은 PIN으로 들어온 날의 첫 실행에 자동백업 한 벌(최근 5건까지만 남김)을 앱 전용 저장 공간에 스스로 만듭니다. 자동백업은 데이터와 같은 방식으로 암호화되어 있어 그 백업을 만든 시점의 PIN이 있어야 열 수 있고, 개발자의 서버나 다른 곳으로 전송되지 않으며, 앱을 삭제하거나 앱 데이터를 지우면 함께 삭제됩니다. 저장 파일이 손상되었거나 저장 공간이 부족할 때만 앱이 이를 알리고, 이용자가 고르면 자동백업으로 복원합니다. 복원하면 PIN도 그 백업 시점의 값으로 돌아가며, 에너지와 광고 횟수는 복원으로 되살아나지 않습니다.</p>
+<p>이용자가 &quot;백업 파일로 저장&quot;을 누르면 마인드맵과 분류가 담긴 암호화된 백업 파일(.bak)이 이용자가 고른 위치에 저장됩니다. 에너지, 광고 시청 횟수, 테마, 약관 동의, 기기 잠금, 화면 캡처 차단 설정은 담기지 않습니다. 백업 파일은 백업을 만들 때 이용자가 정한 비밀번호로 암호화되며, 이 비밀번호는 기기나 개발자에게 저장되지 않습니다. 파일과 비밀번호를 알면 다른 기기에서도 복원할 수 있으므로, 타인에게 전달하거나 공유 폴더에 두지 않도록 주의해 주세요.</p>
+<p>이용자가 &quot;내보내기&quot;를 선택하면 마인드맵이 이미지(PNG)·PDF·텍스트 파일로 만들어져 이용자가 고른 위치에 저장되거나(개요 복사는 기기의 클립보드에 복사되며), 이 파일에는 마인드맵 제목, 가지 글, 메모 등이 암호화되지 않은 상태로 담깁니다. 이 파일과 복사한 내용은 개발자의 서버나 광고 서비스로 전송되지 않습니다. 클립보드는 다른 앱이 읽을 수 있고 내보낸 파일은 앱 밖에서 누구든 열 수 있으므로, 보관과 공유에 주의해 주세요. 내보낸 파일과 복사한 내용의 관리 책임은 이용자에게 있습니다.</p>
+<h2 id="ko-s3">3. 이용 목적</h2>
+<p>저장된 정보는 마인드맵 제공, 목록 정렬·검색, 에너지 지급·차감과 광고 충전 한도·대기 시간 관리, 약관 재동의 확인 목적으로만 앱 안에서 사용됩니다.</p>
+<h2 id="ko-s4">4. 보유 및 파기</h2>
 <ul>
 <li>정보는 이용자의 기기에 저장되어 있는 동안 보유됩니다.</li>
 <li>이용자가 앱에서 마인드맵이나 분류를 삭제하면 해당 정보는 즉시 삭제됩니다.</li>
 <li>앱을 삭제하거나 기기 설정에서 앱 데이터를 삭제하면 앱 안의 모든 정보(에너지 포함)가 삭제되며, 삭제된 정보는 복구할 수 없습니다. 다만 이용자가 미리 만들어 둔 백업 파일은 이용자가 삭제할 때까지 이용자의 저장 위치에 남아 있습니다.</li>
 <li>기기 분실, 초기화, 파일 손상 등으로 데이터가 사라질 수 있으며 개발자는 이를 복구할 수 없습니다. (서비스 이용약관 제7조 참고)</li>
 </ul>
-<h2 id="s5">5. 제3자 제공 및 처리 위탁</h2>
-<p class="">개발자는 이용자의 정보를 제3자에게 제공하거나 처리를 위탁하지 않습니다. 다만 아래 6항의 광고 서비스는 예외로 합니다.</p>
-<h2 id="s6">6. 광고 및 광고 SDK (광고가 포함된 버전에 한함)</h2>
-<p class="">앱은 이용자가 &quot;광고 보고 충전&quot;을 선택했을 때 Google AdMob 또는 Unity Ads(Unity LevelPlay 포함)의 보상형 광고를 표시합니다. 앱 버전과 광고 재고 상황에 따라 둘 중 하나만 쓰거나 둘 다 쓸 수 있으며, 광고를 불러올 수 있는 쪽의 광고가 표시됩니다.</p>
-<p class="">[가] Google AdMob</p>
+<h2 id="ko-s5">5. 제3자 제공 및 처리 위탁</h2>
+<p>개발자는 이용자의 정보를 제3자에게 제공하거나 처리를 위탁하지 않습니다. 다만 아래 6항의 광고 서비스는 예외로 합니다.</p>
+<h2 id="ko-s6">6. 광고 및 광고 SDK (광고가 포함된 버전에 한함)</h2>
+<p>앱은 이용자가 &quot;광고 보고 충전&quot;을 선택했을 때 Google AdMob 또는 Unity Ads(Unity LevelPlay 포함)의 보상형 광고를 표시합니다. 앱 버전과 광고 재고 상황에 따라 둘 중 하나만 쓰거나 둘 다 쓸 수 있으며, 광고를 불러올 수 있는 쪽의 광고가 표시됩니다.</p>
+<p>[가] Google AdMob</p>
 <ul>
 <li>수집·이용하는 자: Google LLC 및 그 계열사</li>
 <li>수집 항목: 광고 식별자(Android 광고 ID)와 앱 세트 ID 등 기기 식별자, IP 주소(대략적인 위치 추정에 쓰일 수 있음), 광고 노출·시청 완료 등 제품 상호작용 정보, 앱·SDK 성능 관련 진단 정보, 기기 정보(기종, 운영체제 버전, 언어 등)</li>
 <li>이용 목적: 광고 제공, 성과 측정·분석, 부정 이용 방지 (기기의 광고 맞춤 설정이 켜져 있으면 맞춤 광고)</li>
 <li>이전 방식: 이 정보는 이용자의 기기에서 Google의 서버(미국 등 국외)로 직접 전송되며, Google의 정책에 따라 보유·이용됩니다.</li>
 </ul>
-<p class="">[나] Unity Ads</p>
+<p>[나] Unity Ads</p>
 <ul>
 <li>수집·이용하는 자: Unity Technologies 및 그 계열사, 광고 파트너</li>
 <li>수집 항목: 광고 식별자(Android 광고 ID) 등 기기 식별자, IP 주소와 이를 바탕으로 한 설치 국가·대략적인 위치, 기기 정보(제조사, 기종, 운영체제 버전, 언어 등), 광고 노출·시청 완료·클릭 등 광고 상호작용 정보, 앱·SDK 성능 및 부정 이용 방지 관련 진단 정보</li>
 <li>이용 목적: 광고 제공, 성과 측정·분석, 부정 이용 방지 (이용자의 광고 개인정보 선택에 따라 맞춤 광고 또는 맥락 광고)</li>
 <li>이전 방식: 이 정보는 이용자의 기기에서 Unity 및 광고 파트너의 서버(미국 등 국외)로 직접 전송되며, Unity의 정책에 따라 보유·이용됩니다.</li>
 </ul>
-<p class="">이용자가 입력한 마인드맵, 메모, 분류, 에너지 정보와 광고 시청 횟수·대기 시간 정보는 광고 SDK에 제공되지 않습니다. 광고 대기 시간은 이용자의 기기 안에서만 계산되며 별도로 전송되지 않습니다.</p>
+<p>이용자가 입력한 마인드맵, 메모, 분류, 에너지 정보와 광고 시청 횟수·대기 시간 정보는 광고 SDK에 제공되지 않습니다. 광고 대기 시간은 이용자의 기기 안에서만 계산되며 별도로 전송되지 않습니다.</p>
 <ul>
 <li>광고를 보지 않아도 앱을 이용할 수 있습니다. 매일 첫 방문 때 지급되는 에너지로 기능을 쓸 수 있고, 광고는 추가로 충전할 때만 필요합니다.</li>
 </ul>
-<p class="">Google의 정보 처리에 관한 자세한 내용은 Google 개인정보처리방침(<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a>)에서, Unity의 정보 처리에 관한 자세한 내용은 Unity 개인정보처리방침(<a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener">https://unity.com/legal/privacy-policy</a>)과 게임 이용자·앱 이용자 개인정보 FAQ(<a href="https://unity.com/legal/game-player-and-app-user-privacy-faq" target="_blank" rel="noopener">https://unity.com/legal/game-player-and-app-user-privacy-faq</a>)에서 확인할 수 있습니다. 광고 맞춤 설정은 기기의 설정 &gt; Google &gt; 광고 메뉴에서 변경하거나 광고 ID를 삭제·초기화할 수 있으며, Unity 광고는 광고 화면의 개인정보 아이콘으로 맞춤 광고 선택을 바꿀 수 있습니다.</p>
-<h2 id="s7">7. 기기 권한</h2>
+<p>Google의 정보 처리에 관한 자세한 내용은 Google 개인정보처리방침(<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a>)에서, Unity의 정보 처리에 관한 자세한 내용은 Unity 개인정보처리방침(<a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener">https://unity.com/legal/privacy-policy</a>)과 게임 이용자·앱 이용자 개인정보 FAQ(<a href="https://unity.com/legal/game-player-and-app-user-privacy-faq" target="_blank" rel="noopener">https://unity.com/legal/game-player-and-app-user-privacy-faq</a>)에서 확인할 수 있습니다. 광고 맞춤 설정은 기기의 설정 &gt; Google &gt; 광고 메뉴에서 변경하거나 광고 ID를 삭제·초기화할 수 있으며, Unity 광고는 광고 화면의 개인정보 아이콘으로 맞춤 광고 선택을 바꿀 수 있습니다.</p>
+<h2 id="ko-s7">7. 기기 권한</h2>
 <ul>
 <li>생체인증/화면 잠금: 기기 잠금 기능이 포함된 버전에서 기기 운영체제의 인증 기능을 사용합니다. 지문·얼굴 정보는 운영체제가 처리하며, 앱과 개발자는 이를 수집하거나 저장하지 않습니다.</li>
 <li>인터넷: 앱 화면을 구성하기 위한 기기 내부 통신과 광고 표시에 사용됩니다.</li>
@@ -97,9 +107,9 @@ footer a{color:var(--sub)}
 <li>화면 보호: 일부 버전에서는 마인드맵 보호를 위해 앱 화면의 캡처·녹화·미러링이 제한될 수 있으며, 설정에서 끌 수 있습니다.</li>
 <li>파일 저장/선택: 백업 파일을 저장하거나 불러올 때 시스템 파일 화면을 사용하며, 별도의 저장소 접근 권한은 요구하지 않습니다.</li>
 </ul>
-<h2 id="s8">8. 이용자의 권리</h2>
-<p class="">이용자는 앱 안에서 입력한 정보를 언제든지 열람, 수정, 삭제할 수 있으며, 앱을 삭제하여 모든 정보를 삭제할 수 있습니다. 개발자는 이용자의 정보를 보관하고 있지 않으므로 별도의 열람·삭제 요청 대상이 되는 정보가 없습니다.</p>
-<h2 id="s9">9. 안전성 확보를 위한 조치</h2>
+<h2 id="ko-s8">8. 이용자의 권리</h2>
+<p>이용자는 앱 안에서 입력한 정보를 언제든지 열람, 수정, 삭제할 수 있으며, 앱을 삭제하여 모든 정보를 삭제할 수 있습니다. 개발자는 이용자의 정보를 보관하고 있지 않으므로 별도의 열람·삭제 요청 대상이 되는 정보가 없습니다.</p>
+<h2 id="ko-s9">9. 안전성 확보를 위한 조치</h2>
 <ul>
 <li>이용자 정보를 개발자의 서버로 전송하지 않음</li>
 <li>앱 전용 저장 공간에 암호화하여 저장 (암호화 키는 이용자의 PIN에서 만들어지며 기기에 저장되지 않음)</li>
@@ -108,43 +118,542 @@ footer a{color:var(--sub)}
 <li>이용자가 입력한 정보를 광고 SDK(AdMob·Unity Ads)에 제공하지 않음</li>
 <li>(선택) 기기 잠금 및 화면 캡처 차단 기능 지원</li>
 </ul>
-<p class="">이용자께서도 기기에 화면 잠금을 설정해 사용하시기를 권장합니다.</p>
-<h2 id="s10">10. 아동의 개인정보</h2>
-<p class="">앱은 만 16세 미만 아동을 대상으로 하지 않으며, 만 16세 미만 아동의 개인정보를 의도적으로 수집하지 않습니다. 입력된 내용은 이용자의 기기에만 저장되고, 광고 SDK가 수집하는 정보는 6항에 따릅니다.</p>
-<h2 id="s11">11. 개인정보 보호책임자 및 문의</h2>
+<p>이용자께서도 기기에 화면 잠금을 설정해 사용하시기를 권장합니다.</p>
+<h2 id="ko-s10">10. 아동의 개인정보</h2>
+<p>앱은 만 16세 미만 아동을 대상으로 하지 않으며, 만 16세 미만 아동의 개인정보를 의도적으로 수집하지 않습니다. 입력된 내용은 이용자의 기기에만 저장되고, 광고 SDK가 수집하는 정보는 6항에 따릅니다.</p>
+<h2 id="ko-s11">11. 개인정보 보호책임자 및 문의</h2>
 <ul>
 <li>책임자: HappyisIT</li>
 <li>문의: <a href="mailto:happyisit@gmail.com">happyisit@gmail.com</a></li>
 </ul>
-<h2 id="s12">12. 방침의 변경</h2>
-<p class="">이 방침이 변경되는 경우 앱 업데이트 또는 앱 내 안내를 통해 알립니다. 중요한 변경은 앱이 업데이트된 뒤 처음 실행할 때 동의 화면으로 다시 보여 드립니다. 광고 등으로 수집하는 항목이 달라지는 경우에는 시행 전에 알립니다.</p>
-<h2 id="s13">13. 지원 OS 안내</h2>
-<p class="">앱은 Android 13 이상에서 이용할 수 있습니다. 더 낮은 버전의 Android 기기에서는 앱을 설치하거나 업데이트할 수 없습니다. 어느 버전이든 개발자는 서버를 운영하지 않으며, 이용자가 입력한 정보는 이용자의 기기 안에만 저장됩니다.</p>
-<h2 id="s14">14. 면책 및 이용자의 책임</h2>
+<h2 id="ko-s12">12. 방침의 변경</h2>
+<p>이 방침이 변경되는 경우 앱 업데이트 또는 앱 내 안내를 통해 알립니다. 중요한 변경은 앱이 업데이트된 뒤 처음 실행할 때 동의 화면으로 다시 보여 드립니다. 광고 등으로 수집하는 항목이 달라지는 경우에는 시행 전에 알립니다. 이 방침은 한국어로 작성되었으며, 다른 언어로 번역된 방침은 참고용입니다. 한국어 방침과 번역본의 내용이 다르면 한국어 방침이 우선합니다.</p>
+<h2 id="ko-s13">13. 지원 OS 안내</h2>
+<p>앱은 Android 13 이상에서 이용할 수 있습니다. 더 낮은 버전의 Android 기기에서는 앱을 설치하거나 업데이트할 수 없습니다. 어느 버전이든 개발자는 서버를 운영하지 않으며, 이용자가 입력한 정보는 이용자의 기기 안에만 저장됩니다.</p>
+<h2 id="ko-s14">14. 면책 및 이용자의 책임</h2>
 <ul>
 <li>앱은 &quot;있는 그대로(AS IS)&quot; 제공되며, 개발자는 앱의 무오류성, 백업 및 복원 기능의 완벽성, 데이터의 완전성을 보증하지 않습니다.</li>
 <li>앱 안에 저장된 데이터의 관리 책임은 이용자 본인에게 있습니다. 기기 변경, 앱 삭제, 업데이트, 개발자의 버그, 기기 고장 등 다양한 원인으로 인한 데이터 유실에 대비해 이용자는 중요한 데이터를 별도로 백업해야 합니다.</li>
-<li>개발자는 앱 사용 중 발생한 데이터의 유실, 백업·복원 실패, 그 밖의 간접적·특별적·결과적 손해에 대해 고의 또는 중대한 과실이 없는 한 책임을 지지 않습니다.</li>
+<li>개발자는 앱 사용 중 발생한 데이터의 유실, 백업·복원 실패, 광고 미송출, 그 밖의 간접적·특별적·결과적·부수적 손해에 대해 고의 또는 중대한 과실이 없는 한 책임을 지지 않으며, 책임이 인정되는 경우의 배상 한도는 서비스 이용약관 제11조에 따릅니다.</li>
 <li>자세한 내용은 서비스 이용약관 제7조와 제11조를 참고해 주세요.</li>
 </ul>
-<h2 id="addendum">부칙</h2>
-<p class="">이 방침은 2026년 11월 5일부터 시행합니다.</p></div>
-
-<div class="card" id="en"><h2 style="border-top:0;margin-top:6px">English Summary</h2>
-<p><b>마인드가지 (MindGazi)</b> is a personal mind-map app. It has no sign-up or account system and the developer operates no server.</p>
+<h2 id="ko-s15">부칙</h2>
+<p>이 방침은 2026년 11월 9일부터 시행합니다.</p></div>
+<div class="card"><h2>개정 이력</h2><table><tr><th>시행일</th><td>2026년 11월 9일 (이번 개정) · 2026년 11월 5일 · 2026년 10월 29일 (최초 시행)</td></tr><tr><th>적용 앱 / 버전</th><td>마인드가지 (Android) v1.3.1 · Android 13 이상</td></tr><tr><th>이번 개정 주요 내용</th><td>한국어본 우선 원칙, 면책 문구 보완(광고 미송출·배상 한도는 약관 제11조), 6개 국어 번역 제공</td></tr></table></div>
+</section>
+<section id="zh-Hant" lang="zh-Hant" hidden="" data-title="隱私權政策 · MindGazi (마인드가지)">
+<div class="dochead"><h1>隱私權政策</h1><p class="meta">MindGazi (마인드가지) · 施行日 2026年11月9日</p></div>
+<nav class="tabs"><a class="on" href="privacy.html#zh-Hant">隱私權政策</a><a class="" href="terms.html#zh-Hant">服務條款</a></nav>
+<div class="tr-note">本頁為參考用譯本。韓文版為正本，若內容或解釋有所不同，以韓文版為準。 <a href="#ko">한국어 원문 보기</a></div>
+<div class="card toc"><h3>目錄</h3><ol><li><a href="#zh-Hant-s1">1. 重點摘要</a></li><li><a href="#zh-Hant-s2">2. 本App處理的資訊及儲存位置</a></li><li><a href="#zh-Hant-s3">3. 使用目的</a></li><li><a href="#zh-Hant-s4">4. 保存及銷毀</a></li><li><a href="#zh-Hant-s5">5. 提供第三方及委託處理</a></li><li><a href="#zh-Hant-s6">6. 廣告及廣告SDK（僅限包含廣告的版本）</a></li><li><a href="#zh-Hant-s7">7. 裝置權限</a></li><li><a href="#zh-Hant-s8">8. 使用者的權利</a></li><li><a href="#zh-Hant-s9">9. 確保安全的措施</a></li><li><a href="#zh-Hant-s10">10. 兒童的個人資料</a></li><li><a href="#zh-Hant-s11">11. 個人資料保護負責人及聯絡方式</a></li><li><a href="#zh-Hant-s12">12. 政策的變更</a></li><li><a href="#zh-Hant-s13">13. 支援的作業系統</a></li><li><a href="#zh-Hant-s14">14. 免責及使用者的責任</a></li><li><a href="#zh-Hant-s15">附則</a></li></ol></div>
+<div class="card"><p>HappyisIT（以下稱「開發者」）在提供App「MindGazi」（以下稱「本App」）時重視使用者的個人資料，並致力遵守大韓民國《個人資訊保護法》等相關法令。本政策說明本App處理哪些資訊以及如何處理。</p>
+<h2 id="zh-Hant-s1">1. 重點摘要</h2>
 <ul>
-<li><b>Your content stays on your device.</b> Mind maps, notes, categories and settings are stored only in the app's private storage, encrypted (AES-256-GCM) with a key derived (Argon2id) from a 6-digit PIN the user chooses. The PIN is not stored; nothing is sent to the developer.</li>
-<li><b>Ads:</b> The app shows opt-in rewarded ads through Google AdMob and/or Unity Ads only when the user chooses "watch an ad to recharge energy" (up to 5 per day, with a 180-second wait between ads, calculated on the device only). Google and Unity may collect the advertising ID and other device identifiers, IP address (which may be used to estimate country or general location), ad interactions, diagnostics and device information. User-entered content, ad counts and wait times are never shared with the SDKs.</li>
-<li><b>Backups:</b> The app keeps up to 5 automatic backups inside its private storage (deleted with the app). Users can also export an encrypted backup file (.bak) protected by a password they choose, saved only where the user selects. The developer cannot read or recover either.</li>
-<li><b>Permissions:</b> biometric/screen lock (optional app lock), internet (local app UI and ads), advertising ID. No location, contacts, camera, microphone or storage-wide access.</li>
-<li><b>Deletion:</b> Uninstall the app or clear app data to delete all data. There are no accounts.</li>
-<li><b>Disclaimer &amp; your responsibility:</b> The app is provided "AS IS" without warranty of error-free operation, of the completeness of the backup/restore function, or of data integrity. Users are responsible for managing their data and must keep their own backups; the developer is not liable for data loss, failed backup/restore, or indirect, special or consequential damages unless caused by willful misconduct or gross negligence.</li>
-<li><b>Age / OS:</b> The app is not directed to children under 16 and requires Android 13 or later.</li>
-<li><b>Contact:</b> <a href="mailto:happyisit@gmail.com">happyisit@gmail.com</a></li>
-</ul></div>
-
-<div class="card"><h2 style="border-top:0;margin-top:6px">개정 이력</h2>
-<table><tr><th>시행일</th><td>'+DATE+' (이번 개정) · 2026년 10월 29일 (최초 시행)</td></tr><tr><th>적용 앱 / 버전</th><td>마인드가지 (Android) v1.2.0 · Android 13 이상</td></tr><tr><th>주요 내용</th><td>PIN(Argon2id) 기반 암호화, 자동백업, 만 16세 이상 이용, 이용 한도, 지원 OS 안내, 광고 SDK 수집 항목, 면책 및 이용자의 책임(AS IS·백업 책임·손해배상 제한), 내보내기 파일(이미지·PDF·텍스트)의 비암호화 안내, 연결선·보던 위치·기능 사용 상태 저장, 에너지 정책의 변경 가능성(포괄 규정)</td></tr></table></div>
+<li>本App沒有會員註冊，不要求姓名、聯絡方式、電子郵件等資訊。</li>
+<li>使用者輸入的心智圖與設定僅儲存於使用者的裝置內，不會傳送到開發者的伺服器。（開發者不營運伺服器。）</li>
+<li>因此開發者無法查看，也無法為您復原資料。（使用者以本App的「儲存為備份檔案」功能自行製作的備份檔案，僅儲存於使用者選擇的位置。）</li>
+</ul>
+<h2 id="zh-Hant-s2">2. 本App處理的資訊及儲存位置</h2>
+<p>使用本App時，下列資訊會儲存在裝置內部的App專用儲存空間。</p>
+<ul>
+<li>使用者直接輸入的資訊：心智圖標題、分支文字、備註、分類名稱</li>
+<li>使用資訊：心智圖的位置・顏色・建立日・修改日、我的最愛・置頂與否、分支間的連接線及其名稱、最後查看的畫面位置・縮放比例、最近使用的顏色、最近5天領取的能量紀錄（領取時間・數量・種類）、各心智圖的功能使用狀態（已建立的分支層級、是否使用連接線等能量扣除紀錄）</li>
+<li>設定資訊：主題、排序方式、鍵盤字體大小、是否使用禁止螢幕擷取・裝置鎖定、能量持有量、最後造訪日、廣告觀看次數及最後觀看廣告的時間（用於計算每日發放・廣告上限・廣告等待時間）、已同意的條款版本</li>
+</ul>
+<p>這些資訊以App加密（AES-256-GCM）的檔案儲存在App專用儲存空間。加密金鑰是以Argon2id方式從使用者設定的6位數字PIN產生，不會儲存在裝置上；每次啟動App輸入PIN時才產生，且僅在使用App期間存在於記憶體中。忘記PIN時，開發者也無法為您開啟資料。這是讓檔案無法被其他App或一般方法直接讀取的基本保護，不保證在所有情況下都能完全安全。裝置鎖定是用於保護畫面的功能，建議不要在本App中輸入密碼、身分證字號、帳號等敏感資訊。</p>
+<p>資料不是儲存為單一檔案，而是分為標頭、設定、心智圖檔案（每個心智圖一個檔案）儲存，且全部加密。即使其中一個檔案損毀，其餘檔案仍可讀取；列表畫面一次只載入30筆。</p>
+<p>本App會在以PIN進入的當天首次啟動時，自動在App專用儲存空間製作一份自動備份（僅保留最近5份）。自動備份以與資料相同的方式加密，必須使用製作該備份時的PIN才能開啟；不會傳送到開發者的伺服器或其他地方，刪除App或App資料時會一併刪除。只有在儲存檔案損毀或儲存空間不足時，本App才會通知您，並在您選擇時以自動備份還原。還原後PIN也會回到該備份時的值，能量與廣告次數不會因還原而恢復。</p>
+<p>使用者點選「儲存為備份檔案」時，包含心智圖與分類的加密備份檔案（.bak）會儲存在使用者選擇的位置。其中不包含能量、廣告觀看次數、主題、條款同意、裝置鎖定、禁止螢幕擷取等設定。備份檔案以製作備份時使用者設定的密碼加密，此密碼不會儲存在裝置或開發者處。只要知道檔案與密碼，即可在其他裝置上還原，請勿交給他人或放在共用資料夾。</p>
+<p>使用者選擇「匯出」時，心智圖會製作成圖片（PNG）・PDF・文字檔案並儲存在使用者選擇的位置（複製大綱則複製到裝置的剪貼簿），這些檔案會以未加密狀態包含心智圖標題、分支文字、備註等。這些檔案與複製的內容不會傳送到開發者的伺服器或廣告服務。剪貼簿可被其他App讀取，匯出的檔案在App之外任何人都能開啟，保管與分享時請多加注意。匯出的檔案與複製內容的管理責任歸屬於使用者。</p>
+<h2 id="zh-Hant-s3">3. 使用目的</h2>
+<p>儲存的資訊僅在App內用於提供心智圖、列表排序・搜尋、能量的發放・扣除與廣告充值上限・等待時間管理，以及確認是否需要重新同意條款。</p>
+<h2 id="zh-Hant-s4">4. 保存及銷毀</h2>
+<ul>
+<li>資訊於儲存在使用者裝置期間保存。</li>
+<li>使用者在App中刪除心智圖或分類時，該資訊會立即刪除。</li>
+<li>刪除App或在裝置設定中刪除App資料時，App內的所有資訊（包含能量）都會刪除，且無法復原。但使用者事先製作的備份檔案，在使用者刪除之前會保留在使用者的儲存位置。</li>
+<li>資料可能因裝置遺失、初始化、檔案損毀等原因消失，開發者無法復原。（請參閱服務條款第7條）</li>
+</ul>
+<h2 id="zh-Hant-s5">5. 提供第三方及委託處理</h2>
+<p>開發者不會將使用者的資訊提供給第三方或委託處理。但下列第6項的廣告服務除外。</p>
+<h2 id="zh-Hant-s6">6. 廣告及廣告SDK（僅限包含廣告的版本）</h2>
+<p>使用者選擇「看廣告充值」時，本App會顯示Google AdMob或Unity Ads（包含Unity LevelPlay）的獎勵式廣告。依App版本及廣告庫存狀況，可能只使用其中之一或兩者皆使用，並顯示可載入廣告的一方的廣告。</p>
+<p>［甲］Google AdMob</p>
+<ul>
+<li>蒐集・利用者：Google LLC及其關係企業</li>
+<li>蒐集項目：廣告識別碼（Android廣告ID）與應用程式組ID等裝置識別碼、IP位址（可能用於推估大略位置）、廣告曝光・觀看完成等產品互動資訊、App・SDK效能相關診斷資訊、裝置資訊（機型、作業系統版本、語言等）</li>
+<li>利用目的：提供廣告、成效衡量・分析、防止不當使用（若裝置的廣告個人化設定為開啟，則提供個人化廣告）</li>
+<li>傳輸方式：這些資訊會從使用者的裝置直接傳送到Google的伺服器（美國等境外），並依Google的政策保存・利用。</li>
+</ul>
+<p>［乙］Unity Ads</p>
+<ul>
+<li>蒐集・利用者：Unity Technologies及其關係企業、廣告合作夥伴</li>
+<li>蒐集項目：廣告識別碼（Android廣告ID）等裝置識別碼、IP位址及據此推估的安裝國家・大略位置、裝置資訊（製造商、機型、作業系統版本、語言等）、廣告曝光・觀看完成・點擊等廣告互動資訊、App・SDK效能及防止不當使用相關診斷資訊</li>
+<li>利用目的：提供廣告、成效衡量・分析、防止不當使用（依使用者的廣告隱私選擇提供個人化廣告或情境廣告）</li>
+<li>傳輸方式：這些資訊會從使用者的裝置直接傳送到Unity及廣告合作夥伴的伺服器（美國等境外），並依Unity的政策保存・利用。</li>
+</ul>
+<p>使用者輸入的心智圖、備註、分類、能量資訊，以及廣告觀看次數・等待時間資訊，不會提供給廣告SDK。廣告等待時間僅在使用者的裝置內計算，不會另行傳送。</p>
+<ul>
+<li>不看廣告也能使用本App。可使用每日首次造訪時發放的能量來使用功能，只有在額外充值時才需要廣告。</li>
+</ul>
+<p>關於Google的資訊處理詳情，請參閱Google隱私權政策（<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a>）；關於Unity的資訊處理詳情，請參閱Unity隱私權政策（<a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener">https://unity.com/legal/privacy-policy</a>）及遊戲玩家・App使用者隱私權常見問題（<a href="https://unity.com/legal/game-player-and-app-user-privacy-faq" target="_blank" rel="noopener">https://unity.com/legal/game-player-and-app-user-privacy-faq</a>）。您可在裝置的「設定 &gt; Google &gt; 廣告」選單中變更廣告個人化設定，或刪除・重設廣告ID；Unity廣告可透過廣告畫面的隱私權圖示變更個人化廣告選擇。</p>
+<h2 id="zh-Hant-s7">7. 裝置權限</h2>
+<ul>
+<li>生物辨識/螢幕鎖定：在包含裝置鎖定功能的版本中，使用裝置作業系統的驗證功能。指紋・臉部資訊由作業系統處理，App與開發者不會蒐集或儲存。</li>
+<li>網際網路：用於建構App畫面的裝置內部通訊及顯示廣告。</li>
+<li>廣告ID：為提供AdMob・Unity Ads獎勵式廣告，使用Android廣告ID（AD_ID）權限，您可在裝置設定中刪除或重設廣告ID。</li>
+<li>畫面保護：部分版本為保護心智圖，可能限制App畫面的擷取・錄影・投影，您可在設定中關閉。</li>
+<li>檔案儲存/選擇：儲存或匯入備份檔案時使用系統檔案畫面，不要求另外的儲存空間存取權限。</li>
+</ul>
+<h2 id="zh-Hant-s8">8. 使用者的權利</h2>
+<p>使用者可隨時查看、修改、刪除在App中輸入的資訊，也可刪除App以刪除所有資訊。開發者未保管使用者的資訊，因此沒有可另行申請查閱・刪除的資訊。</p>
+<h2 id="zh-Hant-s9">9. 確保安全的措施</h2>
+<ul>
+<li>不將使用者資訊傳送到開發者的伺服器</li>
+<li>以加密方式儲存在App專用儲存空間（加密金鑰由使用者的PIN產生，不儲存在裝置上）</li>
+<li>自動備份僅保管於App專用儲存空間（最近5份，刪除App時一併刪除）</li>
+<li>備份檔案以使用者設定的密碼加密</li>
+<li>不將使用者輸入的資訊提供給廣告SDK（AdMob・Unity Ads）</li>
+<li>（選擇性）支援裝置鎖定及禁止螢幕擷取功能</li>
+</ul>
+<p>也建議使用者在裝置上設定螢幕鎖定。</p>
+<h2 id="zh-Hant-s10">10. 兒童的個人資料</h2>
+<p>本App不以未滿16歲的兒童為對象，也不會蓄意蒐集未滿16歲兒童的個人資料。輸入的內容僅儲存在使用者的裝置，廣告SDK蒐集的資訊依第6項規定。</p>
+<h2 id="zh-Hant-s11">11. 個人資料保護負責人及聯絡方式</h2>
+<ul>
+<li>負責人：HappyisIT</li>
+<li>聯絡：<a href="mailto:happyisit@gmail.com">happyisit@gmail.com</a></li>
+</ul>
+<h2 id="zh-Hant-s12">12. 政策的變更</h2>
+<p>本政策變更時，將透過App更新或App內通知告知。重要的變更將於App更新後首次啟動時以同意畫面再次顯示。因廣告等原因蒐集的項目有所變更時，將於施行前告知。本政策以韓文撰寫，翻譯成其他語言的政策僅供參考。若韓文政策與譯本內容不同，以韓文政策為準。</p>
+<h2 id="zh-Hant-s13">13. 支援的作業系統</h2>
+<p>本App可在Android 13以上版本使用。在較低版本的Android裝置上無法安裝或更新本App。不論任何版本，開發者都不營運伺服器，使用者輸入的資訊僅儲存在使用者的裝置內。</p>
+<h2 id="zh-Hant-s14">14. 免責及使用者的責任</h2>
+<ul>
+<li>本App係依「現狀（AS IS）」提供，開發者不保證App沒有錯誤、備份及還原功能完善，以及資料的完整性。</li>
+<li>App內儲存資料的管理責任歸屬於使用者本人。為防範因更換裝置、刪除App、更新、開發者的漏洞、裝置故障等各種原因造成的資料遺失，使用者應另行備份重要資料。</li>
+<li>除有故意或重大過失外，對於使用App期間發生的資料遺失、備份・還原失敗、廣告未播送，以及其他間接・特別・衍生・附帶損害，開發者不負責任；經認定應負責任時，賠償上限依服務條款第11條規定。</li>
+<li>詳細內容請參閱服務條款第7條及第11條。</li>
+</ul>
+<h2 id="zh-Hant-s15">附則</h2>
+<p>本政策自2026年11月9日起施行。</p></div>
+<div class="card"><h2>修訂紀錄</h2><table><tr><th>施行日</th><td>2026年11月9日 (本次修訂) · 2026年11月5日 · 2026年10月29日 (首次施行)</td></tr><tr><th>適用App／版本</th><td>MindGazi (마인드가지) (Android) v1.3.1 · Android 13以上</td></tr><tr><th>本次修訂重點</th><td>以韓文版為準之原則、補充免責文字（廣告未播送・賠償上限依條款第11條）、提供6種語言譯本</td></tr></table></div>
+</section>
+<section id="ru" lang="ru" hidden="" data-title="Политика конфиденциальности · MindGazi (마인드가지)">
+<div class="dochead"><h1>Политика конфиденциальности</h1><p class="meta">MindGazi (마인드가지) · Дата вступления в силу 9 ноября 2026 г.</p></div>
+<nav class="tabs"><a class="on" href="privacy.html#ru">Политика конфиденциальности</a><a class="" href="terms.html#ru">Условия использования</a></nav>
+<div class="tr-note">Это перевод, предоставленный для справки. Официальной является корейская версия; при расхождении в содержании или толковании преимущественную силу имеет корейская версия. <a href="#ko">한국어 원문 보기</a></div>
+<div class="card toc"><h3>Содержание</h3><ol><li><a href="#ru-s1">1. Кратко</a></li><li><a href="#ru-s2">2. Обрабатываемая информация и место хранения</a></li><li><a href="#ru-s3">3. Цели использования</a></li><li><a href="#ru-s4">4. Хранение и уничтожение</a></li><li><a href="#ru-s5">5. Передача третьим лицам и поручение обработки</a></li><li><a href="#ru-s6">6. Реклама и рекламные SDK (только в версиях с рекламой)</a></li><li><a href="#ru-s7">7. Разрешения устройства</a></li><li><a href="#ru-s8">8. Права пользователя</a></li><li><a href="#ru-s9">9. Меры по обеспечению безопасности</a></li><li><a href="#ru-s10">10. Персональные данные детей</a></li><li><a href="#ru-s11">11. Ответственный за защиту персональных данных и контакты</a></li><li><a href="#ru-s12">12. Изменение Политики</a></li><li><a href="#ru-s13">13. Поддерживаемые ОС</a></li><li><a href="#ru-s14">14. Отказ от ответственности и ответственность пользователя</a></li><li><a href="#ru-s15">Заключительное положение</a></li></ol></div>
+<div class="card"><p>HappyisIT (далее — «Разработчик»), предоставляя приложение «MindGazi» (далее — «Приложение»), бережно относится к персональным данным пользователей и стремится соблюдать применимое законодательство, включая Закон Республики Корея о защите персональной информации. Настоящая Политика объясняет, какую информацию обрабатывает Приложение и каким образом.</p>
+<h2 id="ru-s1">1. Кратко</h2>
+<ul>
+<li>В Приложении нет регистрации; оно не запрашивает имя, контактные данные, адрес электронной почты и т. п.</li>
+<li>Введённые пользователем интеллект-карты и настройки хранятся только на его устройстве и не передаются на серверы Разработчика. (Разработчик не использует серверы.)</li>
+<li>Поэтому Разработчик не может ни просмотреть, ни восстановить данные пользователя. (Файлы резервной копии, созданные пользователем с помощью функции «Сохранить файл резервной копии», сохраняются только в выбранное им место.)</li>
+</ul>
+<h2 id="ru-s2">2. Обрабатываемая информация и место хранения</h2>
+<p>При использовании Приложения в его закрытом хранилище на устройстве сохраняется следующая информация.</p>
+<ul>
+<li>Информация, вводимая пользователем: заголовки интеллект-карт, текст ветвей, заметки, названия категорий</li>
+<li>Сведения об использовании: положение, цвет, дата создания и изменения интеллект-карт; отметки «избранное» и «закреплено»; соединительные линии между ветвями и их названия; последняя просмотренная позиция экрана и масштаб; недавно использованные цвета; полученная за последние 5 дней энергия (время, количество и вид); состояние использования функций для каждой карты (уже созданные уровни ветвей, использование соединительных линий и иные записи о списании энергии)</li>
+<li>Настройки: тема, порядок сортировки, размер шрифта клавиатуры, включены ли запрет снимков экрана и блокировка устройства, баланс энергии, дата последнего посещения, количество просмотров рекламы и время последнего просмотра (для расчёта ежедневного начисления, лимита рекламы и времени ожидания), версия принятых условий</li>
+</ul>
+<p>Эта информация хранится в закрытом хранилище Приложения в виде файлов, зашифрованных Приложением (AES-256-GCM). Ключ шифрования создаётся по алгоритму Argon2id из выбранного пользователем 6-значного PIN-кода; он не хранится на устройстве, создаётся каждый раз при вводе PIN-кода при запуске Приложения и находится в памяти только во время использования Приложения. Если вы забудете PIN-код, даже Разработчик не сможет открыть ваши данные. Это базовая защита, не позволяющая другим приложениям или обычными способами напрямую прочитать файлы; она не гарантирует полной безопасности во всех ситуациях. Блокировка устройства — функция защиты экрана; рекомендуем не вводить в Приложение конфиденциальные сведения, такие как пароли, идентификационные номера или номера банковских счетов.</p>
+<p>Данные хранятся не одним файлом, а раздельно — заголовок, настройки и файлы интеллект-карт (по одному файлу на карту), — и все они зашифрованы. Даже если один файл повреждён, остальные читаются; экран списка загружает только по 30 элементов за раз.</p>
+<p>При первом запуске в день, когда вход выполнен с PIN-кодом, Приложение само создаёт в своём закрытом хранилище одну автоматическую резервную копию (хранятся только последние 5). Автоматические копии зашифрованы так же, как данные, поэтому открыть их можно только PIN-кодом, действовавшим на момент создания копии; они не передаются на серверы Разработчика или куда-либо ещё и удаляются вместе с Приложением или его данными. Приложение сообщает о них только при повреждении сохранённых файлов или нехватке памяти и выполняет восстановление из автоматической копии, если пользователь это выберет. При восстановлении PIN-код также возвращается к значению на момент создания копии, а энергия и количество просмотров рекламы не восстанавливаются.</p>
+<p>Когда пользователь нажимает «Сохранить файл резервной копии», зашифрованный файл резервной копии (.bak) с интеллект-картами и категориями сохраняется в выбранное им место. Он не содержит энергию, количество просмотров рекламы, тему, согласие с условиями, настройки блокировки устройства и запрета снимков экрана. Файл резервной копии шифруется паролем, который пользователь задаёт при создании копии; этот пароль не хранится ни на устройстве, ни у Разработчика. Зная файл и пароль, его можно восстановить на другом устройстве, поэтому не передавайте его другим и не храните в общих папках.</p>
+<p>Когда пользователь выбирает «Экспорт», интеллект-карта превращается в файл изображения (PNG), PDF или текста и сохраняется в выбранное место (при «копировании структуры» — копируется в буфер обмена устройства); эти файлы содержат заголовок карты, текст ветвей, заметки и т. п. в незашифрованном виде. Эти файлы и скопированное содержимое не передаются на серверы Разработчика или рекламным сервисам. Буфер обмена могут читать другие приложения, а экспортированные файлы может открыть кто угодно вне Приложения, поэтому будьте внимательны при их хранении и передаче. Ответственность за управление экспортированными файлами и скопированным содержимым несёт пользователь.</p>
+<h2 id="ru-s3">3. Цели использования</h2>
+<p>Сохранённая информация используется только внутри Приложения для работы интеллект-карт, сортировки и поиска в списке, начисления и списания энергии, контроля лимита пополнения за рекламу и времени ожидания, а также для проверки необходимости повторного согласия с условиями.</p>
+<h2 id="ru-s4">4. Хранение и уничтожение</h2>
+<ul>
+<li>Информация хранится, пока она находится на устройстве пользователя.</li>
+<li>Когда пользователь удаляет интеллект-карту или категорию в Приложении, соответствующая информация удаляется немедленно.</li>
+<li>При удалении Приложения или его данных в настройках устройства вся информация в Приложении (включая энергию) удаляется и не может быть восстановлена. Однако заранее созданные пользователем файлы резервной копии остаются в выбранном им месте, пока он их не удалит.</li>
+<li>Данные могут быть утрачены из-за потери устройства, сброса, повреждения файлов и т. п., и Разработчик не может их восстановить. (См. статью 7 Условий использования.)</li>
+</ul>
+<h2 id="ru-s5">5. Передача третьим лицам и поручение обработки</h2>
+<p>Разработчик не передаёт информацию пользователей третьим лицам и не поручает её обработку, за исключением рекламных сервисов, указанных в разделе 6.</p>
+<h2 id="ru-s6">6. Реклама и рекламные SDK (только в версиях с рекламой)</h2>
+<p>Когда пользователь выбирает «Пополнить, посмотрев рекламу», Приложение показывает рекламу с вознаграждением Google AdMob или Unity Ads (включая Unity LevelPlay). В зависимости от версии Приложения и наличия рекламы может использоваться один из сервисов или оба, и показывается реклама того сервиса, который смог её загрузить.</p>
+<p>[А] Google AdMob</p>
+<ul>
+<li>Кто собирает и использует: Google LLC и её аффилированные лица</li>
+<li>Собираемые данные: идентификаторы устройства, такие как рекламный идентификатор (рекламный идентификатор Android) и идентификатор набора приложений; IP-адрес (может использоваться для определения приблизительного местоположения); сведения о взаимодействии с продуктом, такие как показы и завершённые просмотры рекламы; диагностические сведения о работе приложения и SDK; сведения об устройстве (модель, версия ОС, язык и т. п.)</li>
+<li>Цели: показ рекламы, измерение и анализ эффективности, предотвращение мошенничества (персонализированная реклама, если на устройстве включена персонализация рекламы)</li>
+<li>Способ передачи: эта информация передаётся напрямую с устройства пользователя на серверы Google (в США и другие страны за пределами Кореи) и хранится и используется в соответствии с политикой Google.</li>
+</ul>
+<p>[Б] Unity Ads</p>
+<ul>
+<li>Кто собирает и использует: Unity Technologies, её аффилированные лица и рекламные партнёры</li>
+<li>Собираемые данные: идентификаторы устройства, такие как рекламный идентификатор (рекламный идентификатор Android); IP-адрес и определённые на его основе страна установки и приблизительное местоположение; сведения об устройстве (производитель, модель, версия ОС, язык и т. п.); сведения о взаимодействии с рекламой, такие как показы, завершённые просмотры и клики; диагностические сведения о работе приложения и SDK и предотвращении мошенничества</li>
+<li>Цели: показ рекламы, измерение и анализ эффективности, предотвращение мошенничества (персонализированная или контекстная реклама в зависимости от выбора пользователя в отношении конфиденциальности рекламы)</li>
+<li>Способ передачи: эта информация передаётся напрямую с устройства пользователя на серверы Unity и её рекламных партнёров (в США и другие страны за пределами Кореи) и хранится и используется в соответствии с политикой Unity.</li>
+</ul>
+<p>Введённые пользователем интеллект-карты, заметки, категории и сведения об энергии, а также количество просмотров рекламы и время ожидания не передаются рекламным SDK. Время ожидания рекламы рассчитывается только на устройстве пользователя и никуда не передаётся.</p>
+<ul>
+<li>Пользоваться Приложением можно и без просмотра рекламы. Энергии, начисляемой при первом посещении каждый день, достаточно для использования функций; реклама нужна только для дополнительного пополнения.</li>
+</ul>
+<p>Подробнее об обработке информации Google см. Политику конфиденциальности Google (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a>), об обработке информации Unity — Политику конфиденциальности Unity (<a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener">https://unity.com/legal/privacy-policy</a>) и FAQ о конфиденциальности для игроков и пользователей приложений (<a href="https://unity.com/legal/game-player-and-app-user-privacy-faq" target="_blank" rel="noopener">https://unity.com/legal/game-player-and-app-user-privacy-faq</a>). Изменить персонализацию рекламы, удалить или сбросить рекламный идентификатор можно в меню устройства «Настройки &gt; Google &gt; Реклама», а выбор персонализированной рекламы Unity — с помощью значка конфиденциальности на экране рекламы.</p>
+<h2 id="ru-s7">7. Разрешения устройства</h2>
+<ul>
+<li>Биометрия/блокировка экрана: в версиях с функцией блокировки устройства используется функция аутентификации операционной системы. Данные отпечатков пальцев и лица обрабатывает операционная система; ни Приложение, ни Разработчик их не собирают и не хранят.</li>
+<li>Интернет: используется для внутреннего обмена данными на устройстве при построении экранов Приложения и для показа рекламы.</li>
+<li>Рекламный идентификатор: для показа рекламы с вознаграждением AdMob и Unity Ads используется разрешение на рекламный идентификатор Android (AD_ID); удалить или сбросить рекламный идентификатор можно в настройках устройства.</li>
+<li>Защита экрана: в некоторых версиях для защиты интеллект-карт снимки, запись и трансляция экрана Приложения могут быть ограничены; это можно отключить в настройках.</li>
+<li>Сохранение/выбор файлов: при сохранении или загрузке файлов резервной копии используется системный экран файлов; отдельное разрешение на доступ к хранилищу не запрашивается.</li>
+</ul>
+<h2 id="ru-s8">8. Права пользователя</h2>
+<p>Пользователь может в любое время просматривать, изменять и удалять информацию, введённую в Приложении, а также удалить всю информацию, удалив Приложение. Поскольку Разработчик не хранит информацию пользователей, отсутствует информация, в отношении которой можно подать отдельный запрос на доступ или удаление.</p>
+<h2 id="ru-s9">9. Меры по обеспечению безопасности</h2>
+<ul>
+<li>Информация пользователя не передаётся на серверы Разработчика</li>
+<li>Данные хранятся в зашифрованном виде в закрытом хранилище Приложения (ключ шифрования создаётся из PIN-кода пользователя и не хранится на устройстве)</li>
+<li>Автоматические резервные копии хранятся только в закрытом хранилище Приложения (последние 5; удаляются вместе с Приложением)</li>
+<li>Файлы резервной копии шифруются паролем, заданным пользователем</li>
+<li>Введённая пользователем информация не передаётся рекламным SDK (AdMob, Unity Ads)</li>
+<li>(Опционально) поддержка блокировки устройства и запрета снимков экрана</li>
+</ul>
+<p>Рекомендуем также установить блокировку экрана на устройстве.</p>
+<h2 id="ru-s10">10. Персональные данные детей</h2>
+<p>Приложение не предназначено для детей младше 16 лет и намеренно не собирает персональные данные детей младше 16 лет. Вводимое содержимое хранится только на устройстве пользователя, а сбор информации рекламными SDK осуществляется в соответствии с разделом 6.</p>
+<h2 id="ru-s11">11. Ответственный за защиту персональных данных и контакты</h2>
+<ul>
+<li>Ответственный: HappyisIT</li>
+<li>Контакты: <a href="mailto:happyisit@gmail.com">happyisit@gmail.com</a></li>
+</ul>
+<h2 id="ru-s12">12. Изменение Политики</h2>
+<p>При изменении настоящей Политики мы уведомим об этом через обновление Приложения или уведомление в Приложении. Существенные изменения повторно показываются на экране согласия при первом запуске после обновления. Если состав собираемых, в том числе для рекламы, данных изменится, мы сообщим об этом до вступления изменений в силу. Настоящая Политика составлена на корейском языке; переводы на другие языки предоставляются только для справки. При расхождении корейской версии и перевода преимущественную силу имеет корейская версия.</p>
+<h2 id="ru-s13">13. Поддерживаемые ОС</h2>
+<p>Приложение работает на Android 13 и новее. На устройствах с более ранними версиями Android его нельзя установить или обновить. В любой версии Разработчик не использует серверы, а вводимая пользователем информация хранится только на его устройстве.</p>
+<h2 id="ru-s14">14. Отказ от ответственности и ответственность пользователя</h2>
+<ul>
+<li>Приложение предоставляется «КАК ЕСТЬ» (AS IS); Разработчик не гарантирует отсутствие ошибок в Приложении, полноту функций резервного копирования и восстановления и целостность данных.</li>
+<li>Ответственность за управление данными, хранящимися в Приложении, несёт сам пользователь. На случай потери данных по разным причинам — смена устройства, удаление Приложения, обновления, ошибки Разработчика, поломка устройства и т. п. — пользователь должен отдельно создавать резервные копии важных данных.</li>
+<li>При отсутствии умысла или грубой неосторожности Разработчик не несёт ответственности за потерю данных при использовании Приложения, сбой резервного копирования или восстановления, непоказ рекламы, а также за иной косвенный, особый, последующий или сопутствующий ущерб; если ответственность признана, предельный размер возмещения определяется статьёй 11 Условий использования.</li>
+<li>Подробнее см. статьи 7 и 11 Условий использования.</li>
+</ul>
+<h2 id="ru-s15">Заключительное положение</h2>
+<p>Настоящая Политика вступает в силу 9 ноября 2026 г..</p></div>
+<div class="card"><h2>История изменений</h2><table><tr><th>Дата вступления в силу</th><td>9 ноября 2026 г. (текущая редакция) · 5 ноября 2026 г. · 29 октября 2026 г. (первая редакция)</td></tr><tr><th>Приложение / версия</th><td>MindGazi (마인드가지) (Android) v1.3.1 · Android 13 и новее</td></tr><tr><th>Основные изменения</th><td>Принцип приоритета корейской версии, уточнён отказ от ответственности (непоказ рекламы, предельный размер возмещения — статья 11 Условий), переводы на 6 языков</td></tr></table></div>
+</section>
+<section id="en" lang="en" hidden="" data-title="Privacy Policy · MindGazi (마인드가지)">
+<div class="dochead"><h1>Privacy Policy</h1><p class="meta">MindGazi (마인드가지) · Effective date November 9, 2026</p></div>
+<nav class="tabs"><a class="on" href="privacy.html#en">Privacy Policy</a><a class="" href="terms.html#en">Terms of Service</a></nav>
+<div class="tr-note">This is a translation provided for reference only. The Korean version is the official version and prevails in case of any difference in content or interpretation. <a href="#ko">한국어 원문 보기</a></div>
+<div class="card toc"><h3>Contents</h3><ol><li><a href="#en-s1">1. At a Glance</a></li><li><a href="#en-s2">2. Information the App Handles and Where It Is Stored</a></li><li><a href="#en-s3">3. Purposes of Use</a></li><li><a href="#en-s4">4. Retention and Destruction</a></li><li><a href="#en-s5">5. Provision to Third Parties and Outsourcing</a></li><li><a href="#en-s6">6. Ads and Ad SDKs (Only in Versions That Include Ads)</a></li><li><a href="#en-s7">7. Device Permissions</a></li><li><a href="#en-s8">8. Your Rights</a></li><li><a href="#en-s9">9. Security Measures</a></li><li><a href="#en-s10">10. Children&#x27;s Personal Information</a></li><li><a href="#en-s11">11. Privacy Officer and Contact</a></li><li><a href="#en-s12">12. Changes to This Policy</a></li><li><a href="#en-s13">13. Supported Operating Systems</a></li><li><a href="#en-s14">14. Disclaimers and Your Responsibility</a></li><li><a href="#en-s15">Addendum</a></li></ol></div>
+<div class="card"><p>HappyisIT (the &quot;Developer&quot;) values users&#x27; personal information in providing the app &quot;MindGazi&quot; (the &quot;App&quot;) and strives to comply with applicable laws, including the Personal Information Protection Act of the Republic of Korea. This Policy explains what information the App handles and how.</p>
+<h2 id="en-s1">1. At a Glance</h2>
+<ul>
+<li>The App has no sign-up and does not ask for your name, contact details, email address, etc.</li>
+<li>The mind maps and settings you enter are stored only on your device and are not sent to the Developer&#x27;s servers. (The Developer does not operate any servers.)</li>
+<li>The Developer therefore can neither view nor recover your data. (Backup files you create yourself with the App&#x27;s &quot;Save backup file&quot; feature are saved only to the location you choose.)</li>
+</ul>
+<h2 id="en-s2">2. Information the App Handles and Where It Is Stored</h2>
+<p>When you use the App, the following information is stored in the App&#x27;s private storage on your device.</p>
+<ul>
+<li>Information you enter: mind-map titles, branch text, notes, category names</li>
+<li>Usage information: position, color, creation date and modification date of mind maps; favorite and pin status; connecting lines between branches and their names; the last viewed screen position and zoom; recently used colors; energy received in the last 5 days (time, amount and type); per-mind-map feature usage status (branch levels already created, whether connecting lines have been used, and other energy deduction records)</li>
+<li>Settings: theme, sort order, keypad font size, whether screen-capture blocking and device lock are on, energy balance, last visit date, ad view count and time of the last ad viewed (used to calculate the daily grant, ad limit and ad waiting time), and the version of the terms you agreed to</li>
+</ul>
+<p>This information is stored in the App&#x27;s private storage as files encrypted by the App (AES-256-GCM). The encryption key is derived from a 6-digit PIN you choose using Argon2id; it is not stored on the device, is generated each time you enter your PIN when starting the App, and exists in memory only while you are using the App. If you forget your PIN, even the Developer cannot open your data. This is basic protection that keeps the files from being read directly by other apps or by ordinary means, and does not guarantee complete security in every situation. Device lock is a feature for screen protection, and we recommend that you do not enter sensitive information such as passwords, resident registration numbers or bank account numbers into the App.</p>
+<p>Data is not stored as a single file but is split into a header, settings and mind-map files (one file per mind map), all of which are encrypted. Even if one file is damaged the rest can still be read, and the list screen loads only 30 items at a time.</p>
+<p>On the first launch of each day on which you enter with your PIN, the App itself creates one automatic backup in its private storage (keeping only the latest 5). Automatic backups are encrypted in the same way as the data, so they can be opened only with the PIN in use when that backup was made. They are not sent to the Developer&#x27;s servers or anywhere else, and are deleted together with the App or its data. The App notifies you only when stored files are damaged or storage space is low, and restores from an automatic backup if you choose to. Restoring also returns the PIN to its value at the time of that backup, and energy and ad counts are not brought back by a restore.</p>
+<p>When you tap &quot;Save backup file,&quot; an encrypted backup file (.bak) containing your mind maps and categories is saved to the location you choose. It does not contain energy, ad view counts, theme, terms consent, device lock or screen-capture blocking settings. Backup files are encrypted with a password you set when creating the backup, and this password is not stored on the device or by the Developer. Anyone with the file and password can restore it on another device, so do not give it to others or leave it in shared folders.</p>
+<p>When you choose &quot;Export,&quot; the mind map is turned into an image (PNG), PDF or text file and saved to the location you choose (or, for &quot;copy outline,&quot; copied to the device clipboard). These files contain the mind-map title, branch text, notes, etc. in unencrypted form. These files and copied content are not sent to the Developer&#x27;s servers or to advertising services. The clipboard can be read by other apps and exported files can be opened by anyone outside the App, so take care when storing and sharing them. You are responsible for managing exported files and copied content.</p>
+<h2 id="en-s3">3. Purposes of Use</h2>
+<p>Stored information is used only within the App to provide mind maps, sort and search lists, grant and deduct energy, manage ad recharge limits and waiting times, and check whether renewed consent to the terms is required.</p>
+<h2 id="en-s4">4. Retention and Destruction</h2>
+<ul>
+<li>Information is retained while it is stored on your device.</li>
+<li>When you delete a mind map or category in the App, that information is deleted immediately.</li>
+<li>When you delete the App or delete the App&#x27;s data in the device settings, all information in the App (including energy) is deleted and cannot be recovered. However, backup files you created in advance remain in your chosen storage location until you delete them.</li>
+<li>Data may be lost due to device loss, reset, file damage, etc., and the Developer cannot recover it. (See Article 7 of the Terms of Service.)</li>
+</ul>
+<h2 id="en-s5">5. Provision to Third Parties and Outsourcing</h2>
+<p>The Developer does not provide your information to third parties or outsource its processing, except for the advertising services described in Section 6 below.</p>
+<h2 id="en-s6">6. Ads and Ad SDKs (Only in Versions That Include Ads)</h2>
+<p>When you choose &quot;Watch an ad to recharge,&quot; the App shows rewarded ads from Google AdMob or Unity Ads (including Unity LevelPlay). Depending on the App version and ad inventory, one or both may be used, and an ad from whichever service can load one is shown.</p>
+<p>[A] Google AdMob</p>
+<ul>
+<li>Collected and used by: Google LLC and its affiliates</li>
+<li>Items collected: device identifiers such as the advertising ID (Android advertising ID) and app set ID; IP address (which may be used to estimate approximate location); product interaction information such as ad impressions and ad completions; diagnostic information related to app and SDK performance; device information (model, OS version, language, etc.)</li>
+<li>Purposes: serving ads, measuring and analyzing performance, preventing fraud (personalized ads if ad personalization is enabled on the device)</li>
+<li>Transfer method: this information is sent directly from your device to Google&#x27;s servers (in the United States and other countries outside Korea) and is retained and used in accordance with Google&#x27;s policies.</li>
+</ul>
+<p>[B] Unity Ads</p>
+<ul>
+<li>Collected and used by: Unity Technologies and its affiliates, and advertising partners</li>
+<li>Items collected: device identifiers such as the advertising ID (Android advertising ID); IP address and the installation country and approximate location based on it; device information (manufacturer, model, OS version, language, etc.); ad interaction information such as impressions, completions and clicks; diagnostic information related to app and SDK performance and fraud prevention</li>
+<li>Purposes: serving ads, measuring and analyzing performance, preventing fraud (personalized or contextual ads depending on your ad privacy choices)</li>
+<li>Transfer method: this information is sent directly from your device to the servers of Unity and its advertising partners (in the United States and other countries outside Korea) and is retained and used in accordance with Unity&#x27;s policies.</li>
+</ul>
+<p>The mind maps, notes, categories and energy information you enter, as well as ad view counts and waiting-time information, are not provided to ad SDKs. The ad waiting time is calculated only on your device and is not sent anywhere.</p>
+<ul>
+<li>You can use the App without watching ads. Energy granted on the first visit each day lets you use features, and ads are needed only for additional recharges.</li>
+</ul>
+<p>For details on Google&#x27;s processing of information, see the Google Privacy Policy (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a>); for Unity&#x27;s, see the Unity Privacy Policy (<a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener">https://unity.com/legal/privacy-policy</a>) and the game player and app user privacy FAQ (<a href="https://unity.com/legal/game-player-and-app-user-privacy-faq" target="_blank" rel="noopener">https://unity.com/legal/game-player-and-app-user-privacy-faq</a>). You can change ad personalization or delete or reset your advertising ID under the device&#x27;s Settings &gt; Google &gt; Ads, and change personalized-ad choices for Unity ads with the privacy icon on the ad screen.</p>
+<h2 id="en-s7">7. Device Permissions</h2>
+<ul>
+<li>Biometrics/screen lock: in versions that include device lock, the App uses the operating system&#x27;s authentication. Fingerprint and face data are handled by the operating system, and neither the App nor the Developer collects or stores them.</li>
+<li>Internet: used for internal communication within the device to build the App&#x27;s screens and for showing ads.</li>
+<li>Advertising ID: the App uses the Android advertising ID (AD_ID) permission to provide AdMob and Unity Ads rewarded ads. You can delete or reset the advertising ID in the device settings.</li>
+<li>Screen protection: in some versions, capturing, recording and mirroring the App&#x27;s screen may be restricted to protect your mind maps. You can turn this off in the settings.</li>
+<li>Saving/selecting files: the system file screen is used when saving or loading backup files, and no separate storage permission is requested.</li>
+</ul>
+<h2 id="en-s8">8. Your Rights</h2>
+<p>You can view, edit and delete the information you enter in the App at any time, and can delete all information by deleting the App. Because the Developer does not keep your information, there is no information subject to separate access or deletion requests.</p>
+<h2 id="en-s9">9. Security Measures</h2>
+<ul>
+<li>Your information is not sent to the Developer&#x27;s servers</li>
+<li>Data is encrypted in the App&#x27;s private storage (the encryption key is derived from your PIN and is not stored on the device)</li>
+<li>Automatic backups are kept only in the App&#x27;s private storage (latest 5; deleted together with the App)</li>
+<li>Backup files are encrypted with a password you set</li>
+<li>Information you enter is not provided to ad SDKs (AdMob, Unity Ads)</li>
+<li>(Optional) Support for device lock and screen-capture blocking</li>
+</ul>
+<p>We also recommend that you set a screen lock on your device.</p>
+<h2 id="en-s10">10. Children&#x27;s Personal Information</h2>
+<p>The App is not directed to children under 16 and does not knowingly collect personal information of children under 16. Content you enter is stored only on your device, and information collected by ad SDKs is as described in Section 6.</p>
+<h2 id="en-s11">11. Privacy Officer and Contact</h2>
+<ul>
+<li>Officer: HappyisIT</li>
+<li>Contact: <a href="mailto:happyisit@gmail.com">happyisit@gmail.com</a></li>
+</ul>
+<h2 id="en-s12">12. Changes to This Policy</h2>
+<p>If this Policy changes, we will notify you through an app update or an in-app notice. Important changes will be shown again on a consent screen the first time the App is launched after the update. If the items collected for ads or other purposes change, we will notify you before the change takes effect. This Policy was written in Korean, and versions translated into other languages are for reference only. If the Korean version and a translation differ, the Korean version prevails.</p>
+<h2 id="en-s13">13. Supported Operating Systems</h2>
+<p>The App can be used on Android 13 or later. It cannot be installed or updated on devices with lower Android versions. In every version, the Developer operates no servers and the information you enter is stored only on your device.</p>
+<h2 id="en-s14">14. Disclaimers and Your Responsibility</h2>
+<ul>
+<li>The App is provided &quot;AS IS,&quot; and the Developer does not warrant that the App is error-free, that the backup and restore features are complete, or that data will remain complete.</li>
+<li>You are responsible for managing the data stored in the App. To prepare for data loss from various causes, such as changing devices, deleting the App, updates, bugs or device failure, you must back up important data separately.</li>
+<li>Unless there is willful misconduct or gross negligence, the Developer is not liable for loss of data arising while using the App, failure of backup or restore, failure to serve ads, or any other indirect, special, consequential or incidental damages. Where liability is found, the cap on damages is governed by Article 11 of the Terms of Service.</li>
+<li>For details, see Articles 7 and 11 of the Terms of Service.</li>
+</ul>
+<h2 id="en-s15">Addendum</h2>
+<p>This Policy takes effect on November 9, 2026.</p></div>
+<div class="card"><h2>Revision history</h2><table><tr><th>Effective date</th><td>November 9, 2026 (current) · November 5, 2026 · October 29, 2026 (initial)</td></tr><tr><th>App / version</th><td>MindGazi (마인드가지) (Android) v1.3.1 · Android 13 or later</td></tr><tr><th>Main changes in this revision</th><td>Korean-version precedence, clarified disclaimers (failure to serve ads; damages cap under Article 11 of the Terms), translations in 6 languages</td></tr></table></div>
+</section>
+<section id="es" lang="es" hidden="" data-title="Política de Privacidad · MindGazi (마인드가지)">
+<div class="dochead"><h1>Política de Privacidad</h1><p class="meta">MindGazi (마인드가지) · Fecha de entrada en vigor 9 de noviembre de 2026</p></div>
+<nav class="tabs"><a class="on" href="privacy.html#es">Política de Privacidad</a><a class="" href="terms.html#es">Términos de Servicio</a></nav>
+<div class="tr-note">Esta es una traducción ofrecida solo como referencia. La versión coreana es la oficial y prevalece en caso de cualquier diferencia de contenido o interpretación. <a href="#ko">한국어 원문 보기</a></div>
+<div class="card toc"><h3>Índice</h3><ol><li><a href="#es-s1">1. Resumen</a></li><li><a href="#es-s2">2. Información que trata la Aplicación y lugar de almacenamiento</a></li><li><a href="#es-s3">3. Finalidades de uso</a></li><li><a href="#es-s4">4. Conservación y destrucción</a></li><li><a href="#es-s5">5. Cesión a terceros y encargo del tratamiento</a></li><li><a href="#es-s6">6. Anuncios y SDK publicitarios (solo en versiones con anuncios)</a></li><li><a href="#es-s7">7. Permisos del dispositivo</a></li><li><a href="#es-s8">8. Derechos del usuario</a></li><li><a href="#es-s9">9. Medidas de seguridad</a></li><li><a href="#es-s10">10. Información personal de menores</a></li><li><a href="#es-s11">11. Responsable de privacidad y contacto</a></li><li><a href="#es-s12">12. Cambios en esta Política</a></li><li><a href="#es-s13">13. Sistemas operativos compatibles</a></li><li><a href="#es-s14">14. Exención de responsabilidad y responsabilidad del usuario</a></li><li><a href="#es-s15">Disposición final</a></li></ol></div>
+<div class="card"><p>HappyisIT (el «Desarrollador»), al ofrecer la aplicación «MindGazi» (la «Aplicación»), valora la información personal de los usuarios y se esfuerza por cumplir la normativa aplicable, incluida la Ley de Protección de la Información Personal de la República de Corea. Esta Política explica qué información trata la Aplicación y cómo lo hace.</p>
+<h2 id="es-s1">1. Resumen</h2>
+<ul>
+<li>La Aplicación no requiere registro y no solicita nombre, datos de contacto, correo electrónico, etc.</li>
+<li>Los mapas mentales y ajustes que introduce el usuario se almacenan únicamente en su dispositivo y no se envían a los servidores del Desarrollador. (El Desarrollador no opera servidores.)</li>
+<li>Por ello, el Desarrollador no puede consultar ni recuperar los datos del usuario. (Los archivos de copia de seguridad que el propio usuario crea con la función «Guardar archivo de copia de seguridad» se guardan solo en la ubicación que él elija.)</li>
+</ul>
+<h2 id="es-s2">2. Información que trata la Aplicación y lugar de almacenamiento</h2>
+<p>Al usar la Aplicación, se guarda la siguiente información en el almacenamiento privado de la Aplicación dentro del dispositivo.</p>
+<ul>
+<li>Información introducida por el usuario: títulos de mapas mentales, textos de ramas, notas, nombres de categorías</li>
+<li>Información de uso: posición, color, fecha de creación y de modificación de los mapas mentales; marcas de favorito y fijado; líneas de conexión entre ramas y sus nombres; última posición de pantalla y zoom visualizados; colores usados recientemente; registro de energía recibida en los últimos 5 días (hora, cantidad y tipo); estado de uso de funciones por mapa (niveles de ramas ya creados, uso de líneas de conexión y otros registros de descuento de energía)</li>
+<li>Ajustes: tema, orden de clasificación, tamaño de letra del teclado, si están activados el bloqueo de capturas y el bloqueo del dispositivo, saldo de energía, fecha de la última visita, número de anuncios vistos y hora del último anuncio (para calcular la entrega diaria, el límite de anuncios y el tiempo de espera) y versión de los términos aceptados</li>
+</ul>
+<p>Esta información se guarda en el almacenamiento privado de la Aplicación en archivos cifrados por la Aplicación (AES-256-GCM). La clave de cifrado se genera mediante Argon2id a partir de un PIN de 6 dígitos elegido por el usuario; no se guarda en el dispositivo, se genera cada vez que se introduce el PIN al iniciar la Aplicación y solo permanece en memoria mientras se usa la Aplicación. Si olvida el PIN, ni siquiera el Desarrollador podrá abrir sus datos. Se trata de una protección básica que impide que otras aplicaciones o medios ordinarios lean directamente los archivos, y no garantiza una seguridad total en todas las situaciones. El bloqueo del dispositivo es una función de protección de pantalla, y se recomienda no introducir en la Aplicación información sensible como contraseñas, números de identificación o números de cuenta bancaria.</p>
+<p>Los datos no se guardan en un único archivo, sino divididos en un encabezado, los ajustes y los archivos de mapas mentales (un archivo por mapa), todos ellos cifrados. Aunque un archivo se dañe, los demás pueden seguir leyéndose, y la pantalla de lista carga solo 30 elementos cada vez.</p>
+<p>En el primer inicio de cada día en que se entra con el PIN, la Aplicación crea por sí misma una copia de seguridad automática en su almacenamiento privado (conservando solo las 5 más recientes). Las copias automáticas se cifran del mismo modo que los datos, por lo que solo pueden abrirse con el PIN vigente cuando se creó esa copia; no se envían a los servidores del Desarrollador ni a ningún otro lugar y se eliminan junto con la Aplicación o sus datos. La Aplicación solo lo notifica cuando los archivos guardados están dañados o falta espacio de almacenamiento, y restaura desde una copia automática si el usuario lo elige. Al restaurar, el PIN también vuelve al valor de esa copia, y la energía y el número de anuncios no se recuperan con la restauración.</p>
+<p>Cuando el usuario pulsa «Guardar archivo de copia de seguridad», se guarda en la ubicación que elija un archivo de copia de seguridad cifrado (.bak) con los mapas mentales y las categorías. No contiene la energía, el número de anuncios vistos, el tema, la aceptación de los términos ni los ajustes de bloqueo del dispositivo y de bloqueo de capturas. El archivo se cifra con una contraseña que el usuario establece al crear la copia, y esta contraseña no se guarda en el dispositivo ni la conserva el Desarrollador. Cualquiera que tenga el archivo y la contraseña puede restaurarlo en otro dispositivo, por lo que no lo entregue a otras personas ni lo deje en carpetas compartidas.</p>
+<p>Cuando el usuario elige «Exportar», el mapa mental se convierte en un archivo de imagen (PNG), PDF o texto y se guarda en la ubicación que elija (o, en «copiar esquema», se copia al portapapeles del dispositivo); estos archivos contienen el título del mapa, los textos de las ramas, las notas, etc. sin cifrar. Estos archivos y el contenido copiado no se envían a los servidores del Desarrollador ni a los servicios publicitarios. El portapapeles puede ser leído por otras aplicaciones y cualquiera puede abrir los archivos exportados fuera de la Aplicación, así que tenga cuidado al conservarlos y compartirlos. El usuario es responsable de gestionar los archivos exportados y el contenido copiado.</p>
+<h2 id="es-s3">3. Finalidades de uso</h2>
+<p>La información almacenada se usa únicamente dentro de la Aplicación para ofrecer los mapas mentales, ordenar y buscar en la lista, otorgar y descontar energía, gestionar el límite de recarga mediante anuncios y el tiempo de espera, y comprobar si es necesario volver a aceptar los términos.</p>
+<h2 id="es-s4">4. Conservación y destrucción</h2>
+<ul>
+<li>La información se conserva mientras esté almacenada en el dispositivo del usuario.</li>
+<li>Cuando el usuario elimina un mapa mental o una categoría en la Aplicación, esa información se elimina de inmediato.</li>
+<li>Al eliminar la Aplicación o borrar sus datos en los ajustes del dispositivo, se elimina toda la información de la Aplicación (incluida la energía) y no puede recuperarse. No obstante, los archivos de copia de seguridad que el usuario haya creado previamente permanecen en la ubicación que eligió hasta que los elimine.</li>
+<li>Los datos pueden perderse por pérdida del dispositivo, restablecimiento, daños en los archivos, etc., y el Desarrollador no puede recuperarlos. (Consulte el Artículo 7 de los Términos de Servicio.)</li>
+</ul>
+<h2 id="es-s5">5. Cesión a terceros y encargo del tratamiento</h2>
+<p>El Desarrollador no cede la información del usuario a terceros ni encarga su tratamiento, con la excepción de los servicios publicitarios indicados en la sección 6.</p>
+<h2 id="es-s6">6. Anuncios y SDK publicitarios (solo en versiones con anuncios)</h2>
+<p>Cuando el usuario elige «Recargar viendo un anuncio», la Aplicación muestra anuncios recompensados de Google AdMob o Unity Ads (incluido Unity LevelPlay). Según la versión de la Aplicación y el inventario publicitario, puede usarse solo uno o ambos, y se muestra el anuncio del servicio que pueda cargarlo.</p>
+<p>[A] Google AdMob</p>
+<ul>
+<li>Quién recopila y usa: Google LLC y sus filiales</li>
+<li>Datos recopilados: identificadores del dispositivo, como el identificador de publicidad (ID de publicidad de Android) y el ID de conjunto de aplicaciones; dirección IP (que puede usarse para estimar la ubicación aproximada); información de interacción con el producto, como impresiones y visualizaciones completas de anuncios; información de diagnóstico sobre el rendimiento de la aplicación y del SDK; información del dispositivo (modelo, versión del sistema operativo, idioma, etc.)</li>
+<li>Finalidades: mostrar anuncios, medir y analizar el rendimiento, prevenir el fraude (anuncios personalizados si la personalización de anuncios está activada en el dispositivo)</li>
+<li>Forma de transferencia: esta información se envía directamente desde el dispositivo del usuario a los servidores de Google (en Estados Unidos y otros países fuera de Corea) y se conserva y usa conforme a las políticas de Google.</li>
+</ul>
+<p>[B] Unity Ads</p>
+<ul>
+<li>Quién recopila y usa: Unity Technologies, sus filiales y socios publicitarios</li>
+<li>Datos recopilados: identificadores del dispositivo, como el identificador de publicidad (ID de publicidad de Android); dirección IP y, a partir de ella, el país de instalación y la ubicación aproximada; información del dispositivo (fabricante, modelo, versión del sistema operativo, idioma, etc.); información de interacción con anuncios, como impresiones, visualizaciones completas y clics; información de diagnóstico sobre el rendimiento de la aplicación y del SDK y la prevención del fraude</li>
+<li>Finalidades: mostrar anuncios, medir y analizar el rendimiento, prevenir el fraude (anuncios personalizados o contextuales según las preferencias de privacidad publicitaria del usuario)</li>
+<li>Forma de transferencia: esta información se envía directamente desde el dispositivo del usuario a los servidores de Unity y sus socios publicitarios (en Estados Unidos y otros países fuera de Corea) y se conserva y usa conforme a las políticas de Unity.</li>
+</ul>
+<p>Los mapas mentales, notas, categorías e información de energía que introduce el usuario, así como el número de anuncios vistos y el tiempo de espera, no se proporcionan a los SDK publicitarios. El tiempo de espera entre anuncios se calcula solo en el dispositivo del usuario y no se envía a ningún lugar.</p>
+<ul>
+<li>Puede usar la Aplicación sin ver anuncios. La energía que se otorga en la primera visita de cada día permite usar las funciones, y los anuncios solo son necesarios para recargas adicionales.</li>
+</ul>
+<p>Para más información sobre el tratamiento de datos de Google, consulte la Política de Privacidad de Google (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a>); sobre el de Unity, la Política de Privacidad de Unity (<a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener">https://unity.com/legal/privacy-policy</a>) y las preguntas frecuentes sobre privacidad para jugadores y usuarios de aplicaciones (<a href="https://unity.com/legal/game-player-and-app-user-privacy-faq" target="_blank" rel="noopener">https://unity.com/legal/game-player-and-app-user-privacy-faq</a>). Puede cambiar la personalización de anuncios o eliminar o restablecer el identificador de publicidad en Ajustes &gt; Google &gt; Anuncios del dispositivo, y cambiar las preferencias de anuncios personalizados de Unity con el icono de privacidad de la pantalla del anuncio.</p>
+<h2 id="es-s7">7. Permisos del dispositivo</h2>
+<ul>
+<li>Biometría/bloqueo de pantalla: en las versiones que incluyen el bloqueo del dispositivo, se usa la función de autenticación del sistema operativo. Los datos de huella dactilar y rostro los trata el sistema operativo, y ni la Aplicación ni el Desarrollador los recopilan ni almacenan.</li>
+<li>Internet: se usa para la comunicación interna del dispositivo necesaria para construir las pantallas de la Aplicación y para mostrar anuncios.</li>
+<li>Identificador de publicidad: se usa el permiso del ID de publicidad de Android (AD_ID) para ofrecer anuncios recompensados de AdMob y Unity Ads; puede eliminar o restablecer el identificador de publicidad en los ajustes del dispositivo.</li>
+<li>Protección de pantalla: en algunas versiones, la captura, grabación y duplicación de la pantalla de la Aplicación pueden restringirse para proteger los mapas mentales; puede desactivarlo en los ajustes.</li>
+<li>Guardar/seleccionar archivos: al guardar o cargar archivos de copia de seguridad se usa la pantalla de archivos del sistema, y no se solicita ningún permiso de acceso al almacenamiento.</li>
+</ul>
+<h2 id="es-s8">8. Derechos del usuario</h2>
+<p>El usuario puede consultar, modificar y eliminar en cualquier momento la información introducida en la Aplicación, y puede eliminar toda la información eliminando la Aplicación. Como el Desarrollador no conserva la información del usuario, no existe información sujeta a solicitudes separadas de acceso o supresión.</p>
+<h2 id="es-s9">9. Medidas de seguridad</h2>
+<ul>
+<li>La información del usuario no se envía a los servidores del Desarrollador</li>
+<li>Los datos se guardan cifrados en el almacenamiento privado de la Aplicación (la clave de cifrado se genera a partir del PIN del usuario y no se guarda en el dispositivo)</li>
+<li>Las copias de seguridad automáticas se conservan solo en el almacenamiento privado de la Aplicación (las 5 más recientes; se eliminan junto con la Aplicación)</li>
+<li>Los archivos de copia de seguridad se cifran con una contraseña establecida por el usuario</li>
+<li>La información introducida por el usuario no se proporciona a los SDK publicitarios (AdMob, Unity Ads)</li>
+<li>(Opcional) Compatibilidad con el bloqueo del dispositivo y el bloqueo de capturas de pantalla</li>
+</ul>
+<p>Se recomienda también configurar un bloqueo de pantalla en el dispositivo.</p>
+<h2 id="es-s10">10. Información personal de menores</h2>
+<p>La Aplicación no está dirigida a menores de 16 años y no recopila deliberadamente información personal de menores de 16 años. El contenido introducido se guarda solo en el dispositivo del usuario, y la información que recopilan los SDK publicitarios se rige por la sección 6.</p>
+<h2 id="es-s11">11. Responsable de privacidad y contacto</h2>
+<ul>
+<li>Responsable: HappyisIT</li>
+<li>Contacto: <a href="mailto:happyisit@gmail.com">happyisit@gmail.com</a></li>
+</ul>
+<h2 id="es-s12">12. Cambios en esta Política</h2>
+<p>Si esta Política cambia, se notificará mediante una actualización de la Aplicación o un aviso dentro de ella. Los cambios importantes se mostrarán de nuevo en una pantalla de aceptación la primera vez que se inicie la Aplicación tras la actualización. Si cambian los datos recopilados con fines publicitarios u otros, se avisará antes de su entrada en vigor. Esta Política se redactó en coreano, y las versiones traducidas a otros idiomas son solo de referencia. Si la versión coreana y una traducción difieren, prevalecerá la versión coreana.</p>
+<h2 id="es-s13">13. Sistemas operativos compatibles</h2>
+<p>La Aplicación puede usarse en Android 13 o posterior. No puede instalarse ni actualizarse en dispositivos con versiones anteriores de Android. En cualquier versión, el Desarrollador no opera servidores y la información que introduce el usuario se guarda solo en su dispositivo.</p>
+<h2 id="es-s14">14. Exención de responsabilidad y responsabilidad del usuario</h2>
+<ul>
+<li>La Aplicación se proporciona «TAL CUAL» (AS IS), y el Desarrollador no garantiza que la Aplicación esté libre de errores, que las funciones de copia de seguridad y restauración sean completas ni la integridad de los datos.</li>
+<li>La responsabilidad de gestionar los datos almacenados en la Aplicación corresponde al propio usuario. Para prevenir la pérdida de datos por diversas causas, como el cambio de dispositivo, la eliminación de la Aplicación, actualizaciones, errores del Desarrollador o averías del dispositivo, el usuario debe hacer copias de seguridad separadas de los datos importantes.</li>
+<li>Salvo dolo o culpa grave, el Desarrollador no es responsable de la pérdida de datos ocurrida durante el uso de la Aplicación, del fallo de la copia de seguridad o restauración, de la falta de emisión de anuncios ni de cualquier otro daño indirecto, especial, consecuente o incidental; cuando se declare su responsabilidad, el límite de la indemnización se rige por el Artículo 11 de los Términos de Servicio.</li>
+<li>Para más detalles, consulte los Artículos 7 y 11 de los Términos de Servicio.</li>
+</ul>
+<h2 id="es-s15">Disposición final</h2>
+<p>Esta Política entra en vigor el 9 de noviembre de 2026.</p></div>
+<div class="card"><h2>Historial de revisiones</h2><table><tr><th>Entrada en vigor</th><td>9 de noviembre de 2026 (actual) · 5 de noviembre de 2026 · 29 de octubre de 2026 (inicial)</td></tr><tr><th>Aplicación / versión</th><td>MindGazi (마인드가지) (Android) v1.3.1 · Android 13 o posterior</td></tr><tr><th>Cambios principales</th><td>Prevalencia de la versión coreana, exenciones precisadas (falta de emisión de anuncios; límite de indemnización según el Artículo 11 de los Términos), traducciones a 6 idiomas</td></tr></table></div>
+</section>
+<section id="pt" lang="pt" hidden="" data-title="Política de Privacidade · MindGazi (마인드가지)">
+<div class="dochead"><h1>Política de Privacidade</h1><p class="meta">MindGazi (마인드가지) · Data de vigência 9 de novembro de 2026</p></div>
+<nav class="tabs"><a class="on" href="privacy.html#pt">Política de Privacidade</a><a class="" href="terms.html#pt">Termos de Serviço</a></nav>
+<div class="tr-note">Esta é uma tradução fornecida apenas para referência. A versão coreana é a oficial e prevalece em caso de qualquer diferença de conteúdo ou interpretação. <a href="#ko">한국어 원문 보기</a></div>
+<div class="card toc"><h3>Sumário</h3><ol><li><a href="#pt-s1">1. Resumo</a></li><li><a href="#pt-s2">2. Informações tratadas pelo Aplicativo e local de armazenamento</a></li><li><a href="#pt-s3">3. Finalidades de uso</a></li><li><a href="#pt-s4">4. Retenção e eliminação</a></li><li><a href="#pt-s5">5. Compartilhamento com terceiros e terceirização do tratamento</a></li><li><a href="#pt-s6">6. Anúncios e SDKs de publicidade (somente em versões com anúncios)</a></li><li><a href="#pt-s7">7. Permissões do dispositivo</a></li><li><a href="#pt-s8">8. Direitos do usuário</a></li><li><a href="#pt-s9">9. Medidas de segurança</a></li><li><a href="#pt-s10">10. Informações pessoais de crianças e adolescentes</a></li><li><a href="#pt-s11">11. Responsável pela privacidade e contato</a></li><li><a href="#pt-s12">12. Alterações nesta Política</a></li><li><a href="#pt-s13">13. Sistemas operacionais compatíveis</a></li><li><a href="#pt-s14">14. Isenção de responsabilidade e responsabilidade do usuário</a></li><li><a href="#pt-s15">Disposição final</a></li></ol></div>
+<div class="card"><p>HappyisIT (o «Desenvolvedor»), ao oferecer o aplicativo «MindGazi» (o «Aplicativo»), valoriza as informações pessoais dos usuários e se esforça para cumprir a legislação aplicável, incluindo a Lei de Proteção de Informações Pessoais da República da Coreia. Esta Política explica quais informações o Aplicativo trata e como.</p>
+<h2 id="pt-s1">1. Resumo</h2>
+<ul>
+<li>O Aplicativo não exige cadastro e não solicita nome, contato, e-mail etc.</li>
+<li>Os mapas mentais e as configurações inseridos pelo usuário são armazenados apenas no dispositivo dele e não são enviados aos servidores do Desenvolvedor. (O Desenvolvedor não opera servidores.)</li>
+<li>Por isso, o Desenvolvedor não pode visualizar nem recuperar os dados do usuário. (Os arquivos de backup que o próprio usuário cria com a função «Salvar arquivo de backup» são salvos apenas no local que ele escolher.)</li>
+</ul>
+<h2 id="pt-s2">2. Informações tratadas pelo Aplicativo e local de armazenamento</h2>
+<p>Ao usar o Aplicativo, as seguintes informações são armazenadas no armazenamento privado do Aplicativo no dispositivo.</p>
+<ul>
+<li>Informações inseridas pelo usuário: títulos de mapas mentais, textos de ramos, notas, nomes de categorias</li>
+<li>Informações de uso: posição, cor, data de criação e de modificação dos mapas mentais; marcação de favorito e fixação; linhas de conexão entre ramos e seus nomes; última posição de tela e zoom visualizados; cores usadas recentemente; registro de energia recebida nos últimos 5 dias (horário, quantidade e tipo); estado de uso de funções por mapa (níveis de ramos já criados, uso de linhas de conexão e outros registros de desconto de energia)</li>
+<li>Configurações: tema, ordem de classificação, tamanho da fonte do teclado, se o bloqueio de captura de tela e o bloqueio do dispositivo estão ativados, saldo de energia, data da última visita, número de anúncios assistidos e horário do último anúncio (para calcular a concessão diária, o limite de anúncios e o tempo de espera) e versão dos termos aceitos</li>
+</ul>
+<p>Essas informações são armazenadas no armazenamento privado do Aplicativo em arquivos criptografados pelo Aplicativo (AES-256-GCM). A chave de criptografia é gerada por Argon2id a partir de um PIN de 6 dígitos escolhido pelo usuário; ela não é armazenada no dispositivo, é gerada sempre que o PIN é digitado ao iniciar o Aplicativo e permanece na memória apenas enquanto o Aplicativo está em uso. Se você esquecer o PIN, nem o Desenvolvedor poderá abrir seus dados. Trata-se de uma proteção básica que impede que outros aplicativos ou meios comuns leiam os arquivos diretamente, e não garante segurança total em todas as situações. O bloqueio do dispositivo é uma função de proteção de tela, e recomenda-se não inserir no Aplicativo informações sensíveis, como senhas, números de documentos de identificação ou números de contas bancárias.</p>
+<p>Os dados não são armazenados em um único arquivo, mas divididos em cabeçalho, configurações e arquivos de mapas mentais (um arquivo por mapa), todos criptografados. Mesmo que um arquivo seja danificado, os demais continuam legíveis, e a tela de lista carrega apenas 30 itens por vez.</p>
+<p>Na primeira abertura de cada dia em que se entra com o PIN, o próprio Aplicativo cria um backup automático em seu armazenamento privado (mantendo apenas os 5 mais recentes). Os backups automáticos são criptografados da mesma forma que os dados, portanto só podem ser abertos com o PIN vigente quando aquele backup foi criado; não são enviados aos servidores do Desenvolvedor nem a nenhum outro lugar e são excluídos junto com o Aplicativo ou seus dados. O Aplicativo só avisa quando os arquivos salvos estão danificados ou falta espaço de armazenamento, e restaura a partir de um backup automático se o usuário escolher. Ao restaurar, o PIN também volta ao valor daquele backup, e a energia e o número de anúncios não são recuperados pela restauração.</p>
+<p>Quando o usuário toca em «Salvar arquivo de backup», um arquivo de backup criptografado (.bak) com os mapas mentais e as categorias é salvo no local escolhido. Ele não contém a energia, o número de anúncios assistidos, o tema, a aceitação dos termos nem as configurações de bloqueio do dispositivo e de bloqueio de captura de tela. O arquivo de backup é criptografado com uma senha definida pelo usuário ao criar o backup, e essa senha não é armazenada no dispositivo nem pelo Desenvolvedor. Quem tiver o arquivo e a senha pode restaurá-lo em outro dispositivo, portanto não o entregue a outras pessoas nem o deixe em pastas compartilhadas.</p>
+<p>Quando o usuário escolhe «Exportar», o mapa mental é transformado em um arquivo de imagem (PNG), PDF ou texto e salvo no local escolhido (ou, em «copiar esquema», copiado para a área de transferência do dispositivo); esses arquivos contêm o título do mapa, os textos dos ramos, as notas etc. sem criptografia. Esses arquivos e o conteúdo copiado não são enviados aos servidores do Desenvolvedor nem a serviços de publicidade. A área de transferência pode ser lida por outros aplicativos e qualquer pessoa pode abrir os arquivos exportados fora do Aplicativo, por isso tenha cuidado ao guardá-los e compartilhá-los. O usuário é responsável pela gestão dos arquivos exportados e do conteúdo copiado.</p>
+<h2 id="pt-s3">3. Finalidades de uso</h2>
+<p>As informações armazenadas são usadas apenas dentro do Aplicativo para fornecer os mapas mentais, ordenar e pesquisar a lista, conceder e descontar energia, gerenciar o limite de recarga por anúncios e o tempo de espera e verificar se é necessário aceitar novamente os termos.</p>
+<h2 id="pt-s4">4. Retenção e eliminação</h2>
+<ul>
+<li>As informações são retidas enquanto estiverem armazenadas no dispositivo do usuário.</li>
+<li>Quando o usuário exclui um mapa mental ou uma categoria no Aplicativo, essas informações são excluídas imediatamente.</li>
+<li>Ao excluir o Aplicativo ou apagar seus dados nas configurações do dispositivo, todas as informações do Aplicativo (incluindo a energia) são excluídas e não podem ser recuperadas. No entanto, os arquivos de backup criados previamente pelo usuário permanecem no local escolhido até que ele os exclua.</li>
+<li>Os dados podem ser perdidos por perda do dispositivo, redefinição, danos aos arquivos etc., e o Desenvolvedor não pode recuperá-los. (Consulte o Artigo 7 dos Termos de Serviço.)</li>
+</ul>
+<h2 id="pt-s5">5. Compartilhamento com terceiros e terceirização do tratamento</h2>
+<p>O Desenvolvedor não compartilha as informações do usuário com terceiros nem terceiriza seu tratamento, com exceção dos serviços de publicidade indicados na seção 6.</p>
+<h2 id="pt-s6">6. Anúncios e SDKs de publicidade (somente em versões com anúncios)</h2>
+<p>Quando o usuário escolhe «Recarregar assistindo a um anúncio», o Aplicativo exibe anúncios premiados do Google AdMob ou do Unity Ads (incluindo o Unity LevelPlay). Dependendo da versão do Aplicativo e do inventário de anúncios, pode ser usado apenas um ou ambos, e é exibido o anúncio do serviço que conseguir carregá-lo.</p>
+<p>[A] Google AdMob</p>
+<ul>
+<li>Quem coleta e usa: Google LLC e suas afiliadas</li>
+<li>Dados coletados: identificadores do dispositivo, como o identificador de publicidade (ID de publicidade do Android) e o ID do conjunto de apps; endereço IP (que pode ser usado para estimar a localização aproximada); informações de interação com o produto, como impressões e visualizações completas de anúncios; informações de diagnóstico sobre o desempenho do app e do SDK; informações do dispositivo (modelo, versão do sistema operacional, idioma etc.)</li>
+<li>Finalidades: exibir anúncios, medir e analisar o desempenho, prevenir fraudes (anúncios personalizados se a personalização de anúncios estiver ativada no dispositivo)</li>
+<li>Forma de transferência: essas informações são enviadas diretamente do dispositivo do usuário aos servidores do Google (nos Estados Unidos e em outros países fora da Coreia) e são retidas e usadas de acordo com as políticas do Google.</li>
+</ul>
+<p>[B] Unity Ads</p>
+<ul>
+<li>Quem coleta e usa: Unity Technologies, suas afiliadas e parceiros de publicidade</li>
+<li>Dados coletados: identificadores do dispositivo, como o identificador de publicidade (ID de publicidade do Android); endereço IP e, com base nele, o país de instalação e a localização aproximada; informações do dispositivo (fabricante, modelo, versão do sistema operacional, idioma etc.); informações de interação com anúncios, como impressões, visualizações completas e cliques; informações de diagnóstico sobre o desempenho do app e do SDK e a prevenção de fraudes</li>
+<li>Finalidades: exibir anúncios, medir e analisar o desempenho, prevenir fraudes (anúncios personalizados ou contextuais de acordo com as escolhas de privacidade de anúncios do usuário)</li>
+<li>Forma de transferência: essas informações são enviadas diretamente do dispositivo do usuário aos servidores da Unity e de seus parceiros de publicidade (nos Estados Unidos e em outros países fora da Coreia) e são retidas e usadas de acordo com as políticas da Unity.</li>
+</ul>
+<p>Os mapas mentais, notas, categorias e informações de energia inseridos pelo usuário, bem como o número de anúncios assistidos e o tempo de espera, não são fornecidos aos SDKs de publicidade. O tempo de espera entre anúncios é calculado apenas no dispositivo do usuário e não é enviado a lugar algum.</p>
+<ul>
+<li>É possível usar o Aplicativo sem assistir a anúncios. A energia concedida na primeira visita de cada dia permite usar as funções, e os anúncios só são necessários para recargas adicionais.</li>
+</ul>
+<p>Para mais detalhes sobre o tratamento de informações pelo Google, consulte a Política de Privacidade do Google (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a>); sobre o tratamento pela Unity, consulte a Política de Privacidade da Unity (<a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener">https://unity.com/legal/privacy-policy</a>) e as perguntas frequentes sobre privacidade para jogadores e usuários de apps (<a href="https://unity.com/legal/game-player-and-app-user-privacy-faq" target="_blank" rel="noopener">https://unity.com/legal/game-player-and-app-user-privacy-faq</a>). Você pode alterar a personalização de anúncios ou excluir ou redefinir o identificador de publicidade em Configurações &gt; Google &gt; Anúncios do dispositivo, e alterar as escolhas de anúncios personalizados da Unity pelo ícone de privacidade na tela do anúncio.</p>
+<h2 id="pt-s7">7. Permissões do dispositivo</h2>
+<ul>
+<li>Biometria/bloqueio de tela: nas versões que incluem o bloqueio do dispositivo, é usada a função de autenticação do sistema operacional. Os dados de impressão digital e de rosto são tratados pelo sistema operacional, e nem o Aplicativo nem o Desenvolvedor os coletam ou armazenam.</li>
+<li>Internet: usada para a comunicação interna do dispositivo necessária para montar as telas do Aplicativo e para exibir anúncios.</li>
+<li>Identificador de publicidade: é usada a permissão do ID de publicidade do Android (AD_ID) para fornecer anúncios premiados do AdMob e do Unity Ads; você pode excluir ou redefinir o identificador de publicidade nas configurações do dispositivo.</li>
+<li>Proteção de tela: em algumas versões, a captura, gravação e espelhamento da tela do Aplicativo podem ser restringidos para proteger os mapas mentais; você pode desativar isso nas configurações.</li>
+<li>Salvar/selecionar arquivos: ao salvar ou carregar arquivos de backup, é usada a tela de arquivos do sistema, e nenhuma permissão separada de acesso ao armazenamento é solicitada.</li>
+</ul>
+<h2 id="pt-s8">8. Direitos do usuário</h2>
+<p>O usuário pode a qualquer momento visualizar, editar e excluir as informações inseridas no Aplicativo, e pode excluir todas as informações excluindo o Aplicativo. Como o Desenvolvedor não guarda as informações do usuário, não há informações sujeitas a pedidos separados de acesso ou exclusão.</p>
+<h2 id="pt-s9">9. Medidas de segurança</h2>
+<ul>
+<li>As informações do usuário não são enviadas aos servidores do Desenvolvedor</li>
+<li>Os dados são armazenados criptografados no armazenamento privado do Aplicativo (a chave de criptografia é gerada a partir do PIN do usuário e não é armazenada no dispositivo)</li>
+<li>Os backups automáticos são guardados apenas no armazenamento privado do Aplicativo (os 5 mais recentes; excluídos junto com o Aplicativo)</li>
+<li>Os arquivos de backup são criptografados com uma senha definida pelo usuário</li>
+<li>As informações inseridas pelo usuário não são fornecidas aos SDKs de publicidade (AdMob, Unity Ads)</li>
+<li>(Opcional) Suporte ao bloqueio do dispositivo e ao bloqueio de captura de tela</li>
+</ul>
+<p>Recomendamos também que você configure um bloqueio de tela no dispositivo.</p>
+<h2 id="pt-s10">10. Informações pessoais de crianças e adolescentes</h2>
+<p>O Aplicativo não se destina a menores de 16 anos e não coleta intencionalmente informações pessoais de menores de 16 anos. O conteúdo inserido é armazenado apenas no dispositivo do usuário, e as informações coletadas pelos SDKs de publicidade seguem a seção 6.</p>
+<h2 id="pt-s11">11. Responsável pela privacidade e contato</h2>
+<ul>
+<li>Responsável: HappyisIT</li>
+<li>Contato: <a href="mailto:happyisit@gmail.com">happyisit@gmail.com</a></li>
+</ul>
+<h2 id="pt-s12">12. Alterações nesta Política</h2>
+<p>Se esta Política for alterada, isso será notificado por meio de uma atualização do Aplicativo ou de um aviso no Aplicativo. Alterações importantes serão exibidas novamente em uma tela de aceitação na primeira vez que o Aplicativo for aberto após a atualização. Se os dados coletados para publicidade ou outros fins mudarem, isso será avisado antes de entrar em vigor. Esta Política foi redigida em coreano, e as versões traduzidas para outros idiomas são apenas para referência. Se a versão coreana e uma tradução divergirem, prevalecerá a versão coreana.</p>
+<h2 id="pt-s13">13. Sistemas operacionais compatíveis</h2>
+<p>O Aplicativo pode ser usado no Android 13 ou superior. Não é possível instalá-lo ou atualizá-lo em dispositivos com versões anteriores do Android. Em qualquer versão, o Desenvolvedor não opera servidores e as informações inseridas pelo usuário são armazenadas apenas no dispositivo dele.</p>
+<h2 id="pt-s14">14. Isenção de responsabilidade e responsabilidade do usuário</h2>
+<ul>
+<li>O Aplicativo é fornecido «NO ESTADO EM QUE SE ENCONTRA» (AS IS), e o Desenvolvedor não garante que o Aplicativo esteja livre de erros, que as funções de backup e restauração sejam completas nem a integridade dos dados.</li>
+<li>A responsabilidade pela gestão dos dados armazenados no Aplicativo é do próprio usuário. Para se prevenir contra a perda de dados por diversas causas, como troca de dispositivo, exclusão do Aplicativo, atualizações, bugs do Desenvolvedor ou defeito do dispositivo, o usuário deve fazer backups separados dos dados importantes.</li>
+<li>Salvo dolo ou culpa grave, o Desenvolvedor não se responsabiliza pela perda de dados ocorrida durante o uso do Aplicativo, pela falha do backup ou da restauração, pela não veiculação de anúncios nem por quaisquer outros danos indiretos, especiais, consequenciais ou incidentais; quando reconhecida a responsabilidade, o limite da indenização rege-se pelo Artigo 11 dos Termos de Serviço.</li>
+<li>Para mais detalhes, consulte os Artigos 7 e 11 dos Termos de Serviço.</li>
+</ul>
+<h2 id="pt-s15">Disposição final</h2>
+<p>Esta Política entra em vigor em 9 de novembro de 2026.</p></div>
+<div class="card"><h2>Histórico de revisões</h2><table><tr><th>Vigência</th><td>9 de novembro de 2026 (atual) · 5 de novembro de 2026 · 29 de outubro de 2026 (inicial)</td></tr><tr><th>Aplicativo / versão</th><td>MindGazi (마인드가지) (Android) v1.3.1 · Android 13 ou superior</td></tr><tr><th>Principais alterações</th><td>Prevalência da versão coreana, isenções esclarecidas (não veiculação de anúncios; limite de indenização conforme o Artigo 11 dos Termos), traduções em 6 idiomas</td></tr></table></div>
+</section>
 </main>
-<footer><p><a href="https://happyisit.github.io/">개발자 홈 HappyisIT</a> · <a href="mailto:happyisit@gmail.com">happyisit@gmail.com</a></p><p>© HappyisIT</p></footer>
+<footer><p><a href="https://happyisit.github.io/">HappyisIT</a> · <a href="mailto:happyisit@gmail.com">happyisit@gmail.com</a></p><p>© HappyisIT</p></footer>
+<script>
+(function(){
+  var L=['ko','zh-Hant','ru','en','es','pt'];
+  function pick(){
+    var h=decodeURIComponent((location.hash||'').slice(1));
+    if(h){for(var i=0;i<L.length;i++){if(h===L[i]||h.indexOf(L[i]+'-s')===0)return L[i]}}
+    var nl=(navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||'ko']);
+    for(var j=0;j<nl.length;j++){var c=String(nl[j]||'').toLowerCase();
+      if(c.indexOf('ko')===0)return'ko';if(c.indexOf('zh')===0)return'zh-Hant';
+      var b=c.split('-')[0];if(L.indexOf(b)>=0)return b}
+    return'ko';
+  }
+  function show(){
+    var cur=pick();
+    L.forEach(function(k){var s=document.getElementById(k);if(s){if(k===cur)s.removeAttribute('hidden');else s.setAttribute('hidden','')}});
+    document.querySelectorAll('nav.langs a').forEach(function(a){a.setAttribute('aria-current',a.getAttribute('href')==='#'+cur?'true':'false')});
+    var s=document.getElementById(cur);document.documentElement.lang=cur;if(s&&s.dataset.title)document.title=s.dataset.title;
+    var h=(location.hash||'').slice(1);
+    if(h&&h!==cur){var t=document.getElementById(h);if(t)t.scrollIntoView()}else if(h===cur){window.scrollTo(0,0)}
+  }
+  window.addEventListener('hashchange',show);show();
+})();
+</script>
 </body></html>
