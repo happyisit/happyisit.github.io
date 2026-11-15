@@ -7,7 +7,14 @@
       "color": "#ff9fc8",
       "icon": "repeat",
       "iconImage": "",
-      "name": { "ko": "반보케", "en": "Banboke", "zh": "Banboke", "es": "Banboke", "pt": "Banboke", "ru": "Banboke" },
+      "name": {
+        "ko": "반보케",
+        "en": "Banboke",
+        "zh": "Banboke",
+        "es": "Banboke",
+        "pt": "Banboke",
+        "ru": "Banboke"
+      },
       "desc": {
         "ko": "잊어버릴 즈음 다시 보여 주는 반복 암기 앱. 다짐쓰기로 내일의 나에게 한 문장을 새깁니다.",
         "en": "A spaced-repetition app that brings things back just before you forget. Write a resolution to remind tomorrow's you.",
@@ -25,7 +32,7 @@
         "ru": ["Повторение", "Обещания"]
       },
       "links": {
-        "play": "",
+        "play": "https://play.google.com/store/apps/details?id=kr.co.happyisit.reminder",
         "privacy": "https://happyisit.github.io/banboke/privacy.html",
         "terms": "https://happyisit.github.io/banboke/terms.html"
       }
@@ -36,7 +43,14 @@
       "color": "#b49bff",
       "icon": "mindmap",
       "iconImage": "",
-      "name": { "ko": "마인드가지", "en": "MindGazi", "zh": "MindGazi", "es": "MindGazi", "pt": "MindGazi", "ru": "MindGazi" },
+      "name": {
+        "ko": "마인드가지",
+        "en": "MindGazi",
+        "zh": "MindGazi",
+        "es": "MindGazi",
+        "pt": "MindGazi",
+        "ru": "MindGazi"
+      },
       "desc": {
         "ko": "떠오르는 생각을 가지처럼 뻗어 정리하는 마인드맵. 손끝으로 그리는 나만의 생각 지도.",
         "en": "A mind map where your thoughts grow like branches. Your own map of ideas, drawn with a fingertip.",
@@ -54,7 +68,7 @@
         "ru": ["Майнд-карта", "Идеи"]
       },
       "links": {
-        "play": "",
+        "play": "https://play.google.com/store/apps/details?id=kr.co.happyisit.mindgazi",
         "privacy": "https://happyisit.github.io/mindgazi/privacy.html",
         "terms": "https://happyisit.github.io/mindgazi/terms.html"
       }
@@ -65,7 +79,14 @@
       "color": "#7fd8c0",
       "icon": "lock",
       "iconImage": "",
-      "name": { "ko": "오프메모", "en": "OffMemo", "zh": "OffMemo", "es": "OffMemo", "pt": "OffMemo", "ru": "OffMemo" },
+      "name": {
+        "ko": "오프메모",
+        "en": "OffMemo",
+        "zh": "OffMemo",
+        "es": "OffMemo",
+        "pt": "OffMemo",
+        "ru": "OffMemo"
+      },
       "desc": {
         "ko": "인터넷 없이 암호화해 저장하는 메모장. 소중한 기록은 내 기기 안에만.",
         "en": "A notepad that encrypts and stores everything offline. Your precious notes stay on your device.",
@@ -83,9 +104,9 @@
         "ru": ["Офлайн", "Шифрование"]
       },
       "links": {
-        "play": "",
-        "privacy": "",
-        "terms": ""
+        "play": "https://play.google.com/store/apps/details?id=kr.co.happyisit.offmemoz",
+        "privacy": "https://happyisit.github.io/offmemoz/privacy.html",
+        "terms": "https://happyisit.github.io/offmemoz/terms.html"
       }
     },
     {
@@ -94,7 +115,14 @@
       "color": "#ffcf8a",
       "icon": "star",
       "iconImage": "",
-      "name": { "ko": "별사주세요", "en": "ByeolSaju", "zh": "ByeolSaju", "es": "ByeolSaju", "pt": "ByeolSaju", "ru": "ByeolSaju" },
+      "name": {
+        "ko": "별사주세요",
+        "en": "ByeolSaju",
+        "zh": "ByeolSaju",
+        "es": "ByeolSaju",
+        "pt": "ByeolSaju",
+        "ru": "ByeolSaju"
+      },
       "desc": {
         "ko": "별자리와 사주로 보는 오늘의 운세. 오늘의 카드 한 장, 예·아니오 점으로 하루를 가볍게 시작해요.",
         "en": "Daily fortunes from your zodiac sign and Saju, the Korean four pillars. Start your day lightly with a daily card or a yes/no reading.",
@@ -112,7 +140,7 @@
         "ru": ["Зодиак", "Саджу"]
       },
       "links": {
-        "play": "",
+        "play": "https://play.google.com/store/apps/details?id=kr.co.happyisit.sazoostar",
         "privacy": "https://happyisit.github.io/sazoostar/privacy.html",
         "terms": "https://happyisit.github.io/sazoostar/terms.html"
       }
@@ -123,7 +151,14 @@
       "color": "#8fc4ff",
       "icon": "text",
       "iconImage": "",
-      "name": { "ko": "연모", "en": "Yeonmo", "zh": "Yeonmo", "es": "Yeonmo", "pt": "Yeonmo", "ru": "Yeonmo" },
+      "name": {
+        "ko": "연모",
+        "en": "Yeonmo",
+        "zh": "Yeonmo",
+        "es": "Yeonmo",
+        "pt": "Yeonmo",
+        "ru": "Yeonmo"
+      },
       "desc": {
         "ko": "글자 수 세기부터 텍스트 변환까지, 글 쓰는 사람을 위한 작은 도구 상자.",
         "en": "From character counts to text conversion, a small toolbox for people who write.",
@@ -142,8 +177,8 @@
       },
       "links": {
         "play": "",
-        "privacy": "",
-        "terms": ""
+        "privacy": "https://happyisit.github.io/yeonmo/privacy.html",
+        "terms": "https://happyisit.github.io/yeonmo/terms.html"
       }
     },
     {
@@ -152,7 +187,14 @@
       "color": "#ff9f9f",
       "icon": "brain",
       "iconImage": "",
-      "name": { "ko": "어웨이크브레인", "en": "AwakeBrain", "zh": "AwakeBrain", "es": "AwakeBrain", "pt": "AwakeBrain", "ru": "AwakeBrain" },
+      "name": {
+        "ko": "어웨이크브레인",
+        "en": "AwakeBrain",
+        "zh": "AwakeBrain",
+        "es": "AwakeBrain",
+        "pt": "AwakeBrain",
+        "ru": "AwakeBrain"
+      },
       "desc": {
         "ko": "숫자 터치, 계산, 기억 게임으로 머리를 깨우는 뇌를 위한 미니게임.",
         "en": "Mini games for your brain. Wake up your mind with number tapping, quick math, and memory challenges.",
@@ -170,7 +212,7 @@
         "ru": ["Мини-игры", "Мозг"]
       },
       "links": {
-        "play": "",
+        "play": "https://play.google.com/store/apps/details?id=kr.co.happyisit.awakebrain",
         "privacy": "https://happyisit.github.io/awakebrain/privacy.html",
         "terms": "https://happyisit.github.io/awakebrain/terms.html"
       }
