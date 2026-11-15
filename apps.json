@@ -1,0 +1,179 @@
+{
+  "_guide": "홈페이지에 노출할 앱 목록입니다. 배열 순서대로 화면에 나옵니다. 앱을 숨기려면 visible을 false로, 지우려면 { ... } 블록 하나를 통째로 지우세요. 링크가 빈 문자열이면 해당 버튼은 표시되지 않습니다. icon: repeat, mindmap, lock, star, text, brain, heart, note, game 중 선택. iconImage에 이미지 경로를 넣으면 그 이미지를 대신 씁니다.",
+  "apps": [
+    {
+      "id": "banboke",
+      "visible": true,
+      "color": "#ff9fc8",
+      "icon": "repeat",
+      "iconImage": "",
+      "name": { "ko": "반보케", "en": "Banboke", "zh": "Banboke", "es": "Banboke", "pt": "Banboke", "ru": "Banboke" },
+      "desc": {
+        "ko": "잊어버릴 즈음 다시 보여 주는 반복 암기 앱. 다짐쓰기로 내일의 나에게 한 문장을 새깁니다.",
+        "en": "A spaced-repetition app that brings things back just before you forget. Write a resolution to remind tomorrow's you.",
+        "zh": "在你快要忘記時再次提醒的反覆記憶 App。用「誓言書寫」為明天的自己刻下一句話。",
+        "es": "Una app de repaso que te muestra las cosas justo antes de olvidarlas. Escribe un propósito para tu yo de mañana.",
+        "pt": "Um app de revisão que mostra as coisas logo antes de você esquecer. Escreva um propósito para o seu eu de amanhã.",
+        "ru": "Приложение для интервального повторения, которое напоминает прямо перед тем, как вы забудете. Запишите обещание себе завтрашнему."
+      },
+      "tags": {
+        "ko": ["반복 암기", "다짐쓰기"],
+        "en": ["Spaced repetition", "Resolutions"],
+        "zh": ["反覆記憶", "誓言書寫"],
+        "es": ["Repaso", "Propósitos"],
+        "pt": ["Revisão", "Propósitos"],
+        "ru": ["Повторение", "Обещания"]
+      },
+      "links": {
+        "play": "",
+        "privacy": "https://happyisit.github.io/banboke/privacy.html",
+        "terms": "https://happyisit.github.io/banboke/terms.html"
+      }
+    },
+    {
+      "id": "mindgazi",
+      "visible": true,
+      "color": "#b49bff",
+      "icon": "mindmap",
+      "iconImage": "",
+      "name": { "ko": "마인드가지", "en": "MindGazi", "zh": "MindGazi", "es": "MindGazi", "pt": "MindGazi", "ru": "MindGazi" },
+      "desc": {
+        "ko": "떠오르는 생각을 가지처럼 뻗어 정리하는 마인드맵. 손끝으로 그리는 나만의 생각 지도.",
+        "en": "A mind map where your thoughts grow like branches. Your own map of ideas, drawn with a fingertip.",
+        "zh": "讓想法像樹枝一樣延伸整理的心智圖。用指尖畫出專屬於你的思考地圖。",
+        "es": "Un mapa mental donde tus ideas crecen como ramas. Tu propio mapa de pensamientos, dibujado con el dedo.",
+        "pt": "Um mapa mental onde as ideias crescem como galhos. Seu próprio mapa de pensamentos, desenhado com a ponta do dedo.",
+        "ru": "Майнд-карта, где мысли растут, как ветви. Ваша собственная карта идей, нарисованная кончиком пальца."
+      },
+      "tags": {
+        "ko": ["마인드맵", "아이디어"],
+        "en": ["Mind map", "Ideas"],
+        "zh": ["心智圖", "點子"],
+        "es": ["Mapa mental", "Ideas"],
+        "pt": ["Mapa mental", "Ideias"],
+        "ru": ["Майнд-карта", "Идеи"]
+      },
+      "links": {
+        "play": "",
+        "privacy": "https://happyisit.github.io/mindgazi/privacy.html",
+        "terms": "https://happyisit.github.io/mindgazi/terms.html"
+      }
+    },
+    {
+      "id": "offmemo",
+      "visible": true,
+      "color": "#7fd8c0",
+      "icon": "lock",
+      "iconImage": "",
+      "name": { "ko": "오프메모", "en": "OffMemo", "zh": "OffMemo", "es": "OffMemo", "pt": "OffMemo", "ru": "OffMemo" },
+      "desc": {
+        "ko": "인터넷 없이 암호화해 저장하는 메모장. 소중한 기록은 내 기기 안에만.",
+        "en": "A notepad that encrypts and stores everything offline. Your precious notes stay on your device.",
+        "zh": "不需網路、加密儲存的記事本。珍貴的紀錄只留在你的裝置裡。",
+        "es": "Un bloc de notas que cifra y guarda todo sin conexión. Tus notas importantes se quedan en tu dispositivo.",
+        "pt": "Um bloco de notas que criptografa e salva tudo offline. Suas notas importantes ficam no seu aparelho.",
+        "ru": "Блокнот, который шифрует и хранит всё офлайн. Ваши важные заметки остаются на устройстве."
+      },
+      "tags": {
+        "ko": ["오프라인", "암호화"],
+        "en": ["Offline", "Encrypted"],
+        "zh": ["離線", "加密"],
+        "es": ["Sin conexión", "Cifrado"],
+        "pt": ["Offline", "Criptografia"],
+        "ru": ["Офлайн", "Шифрование"]
+      },
+      "links": {
+        "play": "",
+        "privacy": "",
+        "terms": ""
+      }
+    },
+    {
+      "id": "byeolsaju",
+      "visible": true,
+      "color": "#ffcf8a",
+      "icon": "star",
+      "iconImage": "",
+      "name": { "ko": "별사주세요", "en": "ByeolSaju", "zh": "ByeolSaju", "es": "ByeolSaju", "pt": "ByeolSaju", "ru": "ByeolSaju" },
+      "desc": {
+        "ko": "별자리와 사주로 보는 오늘의 운세. 오늘의 카드 한 장, 예·아니오 점으로 하루를 가볍게 시작해요.",
+        "en": "Daily fortunes from your zodiac sign and Saju, the Korean four pillars. Start your day lightly with a daily card or a yes/no reading.",
+        "zh": "用星座與四柱八字看今日運勢。抽一張今日卡片、來一次是非占卜，輕鬆開啟一天。",
+        "es": "Tu horóscopo diario según tu signo y el Saju, los cuatro pilares coreanos. Empieza el día con la carta del día o una tirada de sí o no.",
+        "pt": "Seu horóscopo diário pelo signo e pelo Saju, os quatro pilares coreanos. Comece o dia com a carta do dia ou uma leitura de sim ou não.",
+        "ru": "Ежедневный гороскоп по знаку зодиака и саджу — корейским «четырём столпам». Начните день с карты дня или гадания «да или нет»."
+      },
+      "tags": {
+        "ko": ["별자리", "사주"],
+        "en": ["Zodiac", "Saju"],
+        "zh": ["星座", "八字"],
+        "es": ["Zodiaco", "Saju"],
+        "pt": ["Signos", "Saju"],
+        "ru": ["Зодиак", "Саджу"]
+      },
+      "links": {
+        "play": "",
+        "privacy": "https://happyisit.github.io/sazoostar/privacy.html",
+        "terms": "https://happyisit.github.io/sazoostar/terms.html"
+      }
+    },
+    {
+      "id": "yeonmo",
+      "visible": true,
+      "color": "#8fc4ff",
+      "icon": "text",
+      "iconImage": "",
+      "name": { "ko": "연모", "en": "Yeonmo", "zh": "Yeonmo", "es": "Yeonmo", "pt": "Yeonmo", "ru": "Yeonmo" },
+      "desc": {
+        "ko": "글자 수 세기부터 텍스트 변환까지, 글 쓰는 사람을 위한 작은 도구 상자.",
+        "en": "From character counts to text conversion, a small toolbox for people who write.",
+        "zh": "從字數統計到文字轉換，為寫作者準備的小工具箱。",
+        "es": "Desde contar caracteres hasta convertir texto, una pequeña caja de herramientas para quienes escriben.",
+        "pt": "De contar caracteres a converter textos, uma pequena caixa de ferramentas para quem escreve.",
+        "ru": "От подсчёта символов до преобразования текста — небольшой набор инструментов для тех, кто пишет."
+      },
+      "tags": {
+        "ko": ["텍스트 도구"],
+        "en": ["Text tools"],
+        "zh": ["文字工具"],
+        "es": ["Texto"],
+        "pt": ["Texto"],
+        "ru": ["Текст"]
+      },
+      "links": {
+        "play": "",
+        "privacy": "",
+        "terms": ""
+      }
+    },
+    {
+      "id": "awakebrain",
+      "visible": true,
+      "color": "#ff9f9f",
+      "icon": "brain",
+      "iconImage": "",
+      "name": { "ko": "어웨이크브레인", "en": "AwakeBrain", "zh": "AwakeBrain", "es": "AwakeBrain", "pt": "AwakeBrain", "ru": "AwakeBrain" },
+      "desc": {
+        "ko": "숫자 터치, 계산, 기억 게임으로 머리를 깨우는 뇌를 위한 미니게임.",
+        "en": "Mini games for your brain. Wake up your mind with number tapping, quick math, and memory challenges.",
+        "zh": "為大腦準備的小遊戲。用數字點擊、計算與記憶挑戰喚醒你的頭腦。",
+        "es": "Minijuegos para tu cerebro. Despierta la mente con toques de números, cálculo rápido y retos de memoria.",
+        "pt": "Minijogos para o seu cérebro. Desperte a mente com toques em números, contas rápidas e desafios de memória.",
+        "ru": "Мини-игры для мозга. Разбудите ум играми на скорость касаний, быстрый счёт и память."
+      },
+      "tags": {
+        "ko": ["미니게임", "두뇌"],
+        "en": ["Mini games", "Brain"],
+        "zh": ["小遊戲", "大腦"],
+        "es": ["Minijuegos", "Mente"],
+        "pt": ["Minijogos", "Mente"],
+        "ru": ["Мини-игры", "Мозг"]
+      },
+      "links": {
+        "play": "",
+        "privacy": "https://happyisit.github.io/awakebrain/privacy.html",
+        "terms": "https://happyisit.github.io/awakebrain/terms.html"
+      }
+    }
+  ]
+}

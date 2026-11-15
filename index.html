@@ -1,850 +1,605 @@
 <!doctype html>
-<html lang="ko" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Developer HappyisIT | Apps Beyond Code</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              brand: {
-                50: "#f0f6ff",
-                100: "#e0edff",
-                500: "#3b82f6",
-                600: "#2563eb",
-                900: "#0f172a",
-                950: "#030712",
-              },
-              accent: {
-                cyan: "#06b6d4",
-                purple: "#a855f7",
-                emerald: "#10b981",
-                amber: "#f59e0b",
-              },
-            },
-            animation: {
-              float: "float 6s ease-in-out infinite",
-              "float-delayed": "float 6s ease-in-out 3s infinite",
-              "pulse-slow": "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
-              "spin-slow": "spin 12s linear infinite",
-            },
-            keyframes: {
-              float: {
-                "0%, 100%": { transform: "translateY(0px) rotate(0deg)" },
-                "50%": { transform: "translateY(-15px) rotate(3deg)" },
-              },
-            },
-          },
-        },
-      };
-    </script>
-    <!-- Google Fonts: Noto Sans KR & Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      body {
-        font-family: "Inter", "Noto Sans KR", sans-serif;
-        background-color: #030712;
-        color: #f3f4f6;
-        overflow-x: hidden;
-      }
-      /* Custom Glassmorphism styling */
-      .glass-card {
-        background: rgba(17, 24, 39, 0.6);
-        backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-      }
-      .glass-card:hover {
-        border-color: rgba(59, 130, 246, 0.4);
-        box-shadow: 0 0 25px rgba(59, 130, 246, 0.15);
-      }
-      .text-gradient {
-        background: linear-gradient(
-          135deg,
-          #60a5fa 0%,
-          #c084fc 50%,
-          #f472b6 100%
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-      .text-gradient-cyan {
-        background: linear-gradient(135deg, #22d3ee 0%, #818cf8 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-      .bg-grid-pattern {
-        background-image: radial-gradient(
-          rgba(255, 255, 255, 0.07) 1px,
-          transparent 1px
-        );
-        background-size: 32px 32px;
-      }
-    </style>
-  </head>
-  <body
-    class="relative min-h-screen bg-grid-pattern antialiased selection:bg-brand-500 selection:text-white"
-  >
-    <!-- Ambient Glowing Background Elements -->
-    <div
-      class="fixed top-0 left-1/4 -translate-x-1/2 w-[500px] h-[500px] bg-brand-600/20 rounded-full blur-[140px] pointer-events-none -z-10"
-    ></div>
-    <div
-      class="fixed top-1/3 right-10 w-[400px] h-[400px] bg-accent-purple/15 rounded-full blur-[120px] pointer-events-none -z-10"
-    ></div>
-    <div
-      class="fixed bottom-10 left-1/3 w-[600px] h-[600px] bg-accent-cyan/10 rounded-full blur-[160px] pointer-events-none -z-10"
-    ></div>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HappyisIT | Small apps for your day</title>
+<meta name="description" content="HappyisIT makes offline-first apps that need no sign-up and keep your data only on your device.">
+<meta property="og:title" content="HappyisIT">
+<meta property="og:description" content="Small apps for your day. Offline first, no sign-up, stored only on your device.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://happyisit.github.io/">
+<meta name="theme-color" content="#1b1640">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%232a2163'/%3E%3Ccircle cx='19' cy='21' r='12' fill='%23f6c9e0'/%3E%3Ccircle cx='25' cy='16' r='10' fill='%232a2163'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@500;700&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@500;700&family=Noto+Serif:wght@500;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--pink:#f6c9e0;--text:#efeaff;--muted:#c5bce8;--dim:#a79ed4;--line:rgba(255,255,255,.13)}
+html{scroll-behavior:smooth}
+body{font-family:"Noto Sans KR","Noto Sans TC",system-ui,sans-serif;color:var(--text);background:linear-gradient(180deg,#1b1640 0%,#2a2163 25%,#3b2b6e 50%,#2a2163 75%,#1a1538 100%);min-height:100vh;overflow-x:hidden;line-height:1.6}
+html[lang="zh-Hant"] body{font-family:"Noto Sans TC","Noto Sans KR",system-ui,sans-serif}
+.serif{font-family:"Noto Serif KR","Noto Serif TC","Noto Serif",Georgia,serif}
+html[lang="zh-Hant"] .serif{font-family:"Noto Serif TC","Noto Serif KR",serif}
+html[lang="en"] .serif,html[lang="es"] .serif,html[lang="pt"] .serif,html[lang="ru"] .serif{font-family:"Noto Serif",Georgia,serif}
+a{color:inherit;text-decoration:none}
+#sky{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.tw{animation:tw 4s ease-in-out infinite}
+@keyframes tw{0%,100%{opacity:.25}50%{opacity:1}}
+.glow{position:fixed;border-radius:50%;filter:blur(90px);z-index:0;pointer-events:none}
+.wrap{position:relative;z-index:1;width:min(1180px,100% - 40px);margin:0 auto}
+header{position:sticky;top:0;z-index:20;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:rgba(27,22,64,.55);border-bottom:1px solid rgba(255,255,255,.06)}
+nav{display:flex;align-items:center;justify-content:space-between;gap:16px;height:72px}
+.logo{display:flex;gap:10px;align-items:center;font-size:19px;font-weight:700;white-space:nowrap}
+.menu{display:flex;gap:32px;font-size:15px;color:var(--muted)}
+.menu a:hover{color:#fff}
+.lang{display:flex;gap:2px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);padding:4px;border-radius:999px;font-size:13px;overflow-x:auto;scrollbar-width:none}
+.lang::-webkit-scrollbar{display:none}
+.lang button{border:0;background:none;color:#bdb3e6;padding:6px 11px;border-radius:999px;cursor:pointer;font:inherit;white-space:nowrap}
+.lang button:hover{color:#fff}
+.lang button[aria-pressed="true"]{background:var(--pink);color:#3b2763;font-weight:700}
+.hero{text-align:center;padding:96px 0 100px;position:relative}
+.moon{position:absolute;right:10px;top:30px;width:150px;height:150px}
+.chip{display:inline-block;padding:8px 18px;border-radius:999px;border:1px solid rgba(246,201,224,.4);color:var(--pink);font-size:14px;background:rgba(246,201,224,.08)}
+h1{font-size:clamp(38px,6vw,70px);line-height:1.3;font-weight:700;margin:28px 0 24px;letter-spacing:-.5px}
+h1 em{font-style:normal;background:linear-gradient(90deg,#ffc6e1,#d9c5ff,#a9dcff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{font-size:clamp(16px,1.6vw,20px);color:var(--muted);line-height:1.85;max-width:760px;margin:0 auto}
+.cta{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin-top:42px}
+.btn{padding:15px 30px;border-radius:999px;font-size:16px;font-weight:700;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px)}
+.b1{background:linear-gradient(135deg,#ffc6e1,#c7b3ff);color:#2d1f5a;box-shadow:0 0 40px rgba(255,190,225,.35)}
+.b2{border:1px solid rgba(255,255,255,.3)}
+section{scroll-margin-top:80px}
+.sec{padding:80px 0}
+.eyebrow{text-align:center;color:var(--pink);font-size:13px;letter-spacing:4px;font-weight:500}
+h2{text-align:center;font-size:clamp(28px,3.4vw,42px);margin:14px 0;font-weight:700}
+.lead{text-align:center;color:#b2a8da;font-size:17px;margin-bottom:52px}
+.apps{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:24px}
+.app{background:rgba(255,255,255,.07);border:1px solid var(--line);border-radius:28px;padding:32px;position:relative;overflow:hidden;display:flex;flex-direction:column;transition:transform .3s,border-color .3s}
+.app:hover{transform:translateY(-4px);border-color:rgba(255,255,255,.28)}
+.app:before{content:"";position:absolute;width:180px;height:180px;border-radius:50%;top:-70px;right:-60px;background:var(--c);opacity:.28;filter:blur(30px)}
+.icon{width:68px;height:68px;border-radius:22px;display:flex;align-items:center;justify-content:center;margin-bottom:22px;background:var(--c);box-shadow:0 0 28px var(--c);overflow:hidden;position:relative}
+.icon img{width:100%;height:100%;object-fit:cover}
+.app h3{font-size:22px;font-weight:700}
+.app .en{font-size:12px;letter-spacing:2px;color:var(--dim);margin:2px 0 12px;text-transform:uppercase}
+.app p{font-size:15.5px;color:#cbc2ec;line-height:1.75;flex:1}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
+.tags span{font-size:12.5px;padding:4px 11px;border-radius:999px;background:rgba(255,255,255,.08);color:#d9d1f5}
+.links{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.links a{font-size:13px;padding:7px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.18);color:#e3dcff}
+.links a:hover{background:rgba(255,255,255,.1)}
+.links a.play{background:var(--c);border-color:transparent;color:#2d1f5a;font-weight:700}
+.msg{text-align:center;color:var(--dim);padding:30px}
+.how{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.pc{text-align:center;padding:34px 24px;border-radius:26px;background:linear-gradient(180deg,rgba(255,255,255,.09),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.1)}
+.pc .ic{width:62px;height:62px;margin:0 auto 18px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.1)}
+.pc h4{font-size:19px;margin-bottom:10px}
+.pc p{font-size:14.5px;color:#bdb3e6;line-height:1.75}
+.note{margin-top:22px;display:flex;gap:16px;align-items:flex-start;padding:22px 26px;border-radius:20px;background:rgba(255,255,255,.04);border:1px dashed rgba(255,255,255,.16)}
+.note b{display:block;font-size:15px;margin-bottom:4px;color:#e3dcff}
+.note p{font-size:14px;color:var(--dim);line-height:1.75}
+.nums{display:grid;grid-template-columns:repeat(4,1fr);padding:46px 20px;border-radius:32px;background:rgba(255,255,255,.06);border:1px solid var(--line)}
+.n{text-align:center}
+.n b{display:block;font-size:clamp(38px,4.5vw,54px);line-height:1.2;background:linear-gradient(135deg,#ffc6e1,#a9dcff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.n span{color:#bdb3e6;font-size:15px}
+.letter{text-align:center;padding:30px 0}
+.letter q{font-size:clamp(21px,2.4vw,30px);line-height:1.8;quotes:none;display:block;max-width:900px;margin:0 auto}
+.letter small{display:block;margin-top:24px;color:var(--pink);letter-spacing:1px;font-size:14px}
+footer{position:relative;z-index:1;padding:56px 0 70px;text-align:center;color:var(--dim);font-size:14px;border-top:1px solid rgba(255,255,255,.1)}
+footer .q{font-size:21px;font-weight:700;color:var(--text)}
+.mail{display:inline-block;margin:16px 0;padding:13px 28px;border-radius:999px;background:rgba(246,201,224,.14);color:#ffd3e8;font-weight:700}
+.mail:hover{background:rgba(246,201,224,.24)}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s ease}
+.reveal.on{opacity:1;transform:none}
+.nt-back{position:fixed;inset:0;z-index:100;background:rgba(10,7,30,.72);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;padding:20px;animation:fade .3s ease}
+.nt-back[hidden]{display:none}
+.nt{position:relative;width:min(780px,100%);max-height:88vh;display:flex;flex-direction:column;border-radius:28px;background:linear-gradient(180deg,#352a78,#251d5a);border:1px solid rgba(255,255,255,.18);box-shadow:0 30px 80px rgba(0,0,0,.5),0 0 60px rgba(246,201,224,.15);overflow:hidden;animation:pop .35s ease}
+.nt-head{padding:30px 34px 18px;border-bottom:1px solid rgba(255,255,255,.1)}
+.nt-badge{display:inline-flex;align-items:center;gap:6px;padding:5px 14px;border-radius:999px;background:#ff8fb1;color:#3b1530;font-size:13px;font-weight:700}
+.nt-head h3{font-size:clamp(22px,3vw,30px);line-height:1.4;margin-top:14px}
+.nt-date{font-size:13px;color:var(--dim);margin-top:6px}
+.nt-body{padding:24px 34px;overflow-y:auto;font-size:16.5px;line-height:1.9;color:#e3dcff;white-space:normal;word-break:keep-all;overflow-wrap:anywhere}
+.nt-body a{color:#ffd3e8;text-decoration:underline}
+.nt-foot{padding:18px 34px 26px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:flex-end}
+.nt-btn{border:0;cursor:pointer;font:inherit;font-weight:700;padding:13px 30px;border-radius:999px;font-size:15px}
+.nt-close{background:linear-gradient(135deg,#ffc6e1,#c7b3ff);color:#2d1f5a}
+.nt-x{position:absolute;top:18px;right:18px;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);color:#fff;font-size:20px;cursor:pointer}
+.nt-ask{position:absolute;inset:0;background:rgba(20,14,50,.82);display:flex;align-items:center;justify-content:center;padding:24px;animation:fade .2s ease}
+.nt-ask[hidden]{display:none}
+.nt-ask-box{background:#fff;color:#2d1f5a;border-radius:24px;padding:30px 28px 24px;width:min(400px,100%);text-align:center;animation:pop .25s ease}
+.nt-ask-box p{font-size:18px;font-weight:700;line-height:1.6;margin-bottom:22px}
+.nt-ask-row{display:flex;gap:10px}
+.nt-ask-row button{flex:1}
+.nt-no{background:#eee8ff;color:#5b4699}
+.nt-yes{background:linear-gradient(135deg,#ff9fc4,#b49bff);color:#fff}
+.nt.shake{animation:shake .4s}
+body.locked{overflow:hidden}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@keyframes pop{from{opacity:0;transform:translateY(16px) scale(.97)}to{opacity:1;transform:none}}
+@keyframes shake{0%,100%{transform:none}25%{transform:translateX(-8px)}50%{transform:translateX(8px)}75%{transform:translateX(-4px)}}
+@media (max-width:980px){.how{grid-template-columns:repeat(2,1fr)}.menu{display:none}.moon{width:100px;height:100px;top:10px;right:0;opacity:.7}}
+@media (max-width:640px){
+  nav{height:auto;padding:12px 0;flex-wrap:wrap}
+  .lang{width:100%;justify-content:space-between}
+  .hero{padding:60px 0 70px}
+  .sec{padding:56px 0}
+  .apps{grid-template-columns:1fr}
+  .how{grid-template-columns:1fr}
+  .nums{grid-template-columns:repeat(2,1fr);row-gap:28px}
+  .app{padding:26px}
+  .moon{display:none}
+  .nt-back{padding:10px;align-items:flex-end}
+  .nt{max-height:92vh;border-radius:24px}
+  .nt-head{padding:24px 22px 14px}
+  .nt-head h3{padding-right:36px}
+  .nt-body{padding:18px 22px;font-size:15.5px}
+  .nt-foot{padding:14px 22px 20px}
+  .nt-close{width:100%}
+  .nt-x{top:14px;right:14px}
+}
+@media (prefers-reduced-motion:reduce){.tw{animation:none}.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<svg id="sky" aria-hidden="true"></svg>
+<div class="glow" style="width:600px;height:600px;background:#7a4fd1;opacity:.4;top:-150px;left:-150px"></div>
+<div class="glow" style="width:500px;height:500px;background:#d45fa0;opacity:.25;top:30%;right:-180px"></div>
+<div class="glow" style="width:650px;height:650px;background:#4f78d1;opacity:.22;bottom:-200px;left:-220px"></div>
 
-    <!-- Navigation Bar Header -->
-    <header
-      class="sticky top-0 z-50 backdrop-blur-md bg-brand-950/70 border-b border-white/10 transition-all duration-300"
-    >
-      <div
-        class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between"
-      >
-        <!-- Brand Logo / App Icon Concept SVG -->
-        <a href="#" class="flex items-center gap-3 group">
-          <div
-            class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-accent-purple p-0.5 shadow-lg shadow-brand-500/20 group-hover:scale-105 transition-transform duration-300"
-          >
-            <div
-              class="w-full h-full bg-brand-950 rounded-[10px] flex items-center justify-center"
-            >
-              <svg
-                class="w-5 h-5 text-brand-500 group-hover:text-cyan-400 transition-colors"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
-                />
-              </svg>
-            </div>
-          </div>
-          <span
-            class="font-bold text-lg tracking-tight text-white group-hover:text-brand-500 transition-colors"
-            >Happy is IT</span
-          >
-        </a>
-
-        <!-- Navigation Links -->
-        <nav
-          class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-300"
-        >
-          <a href="#philosophy" class="hover:text-white transition-colors"
-            >철학 & 비전</a
-          >
-          <a href="#reflections" class="hover:text-white transition-colors"
-            >여정의 고언</a
-          >
-          <a href="#showcase" class="hover:text-white transition-colors"
-            >앱 디자인 & 시각</a
-          >
-        </nav>
-
-        <!-- Store Badge Mock Link -->
-        <!--<a
-          href="#showcase"
-          class="inline-flex items-center gap-2 px-4 py-2 text-xs sm:text-sm font-semibold rounded-full bg-white/10 hover:bg-white/20 text-white border border-white/15 transition-all hover:scale-105"
-        >
-          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
-            <path
-              d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.85c.67-.82 1.13-1.96.99-3.1-.98.04-2.18.66-2.88 1.48-.63.73-1.18 1.9-1.03 3.03 1.1.09 2.25-.59 2.92-1.41z"
-            />
-          </svg>
-          <span>Store Profile</span>
-        </a>-->
+<header>
+  <div class="wrap">
+    <nav>
+      <a href="#top" class="logo" aria-label="HappyisIT">
+        <svg width="34" height="34" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17" fill="#f6c9e0"/><circle cx="27" cy="14" r="14" fill="#2a2163"/></svg>
+        Happy is IT
+      </a>
+      <div class="menu">
+        <a href="#apps" data-i18n="nav.apps"></a>
+        <a href="#how" data-i18n="nav.how"></a>
+        <a href="#story" data-i18n="nav.story"></a>
+        <a href="#contact" data-i18n="nav.contact"></a>
       </div>
-    </header>
+      <div class="lang" id="lang" role="group" aria-label="Language"></div>
+    </nav>
+  </div>
+</header>
 
-    <main>
-      <!-- Hero Section -->
-      <section
-        class="relative pt-20 pb-24 md:pt-32 md:pb-36 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto text-center overflow-hidden"
-      >
-        <!-- Decorative Animated Floating SVGs -->
-        <div
-          class="absolute -top-10 left-10 md:left-20 animate-float opacity-30 pointer-events-none hidden sm:block"
-        >
-          <svg
-            class="w-20 h-20 text-accent-cyan"
-            viewBox="0 0 100 100"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.5"
-          >
-            <polygon points="50,5 90,25 90,75 50,95 10,75 10,25" />
-            <line x1="50" y1="5" x2="50" y2="95" />
-            <line x1="90" y1="25" x2="10" y2="75" />
-            <line x1="10" y1="25" x2="90" y2="75" />
-          </svg>
-        </div>
-        <div
-          class="absolute bottom-10 right-10 md:right-20 animate-float-delayed opacity-30 pointer-events-none hidden sm:block"
-        >
-          <svg
-            class="w-24 h-24 text-accent-purple"
-            viewBox="0 0 100 100"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.5"
-          >
-            <circle cx="50" cy="50" r="40" stroke-dasharray="6,6" />
-            <circle cx="50" cy="50" r="25" />
-            <circle cx="50" cy="50" r="8" fill="currentColor" />
-          </svg>
-        </div>
+<main class="wrap" id="top">
+  <section class="hero">
+    <svg class="moon" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="46" fill="none" stroke="#fde6f1" stroke-opacity=".15"/><circle cx="50" cy="50" r="40" fill="#fde6f1"/><circle cx="66" cy="38" r="36" fill="#2a2163"/></svg>
+    <span class="chip" data-i18n="hero.chip"></span>
+    <h1 class="serif" data-i18n-html="hero.title"></h1>
+    <p class="sub" data-i18n-html="hero.sub"></p>
+    <div class="cta">
+      <a href="#apps" class="btn b1" data-i18n="hero.cta1"></a>
+      <a href="#how" class="btn b2" data-i18n="hero.cta2"></a>
+    </div>
+  </section>
 
-        <div
-          class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-400 text-xs sm:text-sm font-medium mb-8 backdrop-blur-md"
-        >
-          <span
-            class="w-2 h-2 rounded-full bg-accent-emerald animate-ping"
-          ></span>
-          <span>Crafting Digital Experiences with Purpose & Passion</span>
-        </div>
+  <section class="sec" id="apps">
+    <p class="eyebrow">APPS</p>
+    <h2 class="serif" data-i18n="apps.title"></h2>
+    <p class="lead" data-i18n="apps.lead"></p>
+    <div class="apps" id="appList"></div>
+  </section>
 
-        <h1
-          class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white max-w-4xl mx-auto leading-tight sm:leading-none mb-6"
-        >
-          단순함을 통해 <br class="hidden sm:block" />
-          <span class="text-gradient">인생과 가치</span>를 코드에 담다
-        </h1>
+  <section class="sec" id="how">
+    <p class="eyebrow">HOW WE BUILD</p>
+    <h2 class="serif" data-i18n="how.title"></h2>
+    <p class="lead" data-i18n="how.lead"></p>
+    <div class="how">
+      <div class="pc reveal"><div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffc6e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3l18 18M8.5 8.5A5 5 0 0 0 12 17h5a4 4 0 0 0 1.5-7.7M6 10a4 4 0 0 0-1 7.7"/></svg></div><h4 data-i18n="how.c1t"></h4><p data-i18n="how.c1d"></p></div>
+      <div class="pc reveal"><div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#d9c5ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4.5-6 8-6s7 2 8 6"/><path d="M4 4l16 16"/></svg></div><h4 data-i18n="how.c2t"></h4><p data-i18n="how.c2d"></p></div>
+      <div class="pc reveal"><div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#a9dcff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10" width="14" height="11" rx="2.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15.5" r="1.3"/></svg></div><h4 data-i18n="how.c3t"></h4><p data-i18n="how.c3d"></p></div>
+      <div class="pc reveal"><div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffd59e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h4 data-i18n="how.c4t"></h4><p data-i18n="how.c4d"></p></div>
+    </div>
+    <div class="note reveal">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#a79ed4" stroke-width="2" stroke-linecap="round" style="flex:none;margin-top:2px" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>
+      <div><b data-i18n="how.noteT"></b><p data-i18n="how.noteD"></p></div>
+    </div>
+  </section>
 
-        <p
-          class="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed font-light"
-        >
-          우리는 단순히 앱을 만드는 것이 아닌, 삶의 복잡함을 덜어내고 일상의
-          궤적에 작고 깊은 울림을 주는 디지털 도구를 깎아 만듭니다.
-        </p>
+  <section class="sec" style="padding-top:10px">
+    <div class="nums reveal">
+      <div class="n"><b class="serif" id="appCount">–</b><span data-i18n="num.apps"></span></div>
+      <div class="n"><b class="serif">6</b><span data-i18n="num.langs"></span></div>
+      <div class="n"><b class="serif">0</b><span data-i18n="num.signup"></span></div>
+      <div class="n"><b class="serif">0</b><span data-i18n="num.server"></span></div>
+    </div>
+  </section>
 
-        <!-- Interactive Aesthetic SVG Canvas Illustration (Hero graphic) -->
-        <div
-          class="relative max-w-3xl mx-auto mt-12 rounded-2xl glass-card p-6 md:p-10 shadow-2xl overflow-hidden group"
-        >
-          <div
-            class="absolute inset-0 bg-gradient-to-r from-brand-600/10 via-accent-purple/10 to-accent-cyan/10 opacity-50 group-hover:opacity-100 transition-opacity duration-700"
-          ></div>
+  <section class="sec" id="story">
+    <div class="letter reveal">
+      <q class="serif" data-i18n-html="story.text"></q>
+      <small data-i18n="story.sign"></small>
+    </div>
+  </section>
+</main>
 
-          <svg
-            class="w-full h-auto max-h-[280px] mx-auto text-gray-300"
-            viewBox="0 0 800 320"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <!-- Background Grid inside graphic -->
-            <path
-              d="M0 40H800 M0 120H800 M0 200H800 M0 280H800"
-              stroke="white"
-              stroke-opacity="0.05"
-              stroke-width="1"
-            />
-            <path
-              d="M100 0V320 M300 0V320 M500 0V320 M700 0V320"
-              stroke="white"
-              stroke-opacity="0.05"
-              stroke-width="1"
-            />
+<footer id="contact">
+  <div class="wrap">
+    <div class="q" data-i18n="contact.q"></div>
+    <a class="mail" href="mailto:happyisit@gmail.com">✉ happyisit@gmail.com</a>
+    <div>© 2026 HappyisIT. All rights reserved.</div>
+  </div>
+</footer>
 
-            <!-- Curved Smooth Wave representing growth & journey -->
-            <path
-              d="M50 250 C 200 280, 250 100, 400 160 C 550 220, 600 60, 750 100"
-              stroke="url(#hero-grad)"
-              stroke-width="4"
-              stroke-linecap="round"
-            />
-
-            <!-- Nodes along the curve with glow -->
-            <g class="animate-pulse">
-              <circle cx="210" cy="205" r="7" fill="#3b82f6" />
-              <circle
-                cx="210"
-                cy="205"
-                r="14"
-                stroke="#3b82f6"
-                stroke-opacity="0.4"
-                stroke-width="2"
-              />
-            </g>
-            <g class="animate-pulse" style="animation-delay: 1s">
-              <circle cx="400" cy="160" r="7" fill="#a855f7" />
-              <circle
-                cx="400"
-                cy="160"
-                r="14"
-                stroke="#a855f7"
-                stroke-opacity="0.4"
-                stroke-width="2"
-              />
-            </g>
-            <g class="animate-pulse" style="animation-delay: 2s">
-              <circle cx="630" cy="95" r="7" fill="#06b6d4" />
-              <circle
-                cx="630"
-                cy="95"
-                r="14"
-                stroke="#06b6d4"
-                stroke-opacity="0.4"
-                stroke-width="2"
-              />
-            </g>
-
-            <!-- Abstract Code & Geometry Elements -->
-            <rect
-              x="50"
-              y="50"
-              width="120"
-              height="70"
-              rx="8"
-              fill="#111827"
-              fill-opacity="0.8"
-              stroke="#374151"
-              stroke-width="1"
-            />
-            <line
-              x1="65"
-              y1="70"
-              x2="130"
-              y2="70"
-              stroke="#60a5fa"
-              stroke-width="3"
-              stroke-linecap="round"
-            />
-            <line
-              x1="65"
-              y1="85"
-              x2="150"
-              y2="85"
-              stroke="#9ca3af"
-              stroke-width="2"
-              stroke-linecap="round"
-            />
-            <line
-              x1="65"
-              y1="100"
-              x2="100"
-              y2="100"
-              stroke="#a855f7"
-              stroke-width="2"
-              stroke-linecap="round"
-            />
-
-            <rect
-              x="630"
-              y="180"
-              width="130"
-              height="80"
-              rx="8"
-              fill="#111827"
-              fill-opacity="0.8"
-              stroke="#374151"
-              stroke-width="1"
-            />
-            <circle
-              cx="660"
-              cy="210"
-              r="12"
-              fill="#10b981"
-              fill-opacity="0.2"
-              stroke="#10b981"
-              stroke-width="2"
-            />
-            <path
-              d="M685 205 H735 M685 215 H715"
-              stroke="#e5e7eb"
-              stroke-width="2"
-              stroke-linecap="round"
-            />
-
-            <!-- Gradients Definition -->
-            <defs>
-              <linearGradient id="hero-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stop-color="#3b82f6" />
-                <stop offset="50%" stop-color="#a855f7" />
-                <stop offset="100%" stop-color="#06b6d4" />
-              </linearGradient>
-            </defs>
-          </svg>
-        </div>
-      </section>
-
-      <!-- Core Philosophy Section -->
-      <section
-        id="philosophy"
-        class="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto"
-      >
-        <div class="text-center mb-16">
-          <h2
-            class="text-xs uppercase tracking-widest text-brand-400 font-semibold mb-2"
-          >
-            Core Philosophy
-          </h2>
-          <p class="text-3xl sm:text-4xl font-bold text-white">
-            개발과 삶을 관통하는 4가지 신념
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <!-- Card 1 -->
-          <div
-            class="glass-card p-8 rounded-2xl transition-all duration-300 hover:-translate-y-1 relative overflow-hidden group"
-          >
-            <div
-              class="w-14 h-14 rounded-xl bg-brand-500/10 border border-brand-500/30 flex items-center justify-center text-brand-400 mb-6 group-hover:scale-110 transition-transform"
-            >
-              <!-- SVG Icon: Focus & Precision -->
-              <svg
-                class="w-7 h-7"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <circle cx="12" cy="12" r="9" stroke-width="1.5" />
-                <circle cx="12" cy="12" r="5" stroke-width="1.5" />
-                <circle cx="12" cy="12" r="1" fill="currentColor" />
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold text-white mb-3">
-              본질에의 집중 (Simplicity)
-            </h3>
-            <p class="text-gray-400 leading-relaxed text-sm sm:text-base">
-              화려한 기능보다 중요한 것은 사용자의 삶에서 진짜 필요한 단 하나의
-              가치입니다. 불필요한 군더더기를 걷어내고 가장 순수한 본질에
-              집중합니다.
-            </p>
-          </div>
-
-          <!-- Card 2 -->
-          <div
-            class="glass-card p-8 rounded-2xl transition-all duration-300 hover:-translate-y-1 relative overflow-hidden group"
-          >
-            <div
-              class="w-14 h-14 rounded-xl bg-accent-purple/10 border border-accent-purple/30 flex items-center justify-center text-accent-purple mb-6 group-hover:scale-110 transition-transform"
-            >
-              <!-- SVG Icon: Endurance & Iteration -->
-              <svg
-                class="w-7 h-7"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1.5"
-                  d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
-                />
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold text-white mb-3">
-              지속적인 연마 (Craftsmanship)
-            </h3>
-            <p class="text-gray-400 leading-relaxed text-sm sm:text-base">
-              한 번의 완벽함보다 매일 1%의 개선을 믿습니다. 눈에 보이지 않는
-              내부 코드부터 작은 애니메이션의 디테일까지 장인 정신으로 다듬어
-              나갑니다.
-            </p>
-          </div>
-
-          <!-- Card 3 -->
-          <div
-            class="glass-card p-8 rounded-2xl transition-all duration-300 hover:-translate-y-1 relative overflow-hidden group"
-          >
-            <div
-              class="w-14 h-14 rounded-xl bg-accent-cyan/10 border border-accent-cyan/30 flex items-center justify-center text-accent-cyan mb-6 group-hover:scale-110 transition-transform"
-            >
-              <!-- SVG Icon: Empathy & Connection -->
-              <svg
-                class="w-7 h-7"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1.5"
-                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.684a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                />
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold text-white mb-3">
-              공감과 따뜻함 (Human Centered)
-            </h3>
-            <p class="text-gray-400 leading-relaxed text-sm sm:text-base">
-              기술은 차갑지만 그것이 전달되는 경험은 따뜻해야 합니다. 화면
-              너머의 사람을 이해하고, 사용 과정에서 편안함과 잔잔한 미소를
-              전합니다.
-            </p>
-          </div>
-
-          <!-- Card 4 -->
-          <div
-            class="glass-card p-8 rounded-2xl transition-all duration-300 hover:-translate-y-1 relative overflow-hidden group"
-          >
-            <div
-              class="w-14 h-14 rounded-xl bg-accent-amber/10 border border-accent-amber/30 flex items-center justify-center text-accent-amber mb-6 group-hover:scale-110 transition-transform"
-            >
-              <!-- SVG Icon: Courage & Journey -->
-              <svg
-                class="w-7 h-7"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1.5"
-                  d="M13 10V3L4 14h7v7l9-11h-7z"
-                />
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold text-white mb-3">
-              여정 그 자체의 즐거움 (Journey)
-            </h3>
-            <p class="text-gray-400 leading-relaxed text-sm sm:text-base">
-              목적지에 도달하는 결과도 중요하지만, 문제를 해결해 나가는 탐구와
-              성장의 과과정 자체를 사랑하고 그 경험을 제품에 녹여냅니다.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Quotes & Life Reflections Section -->
-      <section
-        id="reflections"
-        class="py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto border-t border-white/5"
-      >
-        <div class="text-center mb-16">
-          <h2
-            class="text-xs uppercase tracking-widest text-accent-purple font-semibold mb-2"
-          >
-            Life Reflections
-          </h2>
-          <p class="text-3xl sm:text-4xl font-bold text-white">
-            삶과 창작에 관한 성찰
-          </p>
-        </div>
-
-        <div class="space-y-8">
-          <!-- Quote 1 -->
-          <blockquote class="glass-card p-8 md:p-10 rounded-2xl relative">
-            <svg
-              class="absolute top-6 left-6 w-10 h-10 text-white/5"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"
-              />
-            </svg>
-            <p
-              class="text-lg sm:text-xl text-gray-200 font-light italic leading-relaxed mb-6 relative z-10"
-            >
-              "작은 것에 충실할 때 비로소 위대한 소프트웨어가 태어납니다. 복잡한
-              세상을 단순하게 만드는 도구를 짓는 일은, 나 자신의 마음을 정돈하는
-              여정과 닮아 있습니다."
-            </p>
-            <footer class="flex items-center gap-4">
-              <div class="w-8 h-0.5 bg-brand-500"></div>
-              <span class="text-sm text-gray-400 font-medium"
-                >On Crafting Software</span
-              >
-            </footer>
-          </blockquote>
-
-          <!-- Quote 2 -->
-          <blockquote class="glass-card p-8 md:p-10 rounded-2xl relative">
-            <svg
-              class="absolute top-6 left-6 w-10 h-10 text-white/5"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"
-              />
-            </svg>
-            <p
-              class="text-lg sm:text-xl text-gray-200 font-light italic leading-relaxed mb-6 relative z-10"
-            >
-              "버그를 찾고 바로잡는 과정은 우리 인생의 시행착오와 다르지
-              않습니다. 실패를 마주했을 때 멈추지 않고 원인을 파악하며 한 걸음
-              나아가는 일, 그것이 성장의 본질입니다."
-            </p>
-            <footer class="flex items-center gap-4">
-              <div class="w-8 h-0.5 bg-accent-purple"></div>
-              <span class="text-sm text-gray-400 font-medium"
-                >On Embracing Failure</span
-              >
-            </footer>
-          </blockquote>
-        </div>
-      </section>
-
-      <!-- App Concept & Aesthetics Visual Showcase -->
-      <section
-        id="showcase"
-        class="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto border-t border-white/5"
-      >
-        <div class="text-center mb-16">
-          <h2
-            class="text-xs uppercase tracking-widest text-accent-cyan font-semibold mb-2"
-          >
-            Aesthetic Vision
-          </h2>
-          <p class="text-3xl sm:text-4xl font-bold text-white">
-            디자인과 프레임워크 지향점
-          </p>
-        </div>
-
-        <!-- Abstract App Device Mockups / Vector Graphics Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Mockup 1: Minimal Productivity -->
-          <div
-            class="glass-card rounded-2xl p-6 flex flex-col items-center text-center group hover:border-brand-500/50 transition-all"
-          >
-            <div
-              class="w-full h-48 bg-brand-950/80 rounded-xl mb-6 border border-white/10 flex items-center justify-center p-4 relative overflow-hidden"
-            >
-              <!-- Abstract Mobile Wireframe SVG -->
-              <svg
-                class="w-32 h-full text-brand-500"
-                viewBox="0 0 140 220"
-                fill="none"
-                stroke="currentColor"
-              >
-                <rect
-                  x="10"
-                  y="10"
-                  width="120"
-                  height="200"
-                  rx="20"
-                  stroke-width="3"
-                  stroke="#374151"
-                />
-                <rect
-                  x="25"
-                  y="30"
-                  width="90"
-                  height="12"
-                  rx="4"
-                  fill="#3b82f6"
-                  fill-opacity="0.3"
-                  stroke="none"
-                />
-                <rect
-                  x="25"
-                  y="55"
-                  width="60"
-                  height="8"
-                  rx="3"
-                  fill="#6b7280"
-                  fill-opacity="0.5"
-                  stroke="none"
-                />
-                <circle
-                  cx="40"
-                  cy="95"
-                  r="12"
-                  stroke="#60a5fa"
-                  stroke-width="2"
-                />
-                <line
-                  x1="60"
-                  y1="90"
-                  x2="110"
-                  y2="90"
-                  stroke="#4b5563"
-                  stroke-width="2"
-                />
-                <line
-                  x1="60"
-                  y1="100"
-                  x2="90"
-                  y2="100"
-                  stroke="#4b5563"
-                  stroke-width="2"
-                />
-                <circle
-                  cx="40"
-                  cy="135"
-                  r="12"
-                  stroke="#a855f7"
-                  stroke-width="2"
-                />
-                <line
-                  x1="60"
-                  y1="130"
-                  x2="110"
-                  y2="130"
-                  stroke="#4b5563"
-                  stroke-width="2"
-                />
-                <line
-                  x1="60"
-                  y1="140"
-                  x2="95"
-                  y2="140"
-                  stroke="#4b5563"
-                  stroke-width="2"
-                />
-              </svg>
-            </div>
-            <h3 class="text-lg font-semibold text-white mb-2">
-              Minimal Productivity
-            </h3>
-            <p class="text-xs text-gray-400">
-              집중을 방해하지 않는 정갈하고 절제된 인터페이스 레이아웃 탐구
-            </p>
-          </div>
-
-          <!-- Mockup 2: Data & Ambient Analytics -->
-          <div
-            class="glass-card rounded-2xl p-6 flex flex-col items-center text-center group hover:border-accent-purple/50 transition-all"
-          >
-            <div
-              class="w-full h-48 bg-brand-950/80 rounded-xl mb-6 border border-white/10 flex items-center justify-center p-4 relative overflow-hidden"
-            >
-              <!-- Abstract Chart SVG -->
-              <svg
-                class="w-full h-full text-accent-purple"
-                viewBox="0 0 200 120"
-                fill="none"
-              >
-                <path
-                  d="M20 100 Q 60 40, 100 70 T 180 20"
-                  stroke="url(#chart-grad)"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                  fill="none"
-                />
-                <path
-                  d="M20 100 Q 60 40, 100 70 T 180 20 L 180 110 L 20 110 Z"
-                  fill="url(#chart-fill)"
-                  fill-opacity="0.15"
-                />
-                <circle cx="100" cy="70" r="4" fill="#a855f7" />
-                <circle cx="180" cy="20" r="4" fill="#06b6d4" />
-                <defs>
-                  <linearGradient id="chart-grad" x1="0" y1="0" x2="1" y2="0">
-                    <stop offset="0%" stop-color="#a855f7" />
-                    <stop offset="100%" stop-color="#06b6d4" />
-                  </linearGradient>
-                  <linearGradient id="chart-fill" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stop-color="#a855f7" />
-                    <stop offset="100%" stop-color="transparent" />
-                  </linearGradient>
-                </defs>
-              </svg>
-            </div>
-            <h3 class="text-lg font-semibold text-white mb-2">
-              Fluid Data Visuals
-            </h3>
-            <p class="text-xs text-gray-400">
-              데이터가 선율처럼 자연스럽게 읽히는 시각적 스토리텔링
-            </p>
-          </div>
-
-          <!-- Mockup 3: Micro Interactions -->
-          <div
-            class="glass-card rounded-2xl p-6 flex flex-col items-center text-center group hover:border-accent-cyan/50 transition-all sm:col-span-2 lg:col-span-1"
-          >
-            <div
-              class="w-full h-48 bg-brand-950/80 rounded-xl mb-6 border border-white/10 flex items-center justify-center p-4 relative overflow-hidden"
-            >
-              <!-- Micro interaction SVG -->
-              <svg
-                class="w-24 h-24 text-accent-cyan animate-spin-slow"
-                viewBox="0 0 100 100"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <circle cx="50" cy="50" r="35" stroke-dasharray="10 15" />
-                <circle
-                  cx="50"
-                  cy="50"
-                  r="20"
-                  stroke="#3b82f6"
-                  stroke-width="1.5"
-                />
-                <polygon points="50,20 55,30 45,30" fill="#06b6d4" />
-                <polygon points="50,80 55,70 45,70" fill="#06b6d4" />
-              </svg>
-            </div>
-            <h3 class="text-lg font-semibold text-white mb-2">
-              Micro Interactions
-            </h3>
-            <p class="text-xs text-gray-400">
-              손끝에 전해지는 작고 세심한 반응과 모션 감성 디자인
-            </p>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- Footer Section -->
-    <footer
-      class="border-t border-white/10 bg-brand-950/80 py-12 px-4 sm:px-6 lg:px-8"
-    >
-      <div
-        class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left"
-      >
-        <div>
-          <p class="text-white font-semibold text-base">Developer Profile</p>
-          <p class="text-xs text-gray-500 mt-1">
-            © 2026 Developer HappyisIT. All rights reserved
-          </p>
-        </div>
-
-        <!-- Social / Code Link SVGs -->
-        <div class="flex items-center space-x-5">
-          <!-- GitHub SVG Icon -->
-          <!--<a
-            href="https://github.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="w-10 h-10 rounded-full bg-white/5 hover:bg-white/15 border border-white/10 flex items-center justify-center text-gray-300 hover:text-white transition-all hover:scale-110"
-            aria-label="GitHub Profile"
-          >
-            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-              />
-            </svg>
-          </a>-->
-
-          <!-- App Store Link Icon -->
-          <!--<a
-            href="#"
-            class="w-10 h-10 rounded-full bg-white/5 hover:bg-white/15 border border-white/10 flex items-center justify-center text-gray-300 hover:text-white transition-all hover:scale-110"
-            aria-label="App Store"
-          >
-            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-              <path
-                d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.85c.67-.82 1.13-1.96.99-3.1-.98.04-2.18.66-2.88 1.48-.63.73-1.18 1.9-1.03 3.03 1.1.09 2.25-.59 2.92-1.41z"
-              />
-            </svg>
-          </a>-->
+<div class="nt-back" id="ntBack" hidden>
+  <div class="nt" id="nt" role="dialog" aria-modal="true" aria-labelledby="ntTitle">
+    <button type="button" class="nt-x" id="ntX" aria-label="Close">×</button>
+    <div class="nt-head">
+      <span class="nt-badge" id="ntBadge"></span>
+      <h3 class="serif" id="ntTitle"></h3>
+      <div class="nt-date" id="ntDate"></div>
+    </div>
+    <div class="nt-body" id="ntBody"></div>
+    <div class="nt-foot"><button type="button" class="nt-btn nt-close" id="ntClose"></button></div>
+    <div class="nt-ask" id="ntAsk" hidden>
+      <div class="nt-ask-box" role="alertdialog" aria-modal="true" aria-labelledby="ntAskQ">
+        <p id="ntAskQ"></p>
+        <div class="nt-ask-row">
+          <button type="button" class="nt-btn nt-no" id="ntNo"></button>
+          <button type="button" class="nt-btn nt-yes" id="ntYes"></button>
         </div>
       </div>
-    </footer>
-  </body>
+    </div>
+  </div>
+</div>
+
+<script>
+const LANGS=[
+  {code:"ko",html:"ko",label:"한국어"},
+  {code:"en",html:"en",label:"EN"},
+  {code:"zh",html:"zh-Hant",label:"繁中"},
+  {code:"es",html:"es",label:"ES"},
+  {code:"pt",html:"pt",label:"PT"},
+  {code:"ru",html:"ru",label:"RU"}
+];
+
+const I18N={
+ko:{
+ "meta.title":"HappyisIT | 당신의 하루에 작은 별 하나",
+ "nav.apps":"앱","nav.how":"만드는 방식","nav.story":"이야기","nav.contact":"문의",
+ "hero.chip":"✦ 혼자서 완성해 가는 작은 앱 공방",
+ "hero.title":"당신의 하루에<br><em>작은 별 하나</em>를 띄웁니다",
+ "hero.sub":"당신의 데이터가 아니라, 당신의 하루에 관심이 있습니다.<br>무엇이 도움이 될지 생각하며, 기기 안에서 혼자 완성되는 앱을 만듭니다.",
+ "hero.cta1":"앱 둘러보기","hero.cta2":"만드는 방식",
+ "apps.title":"함께 빛나는 별들","apps.lead":"하나씩 직접 만들고 다듬어 온 앱들입니다.",
+ "apps.privacy":"개인정보처리방침","apps.terms":"이용약관",
+ "apps.empty":"곧 새로운 앱으로 찾아올게요.",
+ "apps.error":"앱 목록을 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.",
+ "how.title":"이렇게 만듭니다","how.lead":"모든 앱에 공통으로 담긴 생각입니다.",
+ "how.c1t":"오프라인 우선","how.c1d":"인터넷 없이도 혼자서 완성되는 앱. 모든 기능이 당신의 기기 안에서 동작합니다.",
+ "how.c2t":"회원가입 없음","how.c2d":"계정도 로그인도 필요 없습니다. 설치하면 바로 시작할 수 있어요.",
+ "how.c3t":"기기에만 저장","how.c3d":"기록은 당신의 기기에만 저장되며, 필요한 경우 암호화해 보관합니다.",
+ "how.c4t":"수집하지 않습니다","how.c4d":"저희가 운영하는 서버도, 수집을 위한 전송도 없습니다. 당신의 데이터에는 관심이 없으니까요.",
+ "how.noteT":"광고에 대해",
+ "how.noteD":"무료로 제공하기 위해 앱에는 광고 플랫폼의 SDK가 포함되어 있어, 광고와 관련된 전송·수집이 해당 플랫폼에서 발생할 수 있습니다. 이 데이터 역시 저희에게 전달되지 않습니다. 자세한 내용은 각 앱의 개인정보처리방침에서 확인할 수 있습니다.",
+ "num.apps":"만든 앱","num.langs":"지원 언어","num.signup":"필요한 회원가입","num.server":"저희 서버",
+ "story.text":"나는 당신의 데이터가 아니라, 당신의 일상에 관심이 있습니다.<br>오늘 무엇이 당신에게 도움이 될지 생각하며, 작은 앱을 하나씩 만들어 갑니다.",
+ "story.sign":"— HappyisIT, 혼자서 앱을 만드는 사람",
+ "contact.q":"궁금한 점이나 하고 싶은 이야기가 있다면"
+},
+en:{
+ "meta.title":"HappyisIT | A small star in your day",
+ "nav.apps":"Apps","nav.how":"How we build","nav.story":"Story","nav.contact":"Contact",
+ "hero.chip":"✦ A small, independent app studio",
+ "hero.title":"We place <em>a small star</em><br>in your day",
+ "hero.sub":"We care about your day, not your data.<br>Thinking about what might help, we build apps that work entirely on your device.",
+ "hero.cta1":"Explore apps","hero.cta2":"How we build",
+ "apps.title":"Stars shining together","apps.lead":"Each one built and polished by hand.",
+ "apps.privacy":"Privacy","apps.terms":"Terms",
+ "apps.empty":"New apps are on the way.",
+ "apps.error":"Couldn't load the app list. Try again in a moment.",
+ "how.title":"This is how we build","how.lead":"The thinking behind every app.",
+ "how.c1t":"Offline first","how.c1d":"Apps that are complete on their own, no internet needed. Everything runs on your device.",
+ "how.c2t":"No sign-up","how.c2d":"No account, no login. Install and start right away.",
+ "how.c3t":"Stored only on your device","how.c3d":"Your records stay on your device and are encrypted when needed.",
+ "how.c4t":"We don't collect","how.c4d":"We run no servers and send nothing for collection. We're simply not interested in your data.",
+ "how.noteT":"About ads",
+ "how.noteD":"To keep our apps free, they include advertising platform SDKs, so ad-related data may be sent and collected by those platforms. That data is not passed on to us either. See each app's privacy policy for details.",
+ "num.apps":"Apps made","num.langs":"Languages","num.signup":"Sign-ups required","num.server":"Servers of our own",
+ "story.text":"I'm interested in your everyday life, not your data.<br>Thinking about what might help you today, I make small apps, one at a time.",
+ "story.sign":"— HappyisIT, independent app maker",
+ "contact.q":"Questions or something to share?"
+},
+zh:{
+ "meta.title":"HappyisIT｜在你的每一天點亮一顆小星星",
+ "nav.apps":"App","nav.how":"我們的做法","nav.story":"故事","nav.contact":"聯絡",
+ "hero.chip":"✦ 一個人慢慢打造的小小 App 工作室",
+ "hero.title":"在你的每一天<br>點亮<em>一顆小星星</em>",
+ "hero.sub":"我們在意的是你的日常，而不是你的資料。<br>思考什麼能幫上你，打造只在你的裝置上獨立運作的 App。",
+ "hero.cta1":"瀏覽 App","hero.cta2":"我們的做法",
+ "apps.title":"一起閃耀的星星","apps.lead":"每一款都親手打造、細心打磨。",
+ "apps.privacy":"隱私權政策","apps.terms":"使用條款",
+ "apps.empty":"新的 App 即將登場。",
+ "apps.error":"無法載入 App 清單，請稍後再試。",
+ "how.title":"我們這樣做 App","how.lead":"每一款 App 背後共同的想法。",
+ "how.c1t":"離線優先","how.c1d":"不需網路也能獨立完成的 App，所有功能都在你的裝置內運作。",
+ "how.c2t":"免註冊","how.c2d":"不需要帳號，也不用登入。安裝後就能馬上開始。",
+ "how.c3t":"只存在你的裝置","how.c3d":"你的紀錄只儲存在你的裝置中，必要時會加密保存。",
+ "how.c4t":"我們不蒐集","how.c4d":"我們沒有自己的伺服器，也不會為了蒐集而傳送任何資料。因為我們對你的資料沒有興趣。",
+ "how.noteT":"關於廣告",
+ "how.noteD":"為了免費提供，App 中含有廣告平台的 SDK，因此廣告平台可能會進行與廣告相關的傳輸與蒐集。這些資料同樣不會傳送給我們。詳細內容請參閱各 App 的隱私權政策。",
+ "num.apps":"已推出的 App","num.langs":"支援語言","num.signup":"需要註冊","num.server":"我們的伺服器",
+ "story.text":"我在意的不是你的資料，而是你的日常。<br>想著今天什麼能幫上你，一款一款地做出小小的 App。",
+ "story.sign":"— HappyisIT，獨立 App 開發者",
+ "contact.q":"有任何問題或想說的話嗎？"
+},
+es:{
+ "meta.title":"HappyisIT | Una pequeña estrella en tu día",
+ "nav.apps":"Apps","nav.how":"Cómo las hacemos","nav.story":"Historia","nav.contact":"Contacto",
+ "hero.chip":"✦ Un pequeño estudio de apps independiente",
+ "hero.title":"Encendemos <em>una pequeña estrella</em><br>en tu día",
+ "hero.sub":"Nos importa tu día, no tus datos.<br>Pensando en lo que podría ayudarte, creamos apps que funcionan por completo en tu dispositivo.",
+ "hero.cta1":"Ver las apps","hero.cta2":"Cómo las hacemos",
+ "apps.title":"Estrellas que brillan juntas","apps.lead":"Cada una creada y pulida a mano.",
+ "apps.privacy":"Privacidad","apps.terms":"Términos",
+ "apps.empty":"Pronto llegarán nuevas apps.",
+ "apps.error":"No se pudo cargar la lista de apps. Inténtalo de nuevo en un momento.",
+ "how.title":"Así las creamos","how.lead":"La idea detrás de cada app.",
+ "how.c1t":"Primero sin conexión","how.c1d":"Apps completas por sí solas, sin necesidad de internet. Todo funciona en tu dispositivo.",
+ "how.c2t":"Sin registro","how.c2d":"Sin cuenta ni inicio de sesión. Instala y empieza al instante.",
+ "how.c3t":"Solo en tu dispositivo","how.c3d":"Tus registros se quedan en tu dispositivo y se cifran cuando es necesario.",
+ "how.c4t":"No recopilamos","how.c4d":"No tenemos servidores ni enviamos nada para recopilar. Simplemente, tus datos no nos interesan.",
+ "how.noteT":"Sobre los anuncios",
+ "how.noteD":"Para que nuestras apps sean gratuitas, incluyen SDK de plataformas publicitarias, por lo que esas plataformas pueden enviar y recopilar datos relacionados con los anuncios. Esos datos tampoco llegan a nosotros. Consulta la política de privacidad de cada app para más detalles.",
+ "num.apps":"Apps creadas","num.langs":"Idiomas","num.signup":"Registros necesarios","num.server":"Servidores propios",
+ "story.text":"Me interesa tu día a día, no tus datos.<br>Pensando en qué podría ayudarte hoy, creo pequeñas apps, una a una.",
+ "story.sign":"— HappyisIT, creador independiente de apps",
+ "contact.q":"¿Dudas o algo que contarnos?"
+},
+pt:{
+ "meta.title":"HappyisIT | Uma pequena estrela no seu dia",
+ "nav.apps":"Apps","nav.how":"Como fazemos","nav.story":"História","nav.contact":"Contato",
+ "hero.chip":"✦ Um pequeno estúdio de apps independente",
+ "hero.title":"Acendemos <em>uma pequena estrela</em><br>no seu dia",
+ "hero.sub":"Nos importamos com o seu dia, não com os seus dados.<br>Pensando no que pode ajudar, criamos apps que funcionam inteiramente no seu aparelho.",
+ "hero.cta1":"Ver os apps","hero.cta2":"Como fazemos",
+ "apps.title":"Estrelas que brilham juntas","apps.lead":"Cada um criado e lapidado à mão.",
+ "apps.privacy":"Privacidade","apps.terms":"Termos",
+ "apps.empty":"Novos apps estão a caminho.",
+ "apps.error":"Não foi possível carregar a lista de apps. Tente novamente em instantes.",
+ "how.title":"É assim que criamos","how.lead":"A ideia por trás de cada app.",
+ "how.c1t":"Offline em primeiro lugar","how.c1d":"Apps completos por si só, sem precisar de internet. Tudo funciona no seu aparelho.",
+ "how.c2t":"Sem cadastro","how.c2d":"Sem conta nem login. Instale e comece na hora.",
+ "how.c3t":"Só no seu aparelho","how.c3d":"Seus registros ficam no seu aparelho e são criptografados quando necessário.",
+ "how.c4t":"Não coletamos","how.c4d":"Não temos servidores nem enviamos nada para coleta. Simplesmente não temos interesse nos seus dados.",
+ "how.noteT":"Sobre os anúncios",
+ "how.noteD":"Para manter nossos apps gratuitos, eles incluem SDKs de plataformas de anúncios, então essas plataformas podem enviar e coletar dados relacionados a anúncios. Esses dados também não chegam até nós. Veja a política de privacidade de cada app para mais detalhes.",
+ "num.apps":"Apps criados","num.langs":"Idiomas","num.signup":"Cadastros necessários","num.server":"Servidores próprios",
+ "story.text":"Eu me interesso pelo seu dia a dia, não pelos seus dados.<br>Pensando no que pode te ajudar hoje, crio pequenos apps, um de cada vez.",
+ "story.sign":"— HappyisIT, criador independente de apps",
+ "contact.q":"Dúvidas ou algo para compartilhar?"
+},
+ru:{
+ "meta.title":"HappyisIT | Маленькая звезда для вашего дня",
+ "nav.apps":"Приложения","nav.how":"Как мы работаем","nav.story":"История","nav.contact":"Контакты",
+ "hero.chip":"✦ Маленькая независимая студия приложений",
+ "hero.title":"Дарим вашему дню<br><em>маленькую звезду</em>",
+ "hero.sub":"Нам важен ваш день, а не ваши данные.<br>Думая о том, что может вам помочь, мы создаём приложения, которые полностью работают на вашем устройстве.",
+ "hero.cta1":"Смотреть приложения","hero.cta2":"Как мы работаем",
+ "apps.title":"Звёзды, что светят вместе","apps.lead":"Каждое создано и отшлифовано вручную.",
+ "apps.privacy":"Конфиденциальность","apps.terms":"Условия",
+ "apps.empty":"Скоро появятся новые приложения.",
+ "apps.error":"Не удалось загрузить список приложений. Попробуйте чуть позже.",
+ "how.title":"Вот как мы их делаем","how.lead":"Мысли, которые лежат в основе каждого приложения.",
+ "how.c1t":"Сначала офлайн","how.c1d":"Приложения, которые работают сами по себе, без интернета. Всё происходит на вашем устройстве.",
+ "how.c2t":"Без регистрации","how.c2d":"Никаких аккаунтов и входа. Установили — и сразу начали.",
+ "how.c3t":"Только на вашем устройстве","how.c3d":"Ваши записи хранятся только на устройстве и при необходимости шифруются.",
+ "how.c4t":"Мы не собираем","how.c4d":"У нас нет своих серверов, и мы ничего не передаём для сбора. Ваши данные нам просто не интересны.",
+ "how.noteT":"О рекламе",
+ "how.noteD":"Чтобы приложения оставались бесплатными, в них встроены SDK рекламных платформ, поэтому эти платформы могут передавать и собирать данные, связанные с рекламой. Эти данные к нам также не попадают. Подробнее — в политике конфиденциальности каждого приложения.",
+ "num.apps":"Приложений","num.langs":"Языков","num.signup":"Регистраций","num.server":"Своих серверов",
+ "story.text":"Мне интересна ваша повседневная жизнь, а не ваши данные.<br>Думая о том, что поможет вам сегодня, я создаю небольшие приложения — одно за другим.",
+ "story.sign":"— HappyisIT, независимый разработчик приложений",
+ "contact.q":"Есть вопросы или хотите чем-то поделиться?"
+}
+};
+
+const NOTICE_I18N={
+ ko:{badge:"긴급 공지",close:"닫기",ask:"이 글을 다 읽고 이해하셨습니까?",yes:"예",no:"아니요"},
+ en:{badge:"Urgent notice",close:"Close",ask:"Have you read and understood this notice?",yes:"Yes",no:"No"},
+ zh:{badge:"緊急公告",close:"關閉",ask:"您已經讀完並理解這則公告了嗎？",yes:"是",no:"否"},
+ es:{badge:"Aviso urgente",close:"Cerrar",ask:"¿Has leído y entendido este aviso?",yes:"Sí",no:"No"},
+ pt:{badge:"Aviso urgente",close:"Fechar",ask:"Você leu e entendeu este aviso?",yes:"Sim",no:"Não"},
+ ru:{badge:"Срочное объявление",close:"Закрыть",ask:"Вы прочитали и поняли это объявление?",yes:"Да",no:"Нет"}
+};
+
+const ICONS={
+ repeat:'<path d="M4 12a8 8 0 0 1 14-5.3M20 12a8 8 0 0 1-14 5.3"/><path d="M18 3v4h-4M6 21v-4h4"/>',
+ mindmap:'<circle cx="12" cy="12" r="3"/><circle cx="4.5" cy="6" r="2"/><circle cx="19.5" cy="6" r="2"/><circle cx="4.5" cy="18" r="2"/><circle cx="19.5" cy="18" r="2"/><path d="M9.5 10.5L6 7.3M14.5 10.5L18 7.3M9.5 13.5L6 16.7M14.5 13.5L18 16.7"/>',
+ lock:'<rect x="5" y="10" width="14" height="10" rx="2.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/>',
+ star:'<path d="M12 2.5l2.7 6.1 6.6.6-5 4.4 1.5 6.5L12 16.7l-5.8 3.4 1.5-6.5-5-4.4 6.6-.6z" fill="#fff" stroke="none"/>',
+ text:'<path d="M5 6h14M9 6v13M15 11h5M17.5 11v8"/>',
+ brain:'<path d="M9 4a3 3 0 0 0-3 3 3 3 0 0 0-2 5 3 3 0 0 0 2 5 3 3 0 0 0 6 0V7a3 3 0 0 0-3-3zM15 4a3 3 0 0 1 3 3 3 3 0 0 1 2 5 3 3 0 0 1-2 5 3 3 0 0 1-6 0"/>',
+ heart:'<path d="M12 20C7 16.5 3 13 3 8.8A4.6 4.6 0 0 1 12 7a4.6 4.6 0 0 1 9 1.8C21 13 17 16.5 12 20z"/>',
+ note:'<path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4M9 12h7M9 16h5"/>',
+ game:'<rect x="3" y="7" width="18" height="11" rx="4"/><path d="M8 10.5v4M6 12.5h4M15.5 12h.01M18 13.5h.01"/>'
+};
+
+let lang="en", APPS=null, appsError=false;
+
+function detectLang(){
+  const q=new URLSearchParams(location.search).get("lang");
+  if(q && I18N[q]) return q;
+  try{const s=localStorage.getItem("hiit_lang"); if(s && I18N[s]) return s;}catch(e){}
+  const ruRegions=["RU","BY","KZ","KG","UZ","TJ","TM","AM","AZ","MD","MN"];
+  const ruLangs=["ru","be","kk","ky","uz","tg","tk","mn"];
+  const prefs=navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language||"en"];
+  for(const p of prefs){
+    const [l,r]=p.split("-"); const L=(l||"").toLowerCase(), R=(r||"").toUpperCase();
+    if(L==="ko") return "ko";
+    if(L==="zh") return "zh";
+    if(L==="es"||L==="ca"||L==="gl") return "es";
+    if(L==="pt") return "pt";
+    if(ruLangs.includes(L) || ruRegions.includes(R)) return "ru";
+    if(L==="en") return "en";
+  }
+  return "en";
+}
+
+function t(key){return (I18N[lang] && I18N[lang][key]) || I18N.en[key] || "";}
+function pick(v){ if(v==null) return ""; if(typeof v==="string"||Array.isArray(v)) return v; return v[lang] ?? v.en ?? v.ko ?? ""; }
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+function safeUrl(u){ return /^(https?:|mailto:|\.\/|\/|[a-z0-9_-]+\/)/i.test(u||"") && !/^javascript:/i.test(u) ? u : ""; }
+
+function applyLang(){
+  const meta=LANGS.find(l=>l.code===lang);
+  document.documentElement.lang=meta.html;
+  document.title=t("meta.title");
+  document.querySelectorAll("[data-i18n]").forEach(el=>{el.textContent=t(el.dataset.i18n);});
+  document.querySelectorAll("[data-i18n-html]").forEach(el=>{el.innerHTML=t(el.dataset.i18nHtml);});
+  document.querySelectorAll("#lang button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.code===lang));
+  renderApps();
+  renderNotice();
+}
+
+let NOTICE=null, lastFocus=null;
+function nt(k){return (NOTICE_I18N[lang]||NOTICE_I18N.en)[k];}
+function linkify(s){
+  return esc(s).replace(/(https?:\/\/[^\s<]+)/g,'<a href="$1" target="_blank" rel="noopener">$1</a>').replace(/\n/g,"<br>");
+}
+function noticeHasContent(n){
+  if(!n || n.active===false) return false;
+  return String(pick(n.title)||"").trim()!=="" || String(pick(n.body)||"").trim()!=="";
+}
+function renderNotice(){
+  if(!noticeHasContent(NOTICE)) return;
+  document.getElementById("ntBadge").textContent="⚠ "+nt("badge");
+  document.getElementById("ntTitle").textContent=pick(NOTICE.title)||"";
+  document.getElementById("ntDate").textContent=NOTICE.date||"";
+  document.getElementById("ntBody").innerHTML=linkify(pick(NOTICE.body)||"");
+  document.getElementById("ntClose").textContent=nt("close");
+  document.getElementById("ntX").setAttribute("aria-label",nt("close"));
+  document.getElementById("ntAskQ").textContent=nt("ask");
+  document.getElementById("ntYes").textContent=nt("yes");
+  document.getElementById("ntNo").textContent=nt("no");
+}
+function openNotice(){
+  if(!noticeHasContent(NOTICE)) return;
+  renderNotice();
+  lastFocus=document.activeElement;
+  document.getElementById("ntBack").hidden=false;
+  document.body.classList.add("locked");
+  document.getElementById("ntClose").focus();
+}
+function askClose(){
+  document.getElementById("ntAsk").hidden=false;
+  document.getElementById("ntNo").focus();
+}
+function answerNo(){
+  document.getElementById("ntAsk").hidden=true;
+  const box=document.getElementById("nt");
+  box.classList.remove("shake"); void box.offsetWidth; box.classList.add("shake");
+  document.getElementById("ntBody").focus({preventScroll:true});
+}
+function answerYes(){
+  document.getElementById("ntAsk").hidden=true;
+  document.getElementById("ntBack").hidden=true;
+  document.body.classList.remove("locked");
+  if(lastFocus && lastFocus.focus) lastFocus.focus();
+}
+document.getElementById("ntBody").tabIndex=-1;
+document.getElementById("ntClose").addEventListener("click",askClose);
+document.getElementById("ntX").addEventListener("click",askClose);
+document.getElementById("ntNo").addEventListener("click",answerNo);
+document.getElementById("ntYes").addEventListener("click",answerYes);
+document.getElementById("ntBack").addEventListener("click",e=>{ if(e.target.id==="ntBack") askClose(); });
+document.addEventListener("keydown",e=>{
+  if(document.getElementById("ntBack").hidden) return;
+  if(e.key==="Escape"){ e.preventDefault(); if(document.getElementById("ntAsk").hidden) askClose(); else answerNo(); }
+  if(e.key==="Tab"){
+    const scope=document.getElementById("ntAsk").hidden?document.getElementById("nt"):document.getElementById("ntAsk");
+    const f=[...scope.querySelectorAll("button,a[href]")].filter(x=>x.offsetParent!==null && (scope.id==="ntAsk"||!x.closest("#ntAsk")));
+    if(!f.length) return;
+    const first=f[0], last=f[f.length-1];
+    if(e.shiftKey && document.activeElement===first){e.preventDefault(); last.focus();}
+    else if(!e.shiftKey && document.activeElement===last){e.preventDefault(); first.focus();}
+  }
+});
+
+function setLang(code){
+  lang=code;
+  try{localStorage.setItem("hiit_lang",code);}catch(e){}
+  const u=new URL(location.href); u.searchParams.set("lang",code); history.replaceState(null,"",u);
+  applyLang();
+}
+
+function renderApps(){
+  const box=document.getElementById("appList");
+  if(appsError){box.innerHTML='<p class="msg">'+esc(t("apps.error"))+'</p>';return;}
+  if(!APPS){box.innerHTML="";return;}
+  const list=APPS.filter(a=>a && a.visible!==false);
+  document.getElementById("appCount").textContent=list.length;
+  if(!list.length){box.innerHTML='<p class="msg">'+esc(t("apps.empty"))+'</p>';return;}
+  box.innerHTML=list.map(a=>{
+    const color=/^#[0-9a-f]{3,8}$/i.test(a.color||"")?a.color:"#b49bff";
+    const name=pick(a.name), en=a.name && a.name.en ? a.name.en : "";
+    const img=safeUrl(a.iconImage);
+    const icon=img ? '<img src="'+esc(img)+'" alt="">' :
+      '<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+(ICONS[a.icon]||ICONS.heart)+'</svg>';
+    const tags=(pick(a.tags)||[]).map(x=>'<span>'+esc(x)+'</span>').join("");
+    const L=a.links||{}, links=[];
+    if(safeUrl(L.play)) links.push('<a class="play" href="'+esc(L.play)+'" target="_blank" rel="noopener">Google Play</a>');
+    if(safeUrl(L.privacy)) links.push('<a href="'+esc(L.privacy)+'" target="_blank" rel="noopener">'+esc(t("apps.privacy"))+'</a>');
+    if(safeUrl(L.terms)) links.push('<a href="'+esc(L.terms)+'" target="_blank" rel="noopener">'+esc(t("apps.terms"))+'</a>');
+    return '<article class="app reveal on" style="--c:'+color+'">'+
+      '<div class="icon">'+icon+'</div>'+
+      '<h3>'+esc(name)+'</h3>'+
+      (en && en!==name ? '<div class="en">'+esc(en)+'</div>' : '<div class="en">&nbsp;</div>')+
+      '<p>'+esc(pick(a.desc))+'</p>'+
+      (tags?'<div class="tags">'+tags+'</div>':'')+
+      (links.length?'<div class="links">'+links.join("")+'</div>':'')+
+      '</article>';
+  }).join("");
+}
+
+function drawSky(){
+  const svg=document.getElementById("sky");
+  const w=window.innerWidth, h=window.innerHeight;
+  svg.setAttribute("viewBox","0 0 "+w+" "+h);
+  let seed=7; const rnd=()=>(seed=(seed*9301+49297)%233280)/233280;
+  const count=Math.round(w*h/9000); let out="";
+  for(let i=0;i<count;i++){
+    const x=rnd()*w,y=rnd()*h,r=rnd()*1.6+.4,o=rnd()*.6+.25;
+    const tw=rnd()<.25?' class="tw" style="animation-delay:'+(rnd()*4).toFixed(2)+'s"':'';
+    out+='<circle cx="'+x.toFixed(1)+'" cy="'+y.toFixed(1)+'" r="'+r.toFixed(2)+'" fill="#fff" opacity="'+o.toFixed(2)+'"'+tw+'/>';
+  }
+  const cols=["#ffc6e1","#d9c5ff","#a9dcff"];
+  for(let i=0;i<Math.max(4,Math.round(w/180));i++){
+    const x=rnd()*w,y=rnd()*h,s=6+rnd()*5,c=cols[i%3];
+    out+='<path class="tw" style="animation-delay:'+(rnd()*4).toFixed(2)+'s" d="M'+x+' '+(y-s)+'L'+(x+s*.22)+' '+(y-s*.22)+'L'+(x+s)+' '+y+'L'+(x+s*.22)+' '+(y+s*.22)+'L'+x+' '+(y+s)+'L'+(x-s*.22)+' '+(y+s*.22)+'L'+(x-s)+' '+y+'L'+(x-s*.22)+' '+(y-s*.22)+'Z" fill="'+c+'"/>';
+  }
+  svg.innerHTML=out;
+}
+
+function setupReveal(){
+  const els=document.querySelectorAll(".reveal:not(.on)");
+  if(!("IntersectionObserver" in window)){els.forEach(e=>e.classList.add("on"));return;}
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("on");io.unobserve(e.target);}}),{threshold:.12});
+  els.forEach(e=>io.observe(e));
+}
+
+document.getElementById("lang").innerHTML=LANGS.map(l=>'<button type="button" data-code="'+l.code+'" lang="'+l.html+'">'+l.label+'</button>').join("");
+document.getElementById("lang").addEventListener("click",e=>{const b=e.target.closest("button"); if(b) setLang(b.dataset.code);});
+
+lang=detectLang();
+applyLang();
+drawSky();
+let rt; window.addEventListener("resize",()=>{clearTimeout(rt); rt=setTimeout(drawSky,200);});
+setupReveal();
+
+fetch("apps.json",{cache:"no-cache"})
+  .then(r=>{if(!r.ok) throw new Error(r.status); return r.json();})
+  .then(d=>{APPS=Array.isArray(d)?d:(d.apps||[]); renderApps();})
+  .catch(()=>{appsError=true; renderApps();});
+
+fetch("urgent_notice.json",{cache:"no-store"})
+  .then(r=>r.ok?r.json():null)
+  .then(d=>{ if(d){ NOTICE=d; openNotice(); } })
+  .catch(()=>{});
+</script>
+</body>
 </html>

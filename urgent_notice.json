@@ -1,0 +1,21 @@
+{
+  "_guide": "긴급 공지입니다. active가 true이고 title이나 body에 내용이 있으면 홈페이지에 들어오는 모든 방문자에게 큰 공지창이 뜹니다. 공지를 내리려면 active를 false로 바꾸거나 title·body를 빈칸으로 두세요. 줄바꿈은 \\n, https:// 주소는 자동으로 링크가 됩니다. 번역이 없는 언어는 영어(en)로, 영어도 없으면 한국어(ko)로 보입니다.",
+  "active": false,
+  "date": "2026-11-15",
+  "title": {
+    "ko": "반보케 업데이트 전 꼭 백업해 주세요",
+    "en": "Please back up before updating Banboke",
+    "zh": "更新 Banboke 前請務必備份",
+    "es": "Haz una copia de seguridad antes de actualizar Banboke",
+    "pt": "Faça um backup antes de atualizar o Banboke",
+    "ru": "Сделайте резервную копию перед обновлением Banboke"
+  },
+  "body": {
+    "ko": "다음 업데이트에서 저장 구조가 바뀝니다.\n업데이트 전에 설정 > 백업·복원에서 파일 백업을 먼저 해 주세요.\n\n문의: happyisit@gmail.com",
+    "en": "The next update changes how data is stored.\nBefore updating, please make a file backup in Settings > Backup & Restore.\n\nContact: happyisit@gmail.com",
+    "zh": "下一次更新將變更資料的儲存方式。\n更新前，請先到「設定 > 備份與還原」進行檔案備份。\n\n聯絡：happyisit@gmail.com",
+    "es": "La próxima actualización cambia la forma de guardar los datos.\nAntes de actualizar, haz una copia de seguridad en Ajustes > Copia de seguridad y restauración.\n\nContacto: happyisit@gmail.com",
+    "pt": "A próxima atualização muda a forma como os dados são salvos.\nAntes de atualizar, faça um backup em Configurações > Backup e restauração.\n\nContato: happyisit@gmail.com",
+    "ru": "В следующем обновлении изменится способ хранения данных.\nПеред обновлением сделайте резервную копию в разделе «Настройки > Резервное копирование и восстановление».\n\nКонтакты: happyisit@gmail.com"
+  }
+}
