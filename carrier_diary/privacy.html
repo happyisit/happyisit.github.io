@@ -1,1 +1,317 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>載具手帳 CarrierDiary Privacy Policy</title>
+<style>body{font-family:-apple-system,"Noto Sans KR","Noto Sans TC",sans-serif;max-width:760px;margin:0 auto;padding:18px;line-height:1.75;color:#222}pre{white-space:pre-wrap;font:inherit}nav button{border:1px solid #ccc;background:#fff;border-radius:8px;padding:6px 12px;margin-right:6px;cursor:pointer}nav button.on{background:#222;color:#fff}.s{display:none}.s.on{display:block}</style></head>
+<body><nav><button data-l="ko">한국어</button><button data-l="zh">繁體中文</button><button data-l="en">English</button></nav><section id="ko" class="s"><pre>載具手帳 개인정보 처리방침
 
+버전 1.0.0　시행일 2026-11-20
+개발자(운영자): HappyisIT (문의: happyisit@gmail.com)
+
+※ 요약: 회원가입이 없고 개발자의 서버도 없습니다. 바코드와 가계부 등 이용자가 입력한 내용은 이용자의 휴대전화 안에만 저장되며 개발자에게 전송되지 않습니다. 이용자가 &#x27;광고 보고 충전&#x27;을 눌러 광고를 볼 때만 광고 회사(Unity, Google)가 광고 관련 정보를 수집합니다. 카메라는 영수증 QR 화면에서만 쓰며 사진을 저장하지 않습니다.
+
+HappyisIT(이하 &quot;개발자&quot;)는 앱 「載具手帳」(이하 &quot;앱&quot;)을 제공하면서 이용자의 정보를 소중히 다루며, 대한민국 「개인정보 보호법」과 이용자가 거주하는 국가·지역의 관련 법령(예: 대만 「個人資料保護法」)을 지키기 위해 노력합니다. 이 방침은 앱이 어떤 정보를 어디에, 어떻게 다루는지 알려 드립니다.
+
+1. 한눈에 보기
+・앱은 회원가입·로그인이 없으며 이름, 연락처, 이메일, 재정부 인증코드 등을 요구하지 않습니다.
+・이용자가 입력한 내용은 이용자의 휴대전화 안에만 저장되며, 개발자의 서버로 전송되지 않습니다(개발자는 서버를 운영하지 않습니다).
+・따라서 개발자는 이용자의 데이터를 열람할 수도, 복구해 드릴 수도 없습니다. 이용자가 만든 백업 파일은 이용자가 고른 위치에만 저장됩니다.
+・앱에는 보상형 광고가 포함되어 있어, 이용자가 광고를 볼 때 광고 회사가 광고 관련 정보를 수집할 수 있습니다(6항).
+
+2. 앱이 다루는 정보와 저장 위치
+앱을 사용하면 휴대전화의 앱 전용 저장 공간에 다음 정보가 저장됩니다. 다른 앱은 이 공간에 접근할 수 없습니다.
+(1) 암호화하지 않고 저장하는 정보 — 앱을 열자마자, 잠금 상태에서도 보여야 하는 정보
+・바코드 카드: 휴대전화 바코드 문자열(공개 바코드), 이전에 쓴 바코드(최근 3개), 닉네임, 칭호, 상태 문구, 꾸미기 설정(배경·테두리·스티커·효과 등), 손그림 이미지
+・에너지 정보: 에너지 잔량, 마지막 지급일, 광고 충전 횟수와 마지막 시각, 최근 5일 동안 받은 에너지 기록(시각·종류·개수)
+・설정 정보: 화면 언어, 화면 테마, 바코드 화면 밝기 자동 조절, 화면 캡처 차단, 지문 잠금 사용 여부와 다시 묻지 않는 시간, 약관 동의 여부와 동의한 버전, 처음 안내를 마쳤는지 여부, 마지막 자동 백업 날짜
+・날짜 기준 시간대: 에너지의 하루를 세기 위해 앱을 처음 실행할 때 확인한 기기의 시간대 차이(분)
+・백업 비밀번호 입력 키패드의 글자 크기 단계, QR 화면에서 고른 카메라 렌즈와 배율(이 두 가지는 화면 안 저장소에 저장)
+(2) 암호화해 저장하는 정보
+・가계부 내역(금액·분류·항목·태그·메모·날짜·영수증 번호·입력 방법), 사용자 분류와 홈 고정 분류, 월 예산, 그래프(이름·날짜·값·목표값·표시 방식), 당첨 번호, 휴지통에 있는 항목, 꾸미기 프리셋
+・위 정보는 기기 안에서 무작위로 만든 키로 AES-256-GCM 방식으로 암호화하며, 이 키는 기기의 Android Keystore 로 감싸 보관합니다(기기가 지원하는 경우). 따라서 파일을 다른 기기로 옮겨도 풀 수 없습니다.
+(3) 자동 백업
+・매일 처음 실행할 때, 그리고 백업 파일을 복원하기 직전에 위 (1)·(2)의 내용을 암호화한 자동 백업을 앱 전용 저장 공간에 만들고 최근 5개를 보관합니다.
+(4) 백업 파일
+・이용자가 「백업 파일 저장」을 누르면 이용자가 정한 백업 비밀번호(영문·숫자 10자리, 화면 키패드로 입력)에서 만든 키(PBKDF2-SHA256)로 암호화한 파일을, 기기의 시스템 저장 화면에서 이용자가 고른 위치에 저장합니다.
+・백업 파일에는 가계부(분류·휴지통 포함), 그래프, 당첨 번호, 바코드와 꾸미기·칭호·프리셋·손그림, 화면 언어·테마·표시 설정, 이전에 쓴 바코드 목록이 담기며, 에너지·광고 기록·지문 잠금 켜짐 여부는 담기지 않습니다.
+・백업 비밀번호는 기기에 저장되지 않고 개발자에게 전송되지 않으며, 백업 파일을 만들거나 열 때만 잠시 메모리에 있다가 화면을 떠나면 지워집니다.
+(5) 저장하지 않는 정보
+・QR 화면의 카메라 영상, 사진, 지문·얼굴 등 생체 정보, 재정부 계정·인증코드, 위치 정보, 연락처는 저장하거나 수집하지 않습니다.
+
+3. 이용 목적
+저장된 정보는 바코드 카드 표시, 가계부·그래프·예산 계산과 표시, 당첨 대조, 백업·복원, 에너지와 광고 충전 한도 관리, 설정 유지 목적으로만 앱 안에서 사용됩니다. 개발자는 이 정보를 마케팅, 분석, 프로파일링 등 다른 목적으로 사용하지 않습니다.
+
+4. 보유 기간 및 파기
+・정보는 이용자의 기기에 저장되어 있는 동안 보유되며, 개발자의 서버에는 보관되지 않습니다.
+・앱에서 기록을 지우면 휴지통으로 옮겨지고(최대 300건, 넘으면 오래된 것부터 자동 삭제), 휴지통에서 영구 삭제하거나 비우면 즉시 삭제됩니다. 바코드·손그림 삭제는 즉시 반영됩니다.
+・앱을 삭제하거나 기기 설정에서 앱 데이터를 삭제하면 앱 안의 모든 정보(자동 백업과 에너지 포함)가 삭제되며 복구할 수 없습니다. 이용자가 직접 만든 백업 파일은 이용자가 삭제할 때까지 이용자가 고른 위치에 남습니다.
+・개발자가 수집·보관하는 개인정보가 없으므로 별도의 파기 절차는 없습니다.
+
+5. 제3자 제공 및 처리 위탁
+개발자는 이용자의 정보를 제3자에게 제공하거나 처리를 위탁하지 않습니다. 다만 아래 6항의 광고 서비스는 예외로 합니다.
+
+6. 광고 및 광고 SDK / 개인정보의 국외 이전
+앱은 이용자가 &#x27;광고 보고 충전&#x27;을 눌렀을 때만 보상형 광고를 표시합니다(배너·자동 광고 없음). 광고는 Unity Ads(Unity SDK) 또는 Google AdMob(Google Mobile Ads SDK)을 통해 제공되며, 앱 버전에 따라 하나만 쓰이거나 둘 다 쓰일 수 있습니다.
+・수집·이용하는 자(이전받는 자): Unity Technologies 및 그 계열사, Google LLC 및 그 계열사(미국 등 국외)
+・수집 항목: 광고 식별자(Android 광고 ID), 기기 정보(기종·운영체제 버전·언어 등), IP 주소와 이를 통한 대략적인 위치, 광고 노출·시청 완료 등 광고 상호작용 정보, 오류·성능 등 진단 정보
+・이용 목적: 광고 제공, 광고 성과 측정, 부정 이용 방지(기기의 광고 맞춤 설정이 켜져 있으면 맞춤 광고)
+・이전 시기 및 방법: 이용자가 광고를 불러오거나 시청할 때, 이용자의 기기에서 각 광고 회사의 서버로 암호화된 통신(TLS)으로 직접 전송됩니다.
+・보유 및 이용 기간: 각 광고 회사의 정책에 따릅니다.
+・거부 방법 및 거부 시 불이익: 광고를 보지 않으면 위 정보는 광고 시청을 위해 전송되지 않으며, 광고를 보지 않아도 앱을 이용할 수 있습니다(매일 지급되는 에너지로 에너지 기능을 쓸 수 있고, 바코드·가계부 입력·대조 등 기본 기능은 에너지가 필요 없습니다). 기기의 설정에서 광고 맞춤 설정을 끄거나 광고 ID 를 재설정·삭제할 수 있습니다.
+・이용자가 입력한 바코드, 가계부, 그래프, 당첨 번호, 에너지 정보는 광고 SDK에 제공되지 않습니다. 광고 시청 간격과 하루 횟수는 앱이 기기 안에서만 계산합니다.
+・Unity 개인정보처리방침: https://unity.com/legal/privacy-policy
+・Google 개인정보처리방침: https://policies.google.com/privacy
+
+7. 기기 권한
+・카메라(CAMERA): 이용자가 「영수증 QR 스캔」 화면이나 기록 수정 창의 📷 버튼을 눌렀을 때만, 종이 전자영수증 왼쪽 QR 코드를 읽는 데 씁니다. 영상은 화면 안에서 바로 인식할 뿐 촬영·녹화·저장·전송하지 않으며, 그 화면을 벗어나면 카메라를 끕니다. 허용하지 않아도 영수증 번호를 직접 입력해 앱을 이용할 수 있습니다.
+・생체 인증(USE_BIOMETRIC): 이용자가 「지문 잠금」을 켰을 때 기기의 지문 또는 화면 잠금으로 본인을 확인합니다. 생체 정보는 기기 운영체제가 처리하며 앱은 받을 수 없습니다.
+・인터넷(INTERNET): 광고를 불러오는 데 쓰이며, 앱 화면은 기기 안의 내부 통신으로만 구성됩니다. 이용자의 데이터는 인터넷으로 전송되지 않습니다.
+・광고 ID(AD_ID): 광고 SDK가 광고 제공을 위해 사용합니다.
+・파일 저장·선택: 백업 파일을 저장하고 복원할 때 기기의 시스템 파일 화면을 쓰며, 이용자가 직접 고른 파일에만 접근합니다(저장소 전체에 접근하지 않음).
+・화면 보호: 바코드와 가계부 보호를 위해 앱 화면의 캡처·녹화·미러링이 제한될 수 있으며, 설정에서 끌 수 있습니다.
+・화면 밝기·화면 켜짐 유지: 바코드를 크게 볼 때 스캐너가 잘 읽도록 앱 화면에서만 밝기를 올리고 화면이 꺼지지 않게 하며, 기기의 밝기 설정은 바꾸지 않습니다.
+
+8. 이용자의 권리와 행사 방법
+이용자는 앱 안에서 입력한 정보를 언제든지 열람, 수정, 삭제할 수 있으며, 앱을 삭제해 모든 정보를 지울 수 있습니다. 회원가입과 계정이 없으므로 별도의 계정 삭제 절차는 없고, 개발자는 이용자의 정보를 보관하지 않으므로 열람·정정·삭제·처리정지를 요청할 대상 정보가 없습니다. 광고와 관련해 Unity 또는 Google이 처리하는 정보에 대한 요청은 해당 회사에 직접 하실 수 있습니다. 그 밖의 문의는 11항의 연락처로 주시면 확인해 답변드립니다.
+
+9. 안전성 확보를 위한 조치
+・가계부 등 민감한 정보를 기기 안에서 AES-256-GCM 으로 암호화하고, 암호화 키를 Android Keystore 로 보호
+・모든 파일을 임시 파일에 쓴 뒤 바꾸는 방식으로 저장해 저장 중 손상 위험을 줄임
+・자동 백업은 앱 전용 저장 공간에만 보관(최근 5개, 앱 삭제 시 함께 삭제)하고, 백업 파일은 이용자가 정한 비밀번호로 암호화
+・앱 화면과 앱 내부 서버 사이의 통신은 기기 밖으로 나가지 않으며, 앱 화면이 보낸 요청만 받도록 접근 토큰과 요청 출처를 확인
+・입력값과 복원 파일에서 비정상적인 문자와 형식에 맞지 않는 값을 걸러 냄
+・이용자 정보를 개발자의 서버나 광고 SDK로 보내지 않음
+・(선택) 지문 잠금, 화면 캡처·미러링 제한 기능 지원
+이용자께서도 기기의 화면 잠금을 설정하고, 백업 파일과 비밀번호를 따로 안전하게 보관하시기를 권장합니다.
+
+10. 아동의 개인정보
+앱은 만 16세 미만 아동을 대상으로 하지 않으며, 아동의 개인정보를 의도적으로 수집하지 않습니다. 광고 SDK가 수집하는 정보는 6항에 따릅니다.
+
+11. 개인정보 보호책임자 및 문의
+책임자: HappyisIT
+문의: happyisit@gmail.com
+개인정보 침해에 대한 신고나 상담이 필요하시면 아래 기관에 문의하실 수 있으며, 대한민국 밖에 거주하는 이용자는 거주 국가·지역의 개인정보 보호 기관에도 문의하실 수 있습니다.
+・개인정보침해 신고센터 (privacy.kisa.or.kr / 국번 없이 118)
+・개인정보 분쟁조정위원회 (www.kopico.go.kr / 1833-6972)
+・대검찰청 사이버수사과 (www.spo.go.kr / 국번 없이 1301)
+・경찰청 사이버범죄 신고시스템 (ecrm.police.go.kr / 국번 없이 182)
+
+12. 방침의 변경
+이 방침이 바뀌면 앱 업데이트나 앱 안 안내로 알리며, 이용자에게 불리하거나 중요한 변경은 시행 전에 알립니다. 지원 OS가 상향되어 새 버전을 설치할 수 없는 기기의 이전 버전 앱에는, 그 버전이 표시하던 방침이 계속 적용됩니다.
+
+13. 언어
+이 방침은 한국어로 작성되며, 繁體中文·English 번역본은 참고용입니다. 번역본과 한국어 원문이 다르면 한국어 원문이 우선합니다.
+
+부칙
+이 방침은 2026-11-20부터 시행합니다.
+・2026-11-20 최초 시행 (載具手帳 Android v1.0.0부터)
+
+온라인 전문: https://happyisit.github.io/carrier_diary/privacy.html
+</pre></section><section id="zh" class="s"><pre>載具手帳 隱私權政策
+
+版本 1.0.0　生效日期 2026-11-20
+開發者（營運者）：HappyisIT（聯絡：happyisit@gmail.com）
+
+※ 摘要：沒有會員註冊，開發者也沒有伺服器。條碼與記帳等您輸入的內容只儲存在您的手機內，不會傳送給開發者。只有在您按下「看廣告充值」觀看廣告時，廣告公司（Unity、Google）才會收集廣告相關資訊。相機只在發票 QR 畫面使用，不會儲存照片。
+
+HappyisIT（以下稱「開發者」）提供 App「載具手帳」（以下稱「App」）時重視您的資訊，並努力遵守大韓民國《個人資訊保護法》及您居住國家或地區的相關法令（例如台灣《個人資料保護法》）。本政策說明 App 處理哪些資訊、存放在哪裡以及如何處理。
+
+1. 重點摘要
+・App 沒有會員註冊或登入，不會要求姓名、聯絡方式、電子郵件或財政部驗證碼等。
+・您輸入的內容只儲存在您的手機內，不會傳送到開發者的伺服器（開發者不經營伺服器）。
+・因此開發者無法查看您的資料，也無法替您復原。您製作的備份檔只會存到您選擇的位置。
+・App 含有獎勵廣告，您觀看廣告時，廣告公司可能收集廣告相關資訊（第 6 點）。
+
+2. App 處理的資訊與存放位置
+使用 App 時，下列資訊會存放在手機的 App 專用儲存空間，其他 App 無法存取此空間。
+(1) 不加密儲存的資訊 — 需要一開啟 App、在鎖定狀態下也要顯示的資訊
+・條碼卡片：手機條碼字串（公開條碼）、先前使用的條碼（最近 3 個）、暱稱、稱號、狀態文字、裝飾設定（背景、外框、貼紙、效果等）、手繪圖片
+・能量資訊：能量餘額、上次發放日、廣告充值次數與上次時間、最近 5 天獲得能量的紀錄（時間、種類、數量）
+・設定資訊：畫面語言、畫面主題、條碼畫面自動調亮、防止截圖、指紋鎖是否使用與不再詢問的時間、是否同意條款與同意的版本、是否完成初次說明、上次自動備份日期
+・日期基準時區：為了計算能量的「一天」，第一次開啟 App 時確認的裝置時區差（分鐘）
+・備份密碼鍵盤的文字大小、QR 畫面選擇的鏡頭與倍率（這兩項存放在畫面內的儲存區）
+(2) 加密儲存的資訊
+・記帳內容（金額、分類、品項、標籤、備註、日期、發票號碼、輸入方式）、自訂分類與首頁常用分類、每月預算、圖表（名稱、日期、數值、目標值、顯示方式）、中獎號碼、垃圾桶中的項目、裝飾預設組
+・上述資訊以裝置內隨機產生的金鑰透過 AES-256-GCM 加密，此金鑰以裝置的 Android Keystore 包覆保存（裝置支援時）。因此即使把檔案移到其他裝置也無法解開。
+(3) 自動備份
+・每天第一次開啟時，以及還原備份檔之前，App 會把上述 (1)(2) 的內容加密後建立自動備份，存放在 App 專用儲存空間並保留最近 5 份。
+(4) 備份檔
+・您按下「儲存備份檔」時，App 會以您設定的備份密碼（英文與數字 10 位，用畫面鍵盤輸入）產生的金鑰（PBKDF2-SHA256）加密，並儲存到您在系統儲存畫面中選擇的位置。
+・備份檔包含記帳（含分類、垃圾桶）、圖表、中獎號碼、條碼與裝飾、稱號、預設組、手繪、畫面語言、主題與顯示設定、先前使用的條碼清單，不包含能量、廣告紀錄與指紋鎖開關。
+・備份密碼不會儲存在裝置中，也不會傳送給開發者，只在製作或開啟備份檔時暫時存在記憶體中，離開畫面時即清除。
+(5) 不儲存的資訊
+・QR 畫面的相機影像、照片、指紋與臉部等生物特徵、財政部帳號與驗證碼、位置資訊、聯絡人，App 都不會儲存或收集。
+
+3. 使用目的
+儲存的資訊只在 App 內用於顯示條碼卡片、計算與顯示記帳、圖表與預算、對獎、備份與還原、管理能量與廣告充值上限、保存設定。開發者不會將這些資訊用於行銷、分析、側寫等其他目的。
+
+4. 保存期間與刪除
+・資訊在儲存於您的裝置期間保存，不會保存在開發者的伺服器。
+・在 App 中刪除紀錄時會移到垃圾桶（最多 300 筆，超過時從最舊的開始自動刪除）；從垃圾桶永久刪除或清空時會立即刪除。刪除條碼或手繪會立即生效。
+・刪除 App 或在裝置設定中清除 App 資料時，App 內的所有資訊（包括自動備份與能量）都會被刪除且無法復原。您自行製作的備份檔會留在您選擇的位置，直到您自行刪除。
+・開發者沒有收集或保存的個人資料，因此沒有另外的銷毀程序。
+
+5. 提供第三方與委託處理
+開發者不會將您的資訊提供給第三方或委託處理；但下列第 6 點的廣告服務除外。
+
+6. 廣告與廣告 SDK／個人資料的跨境傳輸
+App 只有在您按下「看廣告充值」時才顯示獎勵廣告（沒有橫幅或自動廣告）。廣告透過 Unity Ads（Unity SDK）或 Google AdMob（Google Mobile Ads SDK）提供，依 App 版本可能只使用其中一個或兩個都使用。
+・收集與使用者（接收者）：Unity Technologies 及其關係企業、Google LLC 及其關係企業（美國等境外）
+・收集項目：廣告識別碼（Android 廣告 ID）、裝置資訊（機型、作業系統版本、語言等）、IP 位址及由此推得的大略位置、廣告曝光與觀看完成等廣告互動資訊、錯誤與效能等診斷資訊
+・使用目的：提供廣告、衡量廣告成效、防止不當使用（裝置的廣告個人化設定開啟時提供個人化廣告）
+・傳輸時間與方式：您載入或觀看廣告時，由您的裝置以加密通訊（TLS）直接傳送到各廣告公司的伺服器。
+・保存與使用期間：依各廣告公司的政策。
+・拒絕方式與拒絕時的影響：不看廣告時，上述資訊不會因觀看廣告而被傳送，不看廣告也可以使用 App（可用每天發放的能量使用能量功能，條碼、記帳、對獎等基本功能不需要能量）。您可以在裝置設定中關閉廣告個人化，或重設、刪除廣告 ID。
+・您輸入的條碼、記帳、圖表、中獎號碼與能量資訊不會提供給廣告 SDK。廣告觀看間隔與每日次數只在裝置內由 App 計算。
+・Unity 隱私權政策：https://unity.com/legal/privacy-policy
+・Google 隱私權政策：https://policies.google.com/privacy
+
+7. 裝置權限
+・相機（CAMERA）：只有在您開啟「掃描發票 QR」畫面或按下紀錄編輯視窗的 📷 按鈕時，用來讀取紙本電子發票左邊的 QR Code。影像只在畫面中直接辨識，不會拍攝、錄影、儲存或傳送，離開該畫面時會關閉相機。不允許此權限也可以自行輸入發票號碼使用 App。
+・生物辨識（USE_BIOMETRIC）：您開啟「指紋鎖」時，用裝置的指紋或螢幕鎖確認本人。生物特徵由裝置作業系統處理，App 無法取得。
+・網路（INTERNET）：用於載入廣告；App 畫面只透過裝置內部通訊運作。您的資料不會透過網路傳送。
+・廣告 ID（AD_ID）：廣告 SDK 為提供廣告而使用。
+・檔案儲存與選擇：儲存與還原備份檔時使用裝置的系統檔案畫面，只存取您自行選擇的檔案（不存取整個儲存空間）。
+・畫面保護：為保護條碼與記帳，App 畫面可能限制截圖、錄影與鏡像，可在設定中關閉。
+・畫面亮度與保持螢幕開啟：放大條碼時，為了讓掃描器容易讀取，只在 App 畫面調亮並避免螢幕關閉，不會改變裝置的亮度設定。
+
+8. 使用者的權利與行使方式
+您可以隨時在 App 中查看、修改、刪除自己輸入的資訊，也可以刪除 App 以清除所有資訊。因為沒有會員註冊與帳號，沒有另外的帳號刪除程序；開發者不保存您的資訊，因此沒有可供查閱、更正、刪除或停止處理的對象資訊。與廣告相關、由 Unity 或 Google 處理的資訊，請直接向該公司提出。其他問題請透過第 11 點的聯絡方式與我們聯繫，我們會確認後回覆。
+
+9. 安全措施
+・在裝置內以 AES-256-GCM 加密記帳等敏感資訊，並以 Android Keystore 保護加密金鑰
+・所有檔案先寫入暫存檔再替換，降低儲存過程中損壞的風險
+・自動備份只存放在 App 專用儲存空間（最近 5 份，刪除 App 時一併刪除），備份檔以您設定的密碼加密
+・App 畫面與 App 內部伺服器之間的通訊不會離開裝置，並確認存取權杖與請求來源，只接受 App 畫面送出的請求
+・過濾輸入值與還原檔中的不正常字元與格式不符的值
+・不會將您的資訊傳送到開發者的伺服器或廣告 SDK
+・（選用）支援指紋鎖、限制截圖與鏡像功能
+也建議您設定裝置的螢幕鎖，並將備份檔與密碼分開妥善保管。
+
+10. 兒童的個人資料
+App 不以未滿 16 歲的兒童為對象，也不會刻意收集兒童的個人資料。廣告 SDK 收集的資訊依第 6 點辦理。
+
+11. 個人資料保護負責人與聯絡方式
+負責人：HappyisIT
+聯絡：happyisit@gmail.com
+如需檢舉或諮詢個人資料侵害，可洽詢下列韓國機關；居住在韓國以外的使用者，也可以洽詢居住國家或地區的個人資料保護機關。
+・個人資訊侵害申報中心（privacy.kisa.or.kr／韓國境內撥 118）
+・個人資訊糾紛調解委員會（www.kopico.go.kr／1833-6972）
+・大檢察廳網路調查科（www.spo.go.kr／韓國境內撥 1301）
+・警察廳網路犯罪申報系統（ecrm.police.go.kr／韓國境內撥 182）
+
+12. 政策的變更
+本政策變更時，會透過 App 更新或 App 內通知告知；對您不利或重要的變更會在生效前通知。因支援的作業系統提高而無法安裝新版本的裝置上，舊版 App 繼續適用該版本顯示的政策。
+
+13. 語言
+本政策以韓文撰寫，繁體中文與英文版本僅供參考。翻譯版本與韓文原文不一致時，以韓文原文為準。
+
+附則
+本政策自 2026-11-20 起生效。
+・2026-11-20 首次生效（自 載具手帳 Android v1.0.0 起）
+
+線上全文：https://happyisit.github.io/carrier_diary/privacy.html
+</pre></section><section id="en" class="s"><pre>CarrierDiary (載具手帳) Privacy Policy
+
+Version 1.0.0   Effective 2026-11-20
+Developer (operator): HappyisIT (contact: happyisit@gmail.com)
+
+* Summary: There is no sign-up and the Developer has no servers. Your barcode, ledger and everything else you enter is stored only on your phone and is never sent to the Developer. Only when you tap &quot;Watch an ad to recharge&quot; and watch an ad do the ad companies (Unity, Google) collect ad-related information. The camera is used only on the invoice QR screen, and no photos are saved.
+
+HappyisIT (the &quot;Developer&quot;) values your information when providing the app &quot;CarrierDiary (載具手帳)&quot; (the &quot;App&quot;) and strives to comply with the Personal Information Protection Act of the Republic of Korea and the applicable laws of the country or region where you live (for example, Taiwan&#x27;s Personal Data Protection Act). This policy explains what information the App handles, where it is stored and how.
+
+1. At a glance
+- The App has no sign-up or login and does not ask for your name, contact details, email, or a Ministry of Finance verification code.
+- What you enter is stored only on your phone and is not sent to the Developer&#x27;s servers (the Developer runs no servers).
+- Therefore the Developer cannot view your data or recover it for you. Backup files you create are saved only where you choose.
+- The App includes rewarded ads; when you watch an ad, the ad companies may collect ad-related information (Section 6).
+
+2. Information the App handles and where it is stored
+When you use the App, the following is stored in the App&#x27;s private storage on your phone. Other apps cannot access this storage.
+(1) Stored unencrypted — information that must appear as soon as the App opens, even when locked
+- Barcode card: your mobile barcode string (a public barcode), previously used barcodes (last 3), nickname, title, status text, decoration settings (background, frame, stickers, effects, etc.), hand drawing image
+- Energy information: Energy balance, last grant date, number and last time of ad recharges, record of Energy received in the last 5 days (time, type, amount)
+- Settings: display language, app theme, automatic brightness on the barcode screen, screenshot blocking, whether the fingerprint lock is used and how long before asking again, whether and which version of the Terms you agreed to, whether the introduction was completed, last automatic backup date
+- Day-boundary time zone: the device&#x27;s time zone offset (in minutes) checked at the first launch, used to count an Energy &quot;day&quot;
+- Text size of the backup password keypad, and the camera lens and zoom chosen on the QR screen (these two are kept in the screen&#x27;s local storage)
+(2) Stored encrypted
+- Ledger entries (amount, category, item, tag, memo, date, invoice number, entry method), custom and pinned categories, monthly budget, charts (name, dates, values, goal, display mode), winning numbers, items in the trash, decoration presets
+- These are encrypted with AES-256-GCM using a random key created on the device, and that key is wrapped with the device&#x27;s Android Keystore (where supported). Moving the files to another device does not make them readable.
+(3) Automatic backups
+- On the first launch each day, and just before restoring a backup file, the App creates an encrypted automatic backup of (1) and (2) in its private storage and keeps the 5 most recent.
+(4) Backup files
+- When you tap &quot;Save backup file&quot;, the App encrypts your data with a key derived (PBKDF2-SHA256) from the backup password you set (10 letters and digits, entered with the on-screen keypad) and saves it to the location you choose in the system save screen.
+- A backup file contains your ledger (with categories and trash), charts, winning numbers, barcode with decorations, title, presets and drawing, display language, theme and display settings, and previously used barcodes. It does not contain Energy, ad history or the fingerprint lock on/off state.
+- The backup password is not stored on the device or sent to the Developer. It stays in memory only briefly while a backup file is created or opened and is cleared when you leave the screen.
+(5) Not stored
+- The App does not store or collect camera video or photos from the QR screen, fingerprints, face or other biometric data, Ministry of Finance accounts or verification codes, location, or contacts.
+
+3. Purposes of use
+Stored information is used only within the App to show the barcode card, calculate and display your ledger, charts and budget, check lottery results, back up and restore, manage Energy and ad recharge limits, and keep your settings. The Developer does not use it for marketing, analytics, profiling or any other purpose.
+
+4. Retention and deletion
+- Information is kept while it is stored on your device and is not kept on the Developer&#x27;s servers.
+- Deleting a record in the App moves it to the trash (up to 300 items; the oldest are deleted automatically beyond that). Permanently deleting from or emptying the trash deletes it immediately. Deleting the barcode or the drawing takes effect immediately.
+- Deleting the App or clearing its data in device settings deletes all information in the App (including automatic backups and Energy) without recovery. Backup files you created remain where you saved them until you delete them.
+- Because the Developer collects and keeps no personal information, there is no separate destruction procedure.
+
+5. Provision to third parties and outsourcing
+The Developer does not provide your information to third parties or outsource its processing, except for the ad services in Section 6.
+
+6. Ads, ad SDKs and international transfer
+The App shows rewarded ads only when you tap &quot;Watch an ad to recharge&quot; (no banner or automatic ads). Ads are provided through Unity Ads (Unity SDK) or Google AdMob (Google Mobile Ads SDK); depending on the App version, one or both may be used.
+- Recipients: Unity Technologies and its affiliates, Google LLC and its affiliates (in the United States and other countries)
+- Information collected: advertising identifier (Android advertising ID), device information (model, OS version, language, etc.), IP address and approximate location derived from it, ad interaction information such as impressions and completed views, and diagnostic information such as errors and performance
+- Purposes: providing ads, measuring ad performance, preventing fraud (personalized ads if ad personalization is enabled on your device)
+- When and how: when you load or watch an ad, sent directly from your device to each ad company&#x27;s servers over encrypted communication (TLS)
+- Retention: according to each ad company&#x27;s policy
+- How to refuse and its effect: if you do not watch ads, this information is not sent for watching ads, and you can still use the App (Energy features can be used with the daily Energy, and basic features such as the barcode, expense entry and lottery checking need no Energy). You can turn off ad personalization or reset or delete your advertising ID in device settings.
+- Your barcode, ledger, charts, winning numbers and Energy information are not provided to ad SDKs. Ad intervals and daily counts are calculated only on the device.
+- Unity privacy policy: https://unity.com/legal/privacy-policy
+- Google privacy policy: https://policies.google.com/privacy
+
+7. Device permissions
+- Camera (CAMERA): used only when you open the &quot;Scan invoice QR&quot; screen or tap the 📷 button in the record editor, to read the QR code on the left of a paper e-invoice. The video is recognized on screen only and is never photographed, recorded, saved or sent, and the camera is turned off when you leave that screen. You can use the App without this permission by entering invoice numbers yourself.
+- Biometric (USE_BIOMETRIC): when you turn on the &quot;fingerprint lock&quot;, your identity is checked with the device&#x27;s fingerprint or screen lock. Biometric data is processed by the operating system; the App cannot access it.
+- Internet (INTERNET): used to load ads. The App screen works only through communication inside the device, and your data is not sent over the internet.
+- Advertising ID (AD_ID): used by the ad SDKs to provide ads.
+- Saving and choosing files: the device&#x27;s system file screen is used to save and restore backup files, and only files you choose are accessed (no access to all storage).
+- Screen protection: to protect your barcode and ledger, screenshots, recording and mirroring of the App screen may be restricted; you can turn this off in Settings.
+- Screen brightness and keep-awake: when you enlarge the barcode, the App brightens only its own screen and keeps it on so scanners can read it, without changing the device&#x27;s brightness setting.
+
+8. Your rights and how to exercise them
+You can view, edit and delete the information you entered in the App at any time, and delete the App to remove all of it. There is no sign-up or account, so there is no separate account deletion procedure, and because the Developer keeps none of your information, there is no information held by the Developer to view, correct, delete or restrict. Requests about information processed by Unity or Google for ads can be made directly to those companies. For any other questions, contact us at the address in Section 11 and we will reply.
+
+9. Security measures
+- Sensitive information such as the ledger is encrypted on the device with AES-256-GCM, and the key is protected with the Android Keystore
+- All files are written to a temporary file and then swapped in, reducing the risk of damage while saving
+- Automatic backups are kept only in the App&#x27;s private storage (last 5, deleted with the App), and backup files are encrypted with your password
+- Communication between the App screen and the App&#x27;s internal server never leaves the device, and an access token and the request origin are checked so that only requests from the App screen are accepted
+- Abnormal characters and values that do not match the format are filtered from input and from restored files
+- Your information is not sent to the Developer&#x27;s servers or to ad SDKs
+- (Optional) fingerprint lock and restriction of screenshots and mirroring
+We also recommend setting a screen lock on your device and keeping backup files and their passwords separately and safely.
+
+10. Children
+The App is not directed at children under 16 and does not knowingly collect children&#x27;s personal information. Information collected by ad SDKs follows Section 6.
+
+11. Privacy officer and contact
+Officer: HappyisIT
+Contact: happyisit@gmail.com
+To report or get advice on privacy violations, you can contact the Korean agencies below; users living outside Korea can also contact the data protection authority of their country or region.
+- Personal Information Infringement Report Center (privacy.kisa.or.kr / 118 within Korea)
+- Personal Information Dispute Mediation Committee (www.kopico.go.kr / 1833-6972)
+- Supreme Prosecutors&#x27; Office Cyber Investigation Division (www.spo.go.kr / 1301 within Korea)
+- Korean National Police Agency Cyber Crime Reporting System (ecrm.police.go.kr / 182 within Korea)
+
+12. Changes to this policy
+Changes are announced through an App update or a notice in the App, and changes that are unfavorable or important are announced before they take effect. On devices that cannot install a new version because the supported OS has been raised, the older App continues to be governed by the policy it displays.
+
+13. Language
+This policy is written in Korean; the Traditional Chinese and English versions are for reference. If a translation differs from the Korean original, the Korean original prevails.
+
+Addendum
+This policy takes effect on 2026-11-20.
+- 2026-11-20 First effective (載具手帳 / CarrierDiary for Android v1.0.0 and later)
+
+Full text online: https://happyisit.github.io/carrier_diary/privacy.html
+</pre></section>
+<script>var b=document.querySelectorAll("nav button");function show(l){b.forEach(function(x){x.classList.toggle("on",x.getAttribute("data-l")===l)});document.querySelectorAll(".s").forEach(function(s){s.classList.toggle("on",s.id===l)});document.documentElement.lang=l==="zh"?"zh-Hant-TW":l}
+b.forEach(function(x){x.onclick=function(){show(x.getAttribute("data-l"));history.replaceState(null,"","#"+x.getAttribute("data-l"))}});var h=(location.hash||"").slice(1),n=(navigator.language||"").toLowerCase();show(["ko","zh","en"].indexOf(h)>=0?h:n.indexOf("ko")===0?"ko":n.indexOf("en")===0?"en":"zh");</script></body></html>
